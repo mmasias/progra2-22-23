@@ -1,0 +1,40 @@
+@startuml
+skinparam sequenceArrowThickness 2
+
+box repo @progra2-22-23
+participant main
+activate main
+note left main: Cada trabajo tendrá una carpeta\nasignada dentro de la carpeta actividades
+participant ramaAlumno
+end box
+
+box repo @participante
+participant participante
+end box
+
+main -> participante: fork (conteniendo la carpeta de trabajo)
+
+activate participante
+
+note right participante: El participante crea una carpeta,\ndentro de la carpeta de trabajo\ncon el formato nombreApellido
+
+
+participante -> ramaAlumno : aportes / avances / revisiones
+
+activate ramaAlumno
+
+ramaAlumno --> participante : propuesta de revisión / ajuste
+
+participante -> ramaAlumno
+
+note left ramaAlumno: Durante el cuatrimestre, el main de la rama\ndel alumno se va llenando con sus avances dentro\nde cada carpeta de actividades
+
+
+
+participante -> ramaAlumno
+
+ramaAlumno -> main: integración final
+note left main: Al final del cuatrimestre, el main del repo\ncontiene las carpetas de todos los participantes\ndentro de cada carpeta de actividades
+
+
+@enduml
