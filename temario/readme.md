@@ -1,7 +1,17 @@
 # Temario
-- 🔲 Introducción a la POO
-- 🔲 Paradigmas de programación
+- ☑️ Introducción a la POO
+- ☑️ Paradigmas de programación
+    - ☑️ Operacional
+        - ☑️ Imperativo
+        - ☑️ Orientado a Objetos
+    - ☑️ Declarativo
+     - ☑️ Funcional
+     - ☑️ Lógico
 - 🔲 Programación orientado a objetos y diagrama de clases
+    - ☑️ ¿Qué es POO?
+    - ☑️ Clase - Atributos y métodos
+    - ☑️ Mis primeras clases en Java
+    - ☑️ UML
 - 🔲 Abstracción y encapsulamiento
 - 🔲 Herencia
 - 🔲 Poliformismo
