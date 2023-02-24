@@ -14,7 +14,7 @@
 ## 🧠 Enunciado
 
 ### Cuenta bancaria
-Crea una clase llamada `CuentaBancaria` que tendrá los siguientes atributos privados: 
+Crea una clase llamada `BankAccount` que tendrá los siguientes atributos privados: 
 - Titular
 - Cantidad (puede tener decimales).
 - Crea sus métodos get, set.
