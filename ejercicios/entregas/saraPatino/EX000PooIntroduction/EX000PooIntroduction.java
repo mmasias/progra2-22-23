@@ -14,6 +14,7 @@ public class BankAccount{
     } else {
       System.out.println("You can't deposit an amount below zero");
     }
+    return this.amount;
   }
 
   public withdraw(double amount){
@@ -22,6 +23,7 @@ public class BankAccount{
     } else {
       this.amount -= amount;
     }
+    return this.amount;
   }
 
 }
