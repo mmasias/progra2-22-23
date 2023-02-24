@@ -2,6 +2,7 @@
 class Poo.Attendance {
    ~ Student student
    ~ String time
+   + void Attendance()
 }
 
 class Poo.Student {
