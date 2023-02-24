@@ -1,0 +1,14 @@
+@startuml
+
+class EX000PooIntroduction {
+-private String titular
+-private double amount
+EX000PooIntroduction()
++public void deposit(double amount)
++public void withdraw(double amount)
++public String getTitular()
++public void setTitular(String titular)
++public double getCantidad()
++public void setCantidad(double cantidad)
+}
+@enduml
