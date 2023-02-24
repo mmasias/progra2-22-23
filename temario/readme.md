@@ -9,6 +9,9 @@
      - ☑️ Lógico
 - 🔲 Programación orientado a objetos y diagrama de clases
     - ☑️ ¿Qué es POO?
+    - ☑️ Clase - Atributos y métodos
+    - ☑️ Mis primeras clases en Java
+    - ☑️ UML
 - 🔲 Abstracción y encapsulamiento
 - 🔲 Herencia
 - 🔲 Poliformismo
