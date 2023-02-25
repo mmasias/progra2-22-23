@@ -12,9 +12,9 @@ class BankAccountTest {
     @org.junit.jupiter.api.Test
     void testDepositBankAccount() {
         BankAccount bankAccount = new BankAccount("Joshua", 150);
-        bankAccount.deposit(20.5);
+        bankAccount.deposit(30.5);
 
-        assertEquals(170.5, bankAccount.getQuantity());
+        assertEquals(180.5, bankAccount.getQuantity());
 
     }
 
