@@ -1,8 +1,0 @@
-@startuml
-class Poo.BankAccount {
-    ~ String titular
-    ~ double amountAccount
-    + void deposit(double amount)
-    + void withdraw(double amount)
-}
-@enduml
