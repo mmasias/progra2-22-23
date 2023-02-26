@@ -23,5 +23,4 @@ public class BankAccount {
         this.amount = amount;
     }
 
-
 }
