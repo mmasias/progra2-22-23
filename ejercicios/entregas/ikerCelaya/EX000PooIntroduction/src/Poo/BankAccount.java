@@ -1,5 +1,4 @@
-Package Poo;
+package Poo;
 
 public class BankAccount {
-
 }

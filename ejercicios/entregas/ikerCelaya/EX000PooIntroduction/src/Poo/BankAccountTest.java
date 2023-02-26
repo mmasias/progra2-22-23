@@ -1,13 +1,12 @@
-Package Poo;
-import org.junit.jupiter.api.Test;
+package Poo;
 
-import static org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test;
 
 public class BankAccountTest {
 
     @Test
     void getOwner() {
-
+        assertEquals();
     }
 
     @Test
