@@ -6,7 +6,7 @@ public class BankAccountTest {
 
     @Test
     void getOwner() {
-        assertEquals();
+
     }
 
     @Test
