@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 public class BankAccountTest {
 
     //Crear una cuenta bancaria con un titular y una cantidad inicial
+    //Comprueba los datos añadidos a la cuenta bancaria creada
     @Test
     void createAccount() {
         BankAccount account1 = new BankAccount("Iker Celaya",800.50);
@@ -14,6 +15,7 @@ public class BankAccountTest {
     }
 
     //Crear una cuenta bancaria, ingresar una cantidad en la cuenta
+    //Comprueba que se añade el depósito al balance total
     @Test
     void depositMoney() {
         BankAccount account1 = new BankAccount("Iker Celaya",220.20);
@@ -22,6 +24,7 @@ public class BankAccountTest {
     }
 
     //Crear una cuenta bancaria, ingresar y retirar una cantidad
+    //Comprueba que el balance total sea correcto tras depositar y retirar dinero
     @Test
     void depositAndWithdraw() {
         BankAccount account1 = new BankAccount("Iker Celaya",525.00);
@@ -33,6 +36,7 @@ public class BankAccountTest {
     //Extra
 
     //Crear una cuenta bancaria, ingresar una cantidad negativa
+    //Este test va a dar error, no podemos depositar una cantidad negativa de dinero
     @Test
     void depositNegativeAmount() {
         BankAccount account1 = new BankAccount("Iker Celaya",720.80);
@@ -41,6 +45,7 @@ public class BankAccountTest {
     }
 
     //Crear una cuenta bancaria, retirar una cantidad negativa
+    //Este test va a dar error, ya que estamos sacando una cantidad negativa
     @Test
     void withdrawNegativeAmount() {
         BankAccount account1 = new BankAccount("Iker Celaya",375.00);
@@ -49,6 +54,7 @@ public class BankAccountTest {
     }
 
     //Crear una cuenta bancaria, retirar una cantidad mayor a la que hay en la cuenta
+    //Este test va a dar error, porque no podemos sacar más dinero del que tenemos en la cuenta
     @Test
     void withdrawTooMuchMoney() {
         BankAccount account1 = new BankAccount("Iker Celaya",900.00);
