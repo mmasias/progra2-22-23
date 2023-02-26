@@ -1,0 +1,42 @@
+@startuml
+
+class clases.BankAccount{
+
+-accountHolder : String
+-balance : double
++{static} final String ANSI_RESET = "\u001B[0m";
++{static} final String ANSI_GREEN = "\u001B[32m";
++{static} final String ANSI_YELLOW = "\u001B[33m";
++{static} final String ANSI_BLUE = "\u001B[34m";
++{static} final String ANSI_RED = "\u001B[31m";
+
++deposit()
++withdrawal()
++msgAccount()
++getAccountHolder()
++getBalance()
+}
+
+class clases.Main{
+
++main()
+
+}
+
+class test.BankAccountTest{
+
++void validateCreationAccountHolderAndBalance()
++void validateDeposit()
++void validateDepositAndWithdrawal()
++void validateDepositWithNegativeAmount()
++void validateWithdrawalWithNegativeAmountForUser()
++void validateWithdrawalWithNegativeBalance()
+
+
+}
+
+BankAccount <-> BankAccountTest
+Main <-> BankAccount
+
+
+@enduml
