@@ -1,0 +1,13 @@
+@startuml
+class BankAccount {
+  -private String owner
+  -private double amount
+  ~BankAccount()
+  +public void deposit(double amount)
+  +public void withdraw(double amount)
+  +public String getOwner()
+  +public void setOwner(String owner)
+  +public double getAmount()
+  +public void setAmount(double amount)
+}
+@enduml
