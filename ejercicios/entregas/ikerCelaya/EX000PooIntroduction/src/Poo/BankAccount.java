@@ -21,6 +21,10 @@ public class BankAccount {
         return amount;
     }
 
+    /**
+     * Sets the amount
+     * @param amount amount to be added
+     */
     public void setAmount(double amount) {
         this.amount = amount;
     }
