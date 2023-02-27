@@ -1,0 +1,15 @@
+@startuml
+
+class BankAccount {
+  -titular: String
+  -cantidad: double
+  +BankAccount(titular: String, cantidad: double)
+  +getTitular(): String
+  +setTitular(titular: String): void
+  +getCantidad(): double
+  +setCantidad(cantidad: double): void
+  +deposit(amount: double): void
+  +withdraw(amount: double): void
+}
+
+@enduml
