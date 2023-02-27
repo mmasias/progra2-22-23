@@ -1,0 +1,17 @@
+@startuml
+
+class BankAccount{
+
+    - String holder
+    - double amount
+
+    + void setHolder(String)
+    + void setAmount(double)
+
+    + String getHolder()
+    + double getAmount()
+
+    + void deposit(double amount)
+    + void withdraw(double amount)
+
+}
