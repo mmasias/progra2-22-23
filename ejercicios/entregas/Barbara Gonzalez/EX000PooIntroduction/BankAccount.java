@@ -1,5 +1,5 @@
 public class BankAccount{
-
+ 
     //Atributos
     private String headline; //titular
     private double amount; //cantidad
