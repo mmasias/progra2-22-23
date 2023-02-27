@@ -29,14 +29,14 @@ public class BankAccount {
         if (amount > 0) {
             setAmount(this.amount + amount);
         } else {
-            System.out.println("Esta operación no es válida");
+            System.out.println("This task is not posible");
         }
     }
 
     public void Withdraw(double amount) {
         if (amount > 0) {
             if (amount > this.amount) {
-                System.out.println("No hay suficientes fondos para esta operación");
+                System.out.println("You don't have enough founds");
             } else {
                 setAmount(this.amount - amount);
             }
