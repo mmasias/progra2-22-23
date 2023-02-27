@@ -1,0 +1,8 @@
+@startuml
+class BankAccount {
+~String AccountHolder;
+~double Amount;
++void deposit(double)
++void withdraw(double)
+}
+@enduml
