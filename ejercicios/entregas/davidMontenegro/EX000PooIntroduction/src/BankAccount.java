@@ -6,7 +6,7 @@ public class BankAccount {
         this.owner = owner;
         this.amount = amount;
     }
-   public String getOwner(){
+    public String getOwner(){
         return this.owner;
    }
    public void setOwner(String owner){
@@ -15,7 +15,7 @@ public class BankAccount {
    public void setAmount(double amount){
         this.amount = amount;
    }
-    public double getAmount(double v) { return this.amount; }
+    public double getAmount() { return this.amount; }
 
         public void deposit(double amount){
         if (amount > 0){
@@ -30,4 +30,5 @@ public class BankAccount {
             }
         }
     }
+    public BankAccount() {}
 }
