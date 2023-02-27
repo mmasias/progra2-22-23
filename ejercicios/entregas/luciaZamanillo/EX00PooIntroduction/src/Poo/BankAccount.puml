@@ -1,0 +1,8 @@
+@startuml
+class Poo.BankAccount {
+    ~ String titular
+    ~ accountAmount
+    + deposit(double amount)
+    + withdraw(double amount)
+    }
+@enduml
