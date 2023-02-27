@@ -2,14 +2,7 @@ import Poo.BankAccount;
 
 public class main {
     public static void main(String[] args) {
-        BankAccount headline = new BankAccount();
-        headline.setHeadline("Juan");
+        System.out.println("Hellow World");
 
-        BankAccount amount = new BankAccount();
-        amount.setAmount(45.85);
-
-
-        System.out.println("Nombre de cuenta: " + headline.getHeadline());
-        System.out.println("Saldo de la cuenta: " + amount.getAmount());
     }
 }
