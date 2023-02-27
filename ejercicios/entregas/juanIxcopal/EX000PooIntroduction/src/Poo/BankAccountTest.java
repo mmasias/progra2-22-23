@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 class BankAccountTest {
 
-    @Test
+    /*@Test
     void getHeadline(){
         Headline headline = this.getHeadline();
-    }
+    }*/
 
     /*@Test
     void getStudent(){

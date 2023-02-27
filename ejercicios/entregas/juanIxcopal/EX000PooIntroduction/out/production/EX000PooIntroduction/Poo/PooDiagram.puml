@@ -1,0 +1,9 @@
+@startuml
+
+class Poo.BankAccount {
+   ~ String name
+   + void Student(name: String)
+   + String getName()
+   + void setName(String)
+}
+@enduml
