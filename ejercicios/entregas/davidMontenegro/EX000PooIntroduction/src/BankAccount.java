@@ -1,3 +1,4 @@
+package src;
 public class BankAccount {
     private String owner;
     private double amount;
@@ -14,7 +15,9 @@ public class BankAccount {
    public void setAmount(double amount){
         this.amount = amount;
    }
-   public void deposit(double amount){
+    public double getAmount(double v) { return this.amount; }
+
+        public void deposit(double amount){
         if (amount > 0){
             setAmount(this.amount + amount);
         }
