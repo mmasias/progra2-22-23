@@ -1,0 +1,16 @@
+@startuml
+
+class BankAccount {
+  -owner: String
+  -balance: double
+
+  +BankAccount(owner: String, balance: double)
+  +getOwner(): String
+  +setOwner(owner: String): void
+  +getBalance(): double
+  +setBalance(balance: double): void
+  +deposit(amount: double): void
+  +withdraw(amount: double): void
+}
+
+@enduml
