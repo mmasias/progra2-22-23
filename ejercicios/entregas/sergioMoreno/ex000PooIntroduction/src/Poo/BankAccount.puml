@@ -1,0 +1,13 @@
+@startuml
+class BankAccount {
+  -private String name
+  -private double quantity
+  ~BankAccount()
+  +public void deposit(double quantity)
+  +public void withdraw(double quantity)
+  +public String getName()
+  +public void setName(String name)
+  +public double getQuantity()
+  +public void setQuantity(double quantity)
+}
+@enduml
