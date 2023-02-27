@@ -1,0 +1,14 @@
+@startuml DiagramaDeClases
+
+class Poo.BankAccount {
+   - String Headline
+   - double Amount
+   + BankAccount(String headline, double amount)
+   + Deposit(double amount)
+   + Withdraw(double amount)
+   + getHeadline()
+   + setHeadline()
+   + getAmount()
+   + setAmount()
+}
+@enduml
