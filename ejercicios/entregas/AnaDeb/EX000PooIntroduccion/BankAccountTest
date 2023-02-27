@@ -1,0 +1,35 @@
+
+public class BankAccountTest{
+
+    BankAccount BankAccount1;
+    BankAccount1 = new BankAccount("Barbara",600);
+    System.out.println("Current total on account: " + BankAccount1.getAmount() + "€");
+
+    BankAccount BankAccount2;
+    BankAccount2 = new BankAccount("Fernando",0);
+    BankAccount2.deposit(600);
+    System.out.println("Current total on account: " + BankAccount2.getAmount() + "€");
+
+    BankAccount BankAccount3;
+    BankAccount3 = new BankAccount("Laura",30);
+    BankAccount3.deposit(505);
+    System.out.println("Current total on account: " + BankAccount3.getAmount() + "€");
+    BankAccount3.withdrawals(500);
+    System.out.println("Current total on account: " + BankAccount3.getAmount() + "€");
+
+    BankAccount BankAccount4;
+    BankAccount4 = new BankAccount("Carlos", 642);
+    BankAccount4.deposit(-505);
+    System.out.println("Current total on account: " + BankAccount4.getAmount() + "€");
+
+    BankAccount BankAccount5;
+    BankAccount5 = new BankAccount("Ivan", 6548);
+    BankAccount5.withdrawals(-505);
+    System.out.println("Current total on account: " + BankAccount5.getAmount() + "€");
+
+    BankAccount BankAccount6;
+    BankAccount6 = new BankAccount("Dani", 50);
+    BankAccount3.withdrawals(60);
+    System.out.println("Current total on account: " + BankAccount6.getAmount() + "€");
+
+}
