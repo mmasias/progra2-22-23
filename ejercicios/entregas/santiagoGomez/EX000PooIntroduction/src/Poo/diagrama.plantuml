@@ -1,0 +1,16 @@
+@startuml
+
+class Poo.BankAccount {
+   - String name
+   - double amount
+    + BankAccount(String name, double amount)
+   + getName()
+   + setName()
+   + getAmount()
+   + setAmount()
+  
+   + Deposit(double amount)
+   + Withdraw(double amount)
+}
+
+@enduml
