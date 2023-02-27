@@ -23,4 +23,24 @@ public class BankAccount {
         this.amount = amount;
     }
 
+    void deposit(double addedAmount){
+
+        if(addedAmount > 0){
+            double newAmount = getAmount() + addedAmount;
+                    setAmount(newAmount);
+        }
+    }
+
+    void withdraw(double withdrewAmount){
+
+        if(getAmount() < withdrewAmount){
+            setAmount(0);
+        }else{
+            double newAmount = getAmount() - withdrewAmount;
+            setAmount(newAmount);
+        }
+
+
+    }
+
 }
