@@ -5,6 +5,5 @@ public class Main {
         Student student = new Student();
         student.setName("John");
         System.out.println(student.getName());
-
     }
 }
