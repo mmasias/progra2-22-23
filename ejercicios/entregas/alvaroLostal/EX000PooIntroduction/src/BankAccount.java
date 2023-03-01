@@ -1,44 +1,44 @@
 public class BankAccount {
 
-    private String titular;
-    private double cantidad;
+    private String headline;
+    private double amount;
 
     // Constructor
-    public BankAccount(String titular, double cantidad) {
-        this.titular = titular;
-        this.cantidad = cantidad;
+    public BankAccount(String titular, double amount) {
+        this.headline = titular;
+        this.amount = amount;
     }
 
     // Métodos get y set
-    public String getTitular() {
-        return titular;
+    public String getHeadline() {
+        return headline;
     }
 
-    public void setTitular(String titular) {
-        this.titular = titular;
+    public void setHeadline(String headline) {
+        this.headline = headline;
     }
 
-    public double getCantidad() {
-        return cantidad;
+    public double getAmount() {
+        return amount;
     }
 
-    public void setCantidad(double cantidad) {
-        this.cantidad = cantidad;
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     // Método para depositar dinero
     public void deposit(double amount) {
         if (amount > 0) {
-            this.cantidad += amount;
+            this.amount += amount;
         }
     }
 
     // Método para retirar dinero
     public void withdraw(double amount) {
-        if (amount > 0 && this.cantidad - amount >= 0) {
-            this.cantidad -= amount;
+        if (amount > 0 && this.amount - amount >= 0) {
+            this.amount -= amount;
         } else {
-            this.cantidad = 0;
+            this.amount = 0;
         }
     }
 }
