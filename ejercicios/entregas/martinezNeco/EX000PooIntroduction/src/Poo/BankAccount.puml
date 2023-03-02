@@ -1,0 +1,16 @@
+@startuml
+class BankAccount {
+  -String userName
+  -double balance
+
+  +BankAccount(String userName, double amount)
+
+  +String getUserName()
+  +void setUserName(String userName)
+  +double getBalance()
+  +void setBalance(double balance)
+
+  +void deposit(double balance)
+  +void withdraw(double balance)
+}
+@enduml
