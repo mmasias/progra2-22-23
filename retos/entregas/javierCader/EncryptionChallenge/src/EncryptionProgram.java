@@ -81,14 +81,14 @@ public class EncryptionProgram {
         System.out.println();
     }
 
-    private String getMessage() {
-        System.out.println("Enter a message to be encrypted: ");
+    private String getMessage(String operationType) {
+        System.out.printf("Enter a message to %s: ", operationType);
         String message = scanner.nextLine();
         return message;
     }
 
     private void encrypt() {
-        letters = getMessage().toCharArray();
+        letters = getMessage("encrypt").toCharArray();
 
         for (int i=0; i<letters.length; i++) {
             for (int j=0; j<list.size(); j++) {
@@ -107,7 +107,7 @@ public class EncryptionProgram {
     }
 
     private void decrypt() {
-        letters = getMessage().toCharArray();
+        letters = getMessage("decrypt").toCharArray();
 
         for (int i=0; i<letters.length; i++) {
             for (int j=0; j<shuffledList.size(); j++) {
