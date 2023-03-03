@@ -18,14 +18,19 @@ public class Subject {
         this.students = new Student[capacity];
     }
 
+
     public void addStudent(Student student) {
         if (position < capacity) {
             students[position] = student;
-            position++;
+            position = position + 1;
             isOrdered = false;
         }
     }
-
+    //ಠ_ಠ
+    /**
+     * Returns the average grade of all the students in the subject.
+     * @return The average grade of all the students in the subject.
+     */
     public void orderStudents() {
         if (!isOrdered) {
             for (int i = 0; i < position; i++) {
@@ -41,12 +46,24 @@ public class Subject {
         }
     }
 
+    /*
+    * Returns the median grade of all the students in the subject.
+     */
     public float getMedian() {
-        orderStudents();
-        if (position % 2 == 0) {
-            return (students[position / 2].getGrade() + students[position / 2 - 1].getGrade()) / 2;
-        } else {
-            return students[position / 2].getGrade();
-        }
+        // TODO: Implement this method.
+    }
+
+    public float getAverageGrade(){
+        // TODO: Implement this method.
+    }
+
+    public int getPosition() {
+        return position;
+    }
+    public Student getBestStudent() {
+        // TODO: Implement this method.
+    }
+    public Student getWorstStudent() {
+        // TODO: Implement this method.
     }
 }
