@@ -16,6 +16,43 @@ public class Subject {
     public int getPosition() {
         return position;
     }
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+
+    public Student[] getStudents() {
+        return students;
+    }
+    public void setStudents(Student[] students) {
+        this.students = students;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public boolean isOrdered() {
+        return isOrdered;
+    }
+    public void setOrdered(boolean ordered) {
+        isOrdered = ordered;
+    }
+
+
+    public int getCapacity() {
+        return capacity;
+    }
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+
 
     public void addStudent(Student student){
         if(position < capacity){
@@ -31,9 +68,9 @@ public class Subject {
             for (int i = 0; i < position; i++){
                 for (int j = i+1; j< position; j++){
                     if (students[i].getGrade() < students[j].getGrade()) {
-                        Student temp = students[i];
+                        Student temporal = students[i];
                         students[i] = students[j];
-                        students[j] = temp;
+                        students[j] = temporal;
                     }
                 }
             }
@@ -61,5 +98,15 @@ public class Subject {
         orderStudents();
         this.orderStudents();
         return students[position - 1].getName() + " " + students[position - 1].getSurname();
+    }
+
+    public float getMedian() {
+        orderStudents();
+        this.orderStudents();
+        if (position % 2 == 0) {
+            return (students[position / 2].getGrade() + students[position / 2 - 1].getGrade()) / 2;
+        } else {
+            return students[position / 2].getGrade();
+        }
     }
 }

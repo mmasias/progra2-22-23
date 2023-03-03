@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="refactor(methods): deleted some unnecessary methods">
+    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="feature(methods): added the get average test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/SubjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/SubjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubjectTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +65,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SubjectTest.getAverage">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="EX001PooStudent" />
@@ -91,10 +93,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SubjectTest.orderStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EX001PooStudent" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SubjectTest" />
+      <option name="METHOD_NAME" value="orderStudents" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SubjectTest.getAverage" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SubjectTest.getAverage" />
+        <item itemvalue="JUnit.SubjectTest.orderStudents" />
         <item itemvalue="JUnit.SubjectTest.addStudent" />
       </list>
     </recent_temporary>
@@ -108,7 +121,8 @@
       <option name="presentableId" value="Default" />
       <updated>1677836400957</updated>
       <workItem from="1677836402086" duration="4195000" />
-      <workItem from="1677856879104" duration="2683000" />
+      <workItem from="1677856879104" duration="4963000" />
+      <workItem from="1677867230225" duration="3315000" />
     </task>
     <task id="LOCAL-00001" summary="feature(classes added): added the classes of Student and Subject also the test class of Subject">
       <created>1677840397713</created>
@@ -124,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677857799187</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feature(methods): added the get average test">
+      <created>1677859613080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677859613080</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +154,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature(classes added): added the classes of Student and Subject also the test class of Subject" />
     <MESSAGE value="refactor(methods): deleted some unnecessary methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(methods): deleted some unnecessary methods" />
+    <MESSAGE value="feature(methods): added the get average test" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(methods): added the get average test" />
   </component>
 </project>
