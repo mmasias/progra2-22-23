@@ -5,9 +5,9 @@ public class Main {
         Subject subject = new Subject("Math", 5);
 
 
-        Student firstStudent = new Student("John", "Doe", "123456", 5.0f);
-        Student secondStudent = new Student("Jane", "Doe", "123457", 4.0f);
-        Student thirdStudent = new Student("John", "Smith", "123458", 3.0f);
+        Student firstStudent = new Student("Diego", "Garcia", "123456", 9.5f);
+        Student secondStudent = new Student("Pepe", "Gutierrez", "123457", 6.0f);
+        Student thirdStudent = new Student("Pablo", "Rodriguez", "123458", 3.0f);
 
         subject.addStudent(firstStudent);
         subject.addStudent(secondStudent);
