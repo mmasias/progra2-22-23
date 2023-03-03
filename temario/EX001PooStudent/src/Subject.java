@@ -5,6 +5,11 @@ public class Subject {
     private int position;
     private int capacity;
 
+    /**
+     * Creates a new subject with the given name and capacity.
+     * @param name The name of the subject.
+     * @param capacity The maximum number of students that can be added to the subject.
+     */
     public Subject(String name, int capacity) {
         this.name = name;
         this.capacity = capacity;
