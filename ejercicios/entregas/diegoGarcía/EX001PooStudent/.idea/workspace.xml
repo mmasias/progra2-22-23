@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="feature(classes added): added the classes of Student and Subject also the test class of Subject">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="refactor(methods): deleted some unnecessary methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Subject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubjectTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +63,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.SubjectTest.getAverage">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="EX001PooStudent" />
@@ -84,8 +81,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SubjectTest.getAverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EX001PooStudent" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SubjectTest" />
+      <option name="METHOD_NAME" value="getAverage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SubjectTest.getAverage" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SubjectTest.addStudent" />
       </list>
@@ -100,7 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677836400957</updated>
       <workItem from="1677836402086" duration="4195000" />
-      <workItem from="1677856879104" duration="668000" />
+      <workItem from="1677856879104" duration="2683000" />
     </task>
     <task id="LOCAL-00001" summary="feature(classes added): added the classes of Student and Subject also the test class of Subject">
       <created>1677840397713</created>
@@ -109,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677840397713</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor(methods): deleted some unnecessary methods">
+      <created>1677857799187</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677857799187</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +132,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature(classes added): added the classes of Student and Subject also the test class of Subject" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature(classes added): added the classes of Student and Subject also the test class of Subject" />
+    <MESSAGE value="refactor(methods): deleted some unnecessary methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(methods): deleted some unnecessary methods" />
   </component>
 </project>
