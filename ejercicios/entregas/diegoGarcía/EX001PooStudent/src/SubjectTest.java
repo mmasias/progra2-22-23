@@ -21,10 +21,6 @@ class SubjectTest {
     }
 
     @Test
-    void getMedian() {
-    }
-
-    @Test
     void getAverage() {
     }
 }

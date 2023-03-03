@@ -13,6 +13,10 @@ public class Subject {
         this.students = new Student[capacity];
     }
 
+    public int getPosition() {
+        return position;
+    }
+
     public void addStudent(Student student){
         if(position < capacity){
             students[position] = student;
@@ -37,16 +41,6 @@ public class Subject {
         }
     }
 
-    public float getMedian() {
-        orderStudents();
-        this.orderStudents();
-        if (position % 2 == 0) {
-            return (students[position / 2].getGrade() + students[position / 2 - 1].getGrade()) / 2;
-        } else {
-            return students[position / 2].getGrade();
-        }
-    }
-
     public float getAverageGrade(){
         orderStudents();
         this.orderStudents();
@@ -57,14 +51,12 @@ public class Subject {
         return sum / position;
     }
 
-    public int getPosition() {
-        return position;
-    }
     public String getBestStudent() {
         orderStudents();
         this.orderStudents();
         return students[0].getName() + " " + students[0].getSurname();
     }
+
     public String getWorstStudent() {
         orderStudents();
         this.orderStudents();
