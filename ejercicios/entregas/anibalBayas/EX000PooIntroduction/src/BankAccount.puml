@@ -1,0 +1,9 @@
+@startuml
+class BankAccount {
+  Titular
+  Cantidad
+ ==
+  Deposit
+  Withdraw
+}
+@enduml
