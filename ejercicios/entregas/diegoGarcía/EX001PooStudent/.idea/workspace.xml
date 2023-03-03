@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="feature(methods): added new methods and the class student test">
-      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="feature(methods): added new methods and the class student test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,6 +115,7 @@
       <workItem from="1677836402086" duration="4195000" />
       <workItem from="1677856879104" duration="4963000" />
       <workItem from="1677867230225" duration="3643000" />
+      <workItem from="1677870950151" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="feature(classes added): added the classes of Student and Subject also the test class of Subject">
       <created>1677840397713</created>
@@ -146,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677870841069</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feature(methods): added new methods and the class student test">
+      <created>1677870959779</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677870959779</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
