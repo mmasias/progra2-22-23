@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="feature(methods): added the get average test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/SubjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/SubjectTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubjectTest.java" afterDir="false" />
+    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="feature(methods): added new methods and the class student test">
+      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -122,7 +116,7 @@
       <updated>1677836400957</updated>
       <workItem from="1677836402086" duration="4195000" />
       <workItem from="1677856879104" duration="4963000" />
-      <workItem from="1677867230225" duration="3315000" />
+      <workItem from="1677867230225" duration="3643000" />
     </task>
     <task id="LOCAL-00001" summary="feature(classes added): added the classes of Student and Subject also the test class of Subject">
       <created>1677840397713</created>
@@ -145,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677859613080</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feature(methods): added new methods and the class student test">
+      <created>1677870841068</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677870841069</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +156,7 @@
     <MESSAGE value="feature(classes added): added the classes of Student and Subject also the test class of Subject" />
     <MESSAGE value="refactor(methods): deleted some unnecessary methods" />
     <MESSAGE value="feature(methods): added the get average test" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature(methods): added the get average test" />
+    <MESSAGE value="feature(methods): added new methods and the class student test" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(methods): added new methods and the class student test" />
   </component>
 </project>
