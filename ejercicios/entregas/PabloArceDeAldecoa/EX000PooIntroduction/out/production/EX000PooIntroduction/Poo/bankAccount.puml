@@ -1,0 +1,12 @@
+@startuml BankAccount
+class BankAccount {
+	- String name
+    - double amount
+    + void setName(String)
+    + String getName()
+    + void setAmount(double)
+    + double getAmount()
+    + void withdraw(double)
+    + void deposit(double)
+}
+@enduml
