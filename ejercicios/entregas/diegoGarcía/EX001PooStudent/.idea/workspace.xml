@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="feature(methods): added new methods and the class student test" />
+    <list default="true" id="73c60cec-90f9-4118-ba28-5294e01381f9" name="Changes" comment="feature(methods): added new methods and the class student test">
+      <change afterPath="$PROJECT_DIR$/src/Student.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Subject.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EX001PooStudent/SubjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EX001PooStudent/SubjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubjectTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,31 +74,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubjectTest.addStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EX001PooStudent" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SubjectTest" />
-      <option name="METHOD_NAME" value="addStudent" />
+      <option name="MAIN_CLASS_NAME" value="StudentTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentTest.getGrade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EX001PooStudent" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StudentTest" />
+      <option name="METHOD_NAME" value="getGrade" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubjectTest.getAverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentTest.getId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EX001PooStudent" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SubjectTest" />
-      <option name="METHOD_NAME" value="getAverage" />
+      <option name="MAIN_CLASS_NAME" value="StudentTest" />
+      <option name="METHOD_NAME" value="getId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubjectTest.orderStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentTest.setGrade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="EX001PooStudent" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SubjectTest" />
-      <option name="METHOD_NAME" value="orderStudents" />
+      <option name="MAIN_CLASS_NAME" value="StudentTest" />
+      <option name="METHOD_NAME" value="setGrade" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,9 +116,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.SubjectTest.getAverage" />
-        <item itemvalue="JUnit.SubjectTest.orderStudents" />
-        <item itemvalue="JUnit.SubjectTest.addStudent" />
+        <item itemvalue="JUnit.StudentTest" />
+        <item itemvalue="JUnit.StudentTest.setGrade" />
+        <item itemvalue="JUnit.StudentTest.getGrade" />
+        <item itemvalue="JUnit.StudentTest.getId" />
       </list>
     </recent_temporary>
   </component>
@@ -116,6 +135,9 @@
       <workItem from="1677856879104" duration="4963000" />
       <workItem from="1677867230225" duration="3643000" />
       <workItem from="1677870950151" duration="77000" />
+      <workItem from="1677871041249" duration="131000" />
+      <workItem from="1677886111172" duration="610000" />
+      <workItem from="1677926314779" duration="4426000" />
     </task>
     <task id="LOCAL-00001" summary="feature(classes added): added the classes of Student and Subject also the test class of Subject">
       <created>1677840397713</created>

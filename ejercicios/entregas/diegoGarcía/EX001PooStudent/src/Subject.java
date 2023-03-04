@@ -78,6 +78,12 @@ public class Subject {
         }
     }
 
+    public Student getStudent(int position){
+        orderStudents();
+        this.orderStudents();
+        return students[position];
+    }
+
     public float getAverageGrade(){
         orderStudents();
         this.orderStudents();

@@ -13,7 +13,7 @@ public class Main {
         subject.addStudent(secondStudent);
         subject.addStudent(thirdStudent);
 
-
+        System.out.println("The student in the 2nd position is " + subject.getStudent(1).getName() + " " + subject.getStudent(1).getSurname() );
         System.out.println("The average grade is: " + subject.getAverageGrade());
         System.out.println("The median grade is: " + subject.getMedian());
         System.out.println("The best student is: " + subject.getBestStudent());
