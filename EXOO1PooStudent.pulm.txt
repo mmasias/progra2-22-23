@@ -1,0 +1,43 @@
+@startuml
+Class Student{
+-String name
+-String surname
+-String id
+-float grade
++Student(name: String,surname: String,id: String)
++setGrade(grade:float)
++setName(name: String)
++setSurname(surname: String)
++setId(id: String)
++getId()
++getName()
++getSurname()
++getGrade()
+}
+
+Class Subject{
+-String name
+-student[] students
+-boolean isOrdered
+-int position
+-int capacity
++setCapacity(capacity: int)
++setName(name: String)
++getName()
++getCapacity()
++getStudents()
++getPosition()
++setPosition(position: int)
++setOrdered(isOrdered: boolean)
++getOrdered()
++setStudents(students: Student[])
++getStudents()
++Subject(name:String capacity: int)
++addStudent(student: Student)
++orderStudents()
++getMedian()
++getAverage()
++getBestStudent()
++getWorstStudent()
+}
+@enduml
