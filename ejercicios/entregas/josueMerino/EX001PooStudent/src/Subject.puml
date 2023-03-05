@@ -1,0 +1,13 @@
+@startuml
+class Subject {
+    - name
+    - students
+    - isOrdered
+    - position
+    - capacity
+    + addStudent()
+    + orderStudent()
+    + getBestStudent()
+}
+
+@enduml
