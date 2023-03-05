@@ -16,6 +16,22 @@
 - Jerarquía de clases, herencia.
 - Como diagramar una clase con UML (Intro).
 - Usar herramienta online de PlantUML.
+- Procedimientos, módulos y funciones contrastados con el paradigma de la POO.
+
+# 📘 Test básicos
+- Crear un proyecto de java e importar una librería.
+- Crear un caso de prueba con JUnit.
+- Crear un método de prueba con JUnit.
+
+# 📘 POO en Java
+- Instancia vs declaración.
+- Crear una clase en Java.
+- Uso de la palabra reservada `this`.
+- Crear un método en Java.
+- Crear un constructor en Java.
+- Crear un atributo en Java.
+- Crear un objeto en Java.
+
 
 
 
@@ -24,4 +40,7 @@
 
 
 ## 🧠 Reto 2
-* Desarrollar el reto de **¿Puedes crear un programa para cifrar y descifrar mensajes secretos?** incluido en [esta página](../retos/002-Cifrado.md).
+* Desarrollar el reto de **¿Puedes crear un programa para cifrar y descifrar mensajes secretos?** Incluido en [esta página](../retos/002-Cifrado.md).
+
+## 🧠 Reto 3
+* Calcular la frecuencia de aparición de cada letra en un texto. Incluido en [esta página](../retos/003-Frecuencias.md).
