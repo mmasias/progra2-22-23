@@ -138,8 +138,8 @@ public class Subject {
 
 
     /**
-     * Return the student with the major note
-     * @return the student with the major note
+     * Return the student with the major grade
+     * @return the student with the major grade
      * */
     public Student getBestStudent() {
         this.orderStudents();
@@ -148,8 +148,8 @@ public class Subject {
     }
 
     /**
-     * Return the student with the worst note
-     * @return the student with the worst note
+     * Return the student with the worst grade
+     * @return the student with the worst grade
      * */
     public Student getWorstStudent() {
         this.orderStudents();
