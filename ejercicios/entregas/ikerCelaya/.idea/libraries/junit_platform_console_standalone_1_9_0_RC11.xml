@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="junit-platform-console-standalone-1.9.0-RC11">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/EX000PooIntroduction/lib/junit-platform-console-standalone-1.9.0-RC1.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

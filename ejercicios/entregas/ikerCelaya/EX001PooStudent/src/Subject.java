@@ -3,7 +3,7 @@ public class Subject {
     private Student[] students;
     private boolean isOrdered;
     private int position;
-    private int capacity;
+    int capacity;
 
     /**
      * Creates a new subject with the given name and capacity.
