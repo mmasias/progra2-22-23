@@ -40,15 +40,15 @@ public class SubjectTest {
     public void testGetMedian() {
         Subject subject = new Subject("Math", 4);
 
-        Student student1 = new Student("John", "Doe", "123456", 0.0f);
+        Student student1 = new Student("John", "Doe", "123456", 2.0f);
         Student student2 = new Student("Jonny", "Doa", "123457", 5.0f);
-        Student student3 = new Student("Jonattan", "Doi", "123458", 10.0f);
+        Student student3 = new Student("Jonattan", "Doi", "123458", 4.0f);
 
         subject.addStudent(student1);
         subject.addStudent(student2);
         subject.addStudent(student3);
 
-        float expectedMedian = 7.5f;
+        float expectedMedian = 4.0f;
         float actualMedian = subject.getMedian();
 
         Assert.assertEquals(expectedMedian, actualMedian, 0.01);
@@ -59,7 +59,7 @@ public class SubjectTest {
         Subject subject = new Subject("Math", 3);
 
         Student student1 = new Student("John", "Doe", "123456", 0.0f);
-        Student student2 = new Student("Jonny", "Doa", "123457", 5.0f);
+        Student student2 = new Student("Jonny", "Doa", "123457", 3.0f);
         Student student3 = new Student("Jonattan", "Doi", "123458", 10.0f);
 
         subject.addStudent(student1);

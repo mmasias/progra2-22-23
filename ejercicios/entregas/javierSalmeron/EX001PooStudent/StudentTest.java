@@ -15,7 +15,7 @@ public class StudentTest {
 
         assertEquals(name, student.getName());
         assertEquals(surname, student.getSurname());
-        //assertEquals(id, student.getId());
+        assertEquals(id, student.getId());
         assertEquals(grade, student.getGrade(), 0); // delta is 0 to check for exact equality of floats
     }
 
