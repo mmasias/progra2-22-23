@@ -8,10 +8,14 @@ public class Main {
 
         Subject subject = new Subject("Math", 5);
 
+        Subject subject2 = new Subject("Programación II", 52);
+
 
         Student firstStudent = new Student("John", "Doe", "123456", 5.0f);
         Student secondStudent = new Student("Jane", "Doe", "123457", 4.0f);
         Student thirdStudent = new Student("John", "Smith", "123458", 3.0f);
+        Student fourthStudent = new Student("Pérez", "Galindo", "777777", 8.5f);
+        Student fifthStudent = new Student("Gabriel", "Mourinho", "1564678", 6.5f);
 
         subject.addStudent(firstStudent);
         subject.addStudent(secondStudent);
