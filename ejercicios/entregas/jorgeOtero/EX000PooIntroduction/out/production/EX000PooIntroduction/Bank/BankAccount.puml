@@ -1,7 +1,7 @@
 @startuml
 class BankAccount {
-~ String accountHolder
-~ Double somebodyAmmount
+- String accountHolder
+- Double somebodyAmmount
 + void setAccountHolder(String)
 + void getAccountHolder()
 + void setAmmount(double)
