@@ -19,13 +19,8 @@
             // TODO: Implement this method.
         }
 
-        public Student(){
-
-        }
 
 
-
-        }
 
         public void setGrade(float grade){
                 this.grade = grade;
