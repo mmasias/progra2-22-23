@@ -18,6 +18,9 @@ public class Subject {
         this.students = new Student[capacity];
     }
 
+    public Student[] getStudent() {
+        return students;
+    }
 
     public void addStudent(Student student) {
         if (position < capacity) {
