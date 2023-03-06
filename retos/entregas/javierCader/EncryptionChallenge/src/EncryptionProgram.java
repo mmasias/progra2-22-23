@@ -1,12 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 import java.util.Scanner;
 
 public class EncryptionProgram {
 
     private Scanner scanner;
-    private Random random;
     private ArrayList<Character> list;
     private ArrayList<Character> shuffledList;
     private char character;
@@ -15,7 +13,6 @@ public class EncryptionProgram {
 
     EncryptionProgram() {
         scanner = new Scanner(System.in);
-        random = new Random();
         list = new ArrayList<Character>();
         shuffledList = new ArrayList<Character>();
         character = ' ';
