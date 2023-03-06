@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        // TODO: Create anew instance of the class "Subject" and add 5 students to it.
+        // TODO: Create anew instance of the class "src.Subject" and add 5 students to it.
 
         Subject subject = new Subject("Math", 5);
 
