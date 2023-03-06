@@ -27,7 +27,7 @@ public class Subject {
     }
 
     public Student[] getStudents() {
-        return students;
+        return this.students;
     }
 
     public void setStudents(Student[] students) {
@@ -93,16 +93,16 @@ public class Subject {
     public float getMedian() {
         this.orderStudents();
         Student[] students = this.getStudents();
-        int totalStudents = students.length;
+        int totalStudents = this.students.length;
 
         if( (totalStudents % 2) == 0 )
         {
             int centralPosition = totalStudents / 2;
-            return (students[centralPosition].getGrade() - students[centralPosition - 1].getGrade())/ 2;
+            return (students[centralPosition].getGrade() + students[centralPosition - 1].getGrade())/ 2;
         }
         else {
             int centralPosition = (int) Math.ceil(totalStudents / 2d);
-            return students[centralPosition].getGrade();
+            return students[centralPosition - 1].getGrade();
         }
 
     }
