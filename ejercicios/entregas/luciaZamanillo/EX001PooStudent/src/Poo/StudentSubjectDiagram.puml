@@ -1,0 +1,35 @@
+@startuml
+class Poo.Student {
+    ~ name
+    ~ surname
+    ~ id
+    ~ grade
+
+    + getName()
+    + setName()
+    + getSurname()
+    + setSurname()
+    + getId()
+    + setId()
+    + getGrade()
+    + setGrade()
+}
+
+class Poo.Subject {
+    ~ name
+    ~ students
+    ~ isOrdered
+    ~ position
+    ~ capacity
+
+    + addStudent(Student student)
+    + orderStudents()
+    + getStudent(int index)
+    + getBestStudent()
+    + getWorstStudent()
+    + getAverage()
+    + getMedian()
+}
+
+Poo.Student --> Poo.Subject
+@enduml
