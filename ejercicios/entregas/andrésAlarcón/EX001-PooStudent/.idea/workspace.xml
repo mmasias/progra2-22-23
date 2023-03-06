@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84210584-5577-4750-b0d2-bc447b8bca50" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EX000PooIntroduction/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/StudentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SubjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../andrésAlarcón.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EX000PooIntroduction/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EX000PooIntroduction/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EX000PooIntroduction/EX000PooIntroduction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../EX000PooIntroduction/EX000PooIntroduction.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EX000PooIntroduction/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EX000PooIntroduction/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../temario/EX001PooStudent/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../temario/EX001PooStudent/src/Main.java" afterDir="false" />
+    <list default="true" id="84210584-5577-4750-b0d2-bc447b8bca50" name="Changes" comment="feature(EX001PooStudent): Creating methods and test">
+      <change afterPath="$PROJECT_DIR$/src/Student.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Subject.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/andre/Documents/REPOSITORIOS/UNIVERSIDAD/progra2-22-23",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/Documents/REPOSITORIOS/UNIVERSIDAD/progra2-22-23&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -99,8 +83,17 @@
       <workItem from="1678100522603" duration="222000" />
       <workItem from="1678101463294" duration="27000" />
       <workItem from="1678116910773" duration="1896000" />
-      <workItem from="1678129169600" duration="1695000" />
+      <workItem from="1678129169600" duration="2026000" />
+      <workItem from="1678132557723" duration="1369000" />
     </task>
+    <task id="LOCAL-00001" summary="feature(EX001PooStudent): Creating methods and test">
+      <created>1678131571757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678131571757</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,13 +137,17 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feature(EX001PooStudent): Creating methods and test" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(EX001PooStudent): Creating methods and test" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/StudentTest.java</url>
-          <line>8</line>
-          <properties class="org.example.StudentTest" method="getGrade">
+          <line>7</line>
+          <properties class="org.example.StudentTest" method="setGrade">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
