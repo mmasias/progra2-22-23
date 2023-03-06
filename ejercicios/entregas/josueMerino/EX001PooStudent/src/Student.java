@@ -5,7 +5,11 @@ public class Student {
     private float grade;
 
     /**
-     *
+     * Creates a new Student with his name, surname, id and grade
+     * @param name The name of the student
+     * @param  surname The surname of the student
+     * @param id The identification of the student
+     * @param grade The grade of the student within a subject
      * */
     public Student(String name, String surname, String id, float grade) {
         this.id = id;
