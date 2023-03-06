@@ -58,6 +58,9 @@ public class Subject {
         this.capacity = capacity;
     }
 
+    /**
+     * Add a student increasing the subject position
+     * */
     public void addStudent(Student student) {
         if (this.position < this.capacity) {
             students[this.position] = student;
@@ -66,11 +69,18 @@ public class Subject {
         }
     }
 
+    /**
+     * Get Student by his index
+     * @return The student in the index position
+     * */
     public Student getStudent(int index)
     {
         return this.students[index];
     }
 
+    /**
+     * Order students by their grades
+     * */
     public void orderStudents() {
         if (!isOrdered) {
             for (int i = 0; i < position; i++) {
@@ -87,8 +97,9 @@ public class Subject {
         this.setStudents(this.students);
     }
 
-    /*
+    /**
      * Returns the median grade of all the students in the subject.
+     * @return the median grade of all the students in the subject.
      */
     public float getMedian() {
         this.orderStudents();
@@ -126,11 +137,20 @@ public class Subject {
     }
 
 
+    /**
+     * Return the student with the major note
+     * @return the student with the major note
+     * */
     public Student getBestStudent() {
         this.orderStudents();
 
         return this.students[this.position - 1];
     }
+
+    /**
+     * Return the student with the worst note
+     * @return the student with the worst note
+     * */
     public Student getWorstStudent() {
         this.orderStudents();
         return this.students[0];
