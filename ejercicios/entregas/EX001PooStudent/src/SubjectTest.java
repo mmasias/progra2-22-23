@@ -1,3 +1,2 @@
-public class SubjectTest {
-
+package PACKAGE_NAME;public class SubjectTest {
 }
