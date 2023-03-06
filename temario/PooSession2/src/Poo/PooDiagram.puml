@@ -1,0 +1,14 @@
+@startuml
+class Poo.Attendance {
+   ~ Student student
+   ~ String time
+   + void Attendance()
+}
+
+class Poo.Student {
+   ~ String name
+   + void Student(name: String)
+   + String getName()
+   + void setName(String)
+}
+@enduml
