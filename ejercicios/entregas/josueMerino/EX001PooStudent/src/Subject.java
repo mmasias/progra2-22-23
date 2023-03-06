@@ -74,7 +74,7 @@ public class Subject {
     public void orderStudents() {
         if (!isOrdered) {
             for (int i = 0; i < position; i++) {
-                for (int j = i + 1; j < (position - i); j++) {
+                for (int j = i + 1; j < position; j++) {
                     if (students[i].getGrade() > students[j].getGrade()) {
                         Student temp = students[i];
                         students[i] = students[j];

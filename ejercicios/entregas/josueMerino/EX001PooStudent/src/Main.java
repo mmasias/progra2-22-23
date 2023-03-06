@@ -21,10 +21,20 @@ public class Main {
         subject.addStudent(secondStudent);
         subject.addStudent(thirdStudent);
 
+        subject2.addStudent(firstStudent);
+        subject2.addStudent(secondStudent);
+        subject2.addStudent(thirdStudent);
+        subject2.addStudent(fourthStudent);
+        subject2.addStudent(fifthStudent);
 
         System.out.println("The average grade is: " + subject.getAverageGrade());
         System.out.println("The best student is: " + subject.getBestStudent().getName());
         System.out.println("The worst student is: " + subject.getWorstStudent().getName());
+
+        System.out.println("Second Subject Statistics");
+        System.out.println("The average grade is: " + subject2.getAverageGrade());
+        System.out.println("The best student is: " + subject2.getBestStudent().getName());
+        System.out.println("The worst student is: " + subject2.getWorstStudent().getName());
 
     }
 }
