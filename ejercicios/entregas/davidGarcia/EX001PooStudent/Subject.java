@@ -49,7 +49,7 @@ public class Subject {
     /*
      * Returns the median grade of all the students in the subject.
      */
-    private Student getStudent(int i){
+    public Student getStudent(int i){
         Student s=null;
         if(i<position){
             s=this.students[i];
