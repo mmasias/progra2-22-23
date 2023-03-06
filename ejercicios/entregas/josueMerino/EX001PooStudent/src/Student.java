@@ -15,6 +15,11 @@ public class Student {
         this.grade = grade;
     }
 
+    public float getGrade() {
+        return grade;
+    }
+
+
     public String getName() {
         return this.name;
     }
