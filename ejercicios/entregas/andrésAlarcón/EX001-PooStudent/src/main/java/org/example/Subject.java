@@ -83,6 +83,34 @@ public class Subject {
     }
 
     /*
+     * Returns the capacity of subject.
+     */
+    public int getCapacity() {
+        return capacity;
+    }
+
+    /*
+     * Returns the name of subject.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /*
+     * Returns the isOrdered of subject.
+     */
+    public boolean getIsOrdered() {
+        return isOrdered;
+    }
+
+    /*
+     * Returns the students of subject.
+     */
+    public Student[] getStudents() {
+        return students;
+    }
+
+    /*
      * Returns the best student in the subject.
      */
     public Student getBestStudent() {
