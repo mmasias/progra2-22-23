@@ -3,6 +3,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class SubjectTest {
 
     @org.junit.jupiter.api.Test
+    void Subject() {
+        Subject subject = new Subject("Programación II", 59);
+        assertEquals("Programación II", subject.getName());
+        assertEquals(59, subject.getCapacity());
+    }
+
+    @org.junit.jupiter.api.Test
     void getName() {
         Subject subject = new Subject("Programación II", 59);
         assertEquals("Programación II", subject.getName());

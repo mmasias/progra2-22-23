@@ -1,14 +1,17 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
 
-//    @BeforeEach
-//    void setUp() {
-//
-//    }
+    @Test
+    void Student() {
+        Student student = new Student("Josué", "Merino", "123456", 7.5f);
+        assertEquals("Josué", student.getName());
+        assertEquals("Merino", student.getSurname());
+        assertEquals("123456", student.getId());
+        assertEquals(7.5f, student.getGrade());
+    }
 
     @Test
     void setGrade() {
