@@ -7,14 +7,14 @@ class SubjectTest {
 
     @Test
     void creationTest(){
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
     }
 
 
     @Test
     void getPosition() {
         Student testStudent = new Student("John", "Doe", "12345", 10);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
         subject.addStudent(testStudent);
 
         int expectedPosition = 1;
@@ -25,7 +25,7 @@ class SubjectTest {
     @Test
     void getName() {
         Student testStudent = new Student("John", "Doe", "12345", 10);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
         subject.addStudent(testStudent);
 
         String expectedPosition = "POO";
@@ -39,7 +39,7 @@ class SubjectTest {
     void isOrdered() {
         Student testStudent = new Student("John", "Doe", "12345", 2.0f);
         Student testStudent2 = new Student("Jane", "Doe", "23456", 8.0f);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
 
         subject.addStudent(testStudent);
         subject.addStudent(testStudent2);
@@ -51,8 +51,8 @@ class SubjectTest {
 
     @Test
     void getCapacity() {
-        Student testStudent = new Student("John", "Doe", "12345", 10,0f);
-        Subject subject = new Subject("POO", 58);
+        Student testStudent = new Student("John", "Doe", "12345", 2.0f);
+        Subject subject = new Subject("POO", 47);
         subject.addStudent(testStudent);
 
         int expectedCapacity = 58;
@@ -65,7 +65,7 @@ class SubjectTest {
         Student testStudent = new Student("John", "Doe", "12345", 2.0f);
         Student testStudent2 = new Student("Jane", "Doe", "23456", 5.0f);
         Student testStudent3 = new Student("Jimmy", "Doe", "34567", 8.0f);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
 
         subject.addStudent(testStudent);
         subject.addStudent(testStudent2);
@@ -78,7 +78,7 @@ class SubjectTest {
     @Test
     void addStudent() {
         Student testStudent = new Student("John", "Doe", "12345", 10.0f);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
         subject.addStudent(testStudent);
 
         int expectedLength = 1;
@@ -92,7 +92,7 @@ class SubjectTest {
     void orderStudents() {
         Student testStudent = new Student("John", "Doe", "12345", 2.0f);
         Student testStudent2 = new Student("Jane", "Doe", "23456", 8.0f);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
 
         subject.addStudent(testStudent);
         subject.addStudent(testStudent2);
@@ -109,7 +109,7 @@ class SubjectTest {
     void getAverage() {
         Student testStudent = new Student("Jane", "Doe", "23456", 8.0f);
         Student testStudent2 = new Student("John", "Doe", "12345", 2.0f);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
 
         subject.addStudent(testStudent);
         subject.addStudent(testStudent2);
@@ -125,7 +125,7 @@ class SubjectTest {
     void getBestStudent() {
         Student testStudent = new Student("John", "Doe", "12345", 8.0f);
         Student testStudent2 = new Student("Jane", "Doe", "23456", 2.0f);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
 
         subject.addStudent(testStudent);
         subject.addStudent(testStudent2);
@@ -140,7 +140,7 @@ class SubjectTest {
     void getWorstStudent() {
         Student testStudent = new Student("John", "Doe", "12345", 8.0f);
         Student testStudent2 = new Student("Jane", "Doe", "23456", 2.0f);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
 
         subject.addStudent(testStudent);
         subject.addStudent(testStudent2);
@@ -156,7 +156,7 @@ class SubjectTest {
         Student testStudent = new Student("John", "Doe", "12345", 2.0f);
         Student testStudent2 = new Student("Jane", "Doe", "23456", 5.0f);
         Student testStudent3 = new Student("Jimmy", "Doe", "34567", 8.0f);
-        Subject subject = new Subject("POO", 58);
+        Subject subject = new Subject("POO", 47);
 
         subject.addStudent(testStudent);
         subject.addStudent(testStudent2);

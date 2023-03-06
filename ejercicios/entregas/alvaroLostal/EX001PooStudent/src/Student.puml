@@ -1,0 +1,17 @@
+@startuml
+class Poo.Student {
+    + name
+    + surname
+    + id
+    + grade
+
+    - getName()
+    - setName()
+    - getSurname()
+    - setSurname()
+    - getId()
+    - setId()
+    - getGrade()
+    - setGrade()
+}
+@enduml
