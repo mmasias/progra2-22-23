@@ -11,7 +11,7 @@ class SubjectTest {
     @org.junit.jupiter.api.Test
     void getIsOrdered() {
         Subject subject = new Subject("Programación II", 59);
-        assertEquals(false, subject.getIsOrdered());
+        assertFalse(subject.getIsOrdered());
     }
 
     @org.junit.jupiter.api.Test
@@ -32,7 +32,7 @@ class SubjectTest {
         Student student = new Student("Josué", "Merino", "123456", 5.6f);
         subject.addStudent(student);
 
-        assertEquals(1, subject.getStudents().length);
+        assertEquals(1, subject.getPosition());
     }
 
     @org.junit.jupiter.api.Test
@@ -64,7 +64,7 @@ class SubjectTest {
 
     @org.junit.jupiter.api.Test
     void getMedian() {
-        Subject subject = new Subject("Programación II", 2);
+        Subject subject = new Subject("Programación II", 59);
         Student student1 = new Student("Josué", "Merino", "123456", 5f);
         Student student2 = new Student("Samuel", "Merino", "123457", 8f);
 
@@ -78,7 +78,7 @@ class SubjectTest {
 
     @org.junit.jupiter.api.Test
     void getAverageGrade() {
-        Subject subject = new Subject("Programación II", 2);
+        Subject subject = new Subject("Programación II", 59);
         Student student1 = new Student("Josué", "Merino", "123456", 5f);
         Student student2 = new Student("Samuel", "Merino", "123457", 8f);
 
@@ -92,7 +92,7 @@ class SubjectTest {
 
     @org.junit.jupiter.api.Test
     void getBestStudent() {
-        Subject subject = new Subject("Programación II", 2);
+        Subject subject = new Subject("Programación II", 59);
         Student student1 = new Student("Josué", "Merino", "123456", 5.6f);
         Student student2 = new Student("Samuel", "Merino", "123457", 8.1f);
 
@@ -106,7 +106,7 @@ class SubjectTest {
 
     @org.junit.jupiter.api.Test
     void getWorstStudent() {
-        Subject subject = new Subject("Programación II", 2);
+        Subject subject = new Subject("Programación II", 59);
         Student student1 = new Student("Josué", "Merino", "123456", 5.6f);
         Student student2 = new Student("Samuel", "Merino", "123457", 8.1f);
 

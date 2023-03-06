@@ -93,7 +93,7 @@ public class Subject {
     public float getMedian() {
         this.orderStudents();
         Student[] students = this.getStudents();
-        int totalStudents = this.students.length;
+        int totalStudents = this.position;
 
         if( (totalStudents % 2) == 0 )
         {
@@ -113,12 +113,14 @@ public class Subject {
      */
     public float getAverageGrade(){
         Student[] students = this.getStudents();
-        int totalStudents = this.students.length;
+        int totalStudents = this.position;
         float gradesSum = 0f;
 
-        for (Student student: students) {
-            gradesSum += student.getGrade();
+        for (int i = 0; i < totalStudents; i++) {
+            gradesSum += students[i].getGrade();
         }
+
+
 
         return gradesSum / totalStudents;
     }
@@ -126,9 +128,8 @@ public class Subject {
 
     public Student getBestStudent() {
         this.orderStudents();
-        int positionOfBestStudent = this.students.length - 1;
 
-        return this.students[positionOfBestStudent];
+        return this.students[this.position - 1];
     }
     public Student getWorstStudent() {
         this.orderStudents();
