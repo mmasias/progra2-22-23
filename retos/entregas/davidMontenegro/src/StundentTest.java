@@ -38,6 +38,4 @@ class StudentTest {
     }
 }
 
-class subjectTest{
-    
-}
+
