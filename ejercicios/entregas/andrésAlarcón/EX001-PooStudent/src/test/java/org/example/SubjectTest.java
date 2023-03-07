@@ -6,31 +6,31 @@ class SubjectTest {
 
     @Test
     void getName() {
-    Subject subjectOne = new subject("Biology", 25);
+    Subject subjectOne = new Subject("Biology", 25);
     assertEquals("Biology", subjectOne.getName());
     }
 
     @Test
     void getCapacity() {
-        Subject subjectTwo = new subject("Chemistry", 30);
+        Subject subjectTwo = new Subject("Chemistry", 30);
         assertEquals(30, subjectTwo.getCapacity());
     }
 
     @Test
     void getIsOrdered() {
-        Subject subjectThree = new subject("Psychology", 35);
+        Subject subjectThree = new Subject("Psychology", 35);
         assertEquals(false, subjectThree.getIsOrdered());
     }
 
     @Test
     void getPosition() {
-        Subject subjectFour = new subject("Mathematics", 40);
+        Subject subjectFour = new Subject("Mathematics", 40);
         assertEquals(0, subjectFour.getPosition());
     }
 
     @Test
     void Subject() {
-        Subject subjectFive = new subject("ED", 20);
+        Subject subjectFive = new Subject("ED", 20);
         assertEquals("ED", subjectFive.getName());
         assertEquals(20, subjectFive.getCapacity());
         assertEquals(false, subjectFive.getIsOrdered());
@@ -39,10 +39,10 @@ class SubjectTest {
 
     @Test
     void addStudent() {
-        Subject subjectSix = new subject("Physics", 28);
-        Student studentTestOne = new Student("Jose", "Perez", 1248369, 2.0f);
-        Student studentTestTwo = new Student("Maria", "Gonzalez", 1248370, 3.0f);
-        Student studentTestThree = new Student("Juan", "Perez", 1248371, 4.0f);
+        Subject subjectSix = new Subject("Physics", 28);
+        Student studentTestOne = new Student("Jose", "Perez", "1248369", 2.0f);
+        Student studentTestTwo = new Student("Maria", "Gonzalez", "1248370", 3.0f);
+        Student studentTestThree = new Student("Juan", "Perez", "1248371", 4.0f);
 
         subjectSix.addStudent(studentTestOne);
         subjectSix.addStudent(studentTestTwo);
@@ -51,10 +51,10 @@ class SubjectTest {
 
     @Test
     void orderStudents() {
-        Subject subjectSeven = new subject("Religion", 21);
-        Student studentTestOne = new Student("Miguel", "Perez", 1248329, 2.0f);
-        Student studentTestTwo = new Student("Fernando", "Gonzalez", 1248330, 3.0f);
-        Student studentTestThree = new Student("Sebastian", "Perez", 1248321, 4.0f);
+        Subject subjectSeven = new Subject("Religion", 21);
+        Student studentTestOne = new Student("Miguel", "Perez", "1248329", 2.0f);
+        Student studentTestTwo = new Student("Fernando", "Gonzalez", "1248330", 3.0f);
+        Student studentTestThree = new Student("Sebastian", "Perez", "1248321", 4.0f);
 
         subjectSeven.addStudent(studentTestOne);
         subjectSeven.addStudent(studentTestTwo);
@@ -98,9 +98,9 @@ class SubjectTest {
         Student studentTestTwo = new Student("Karen", "Goitia", "1235206", 6.320f);
         Student studentTestThree = new Student("Carmen", "Miora", "96547", 5.450f);
 
-        subjectTen.addStudent(studentTest1);
-        subjectTen.addStudent(studentTest2);
-        subjectTen.addStudent(studentTest3);
+        subjectTen.addStudent(studentTestOne);
+        subjectTen.addStudent(studentTestTwo);
+        subjectTen.addStudent(studentTestThree);
 
         assertEquals(7.2400002f, subjectTen.getAverageGrade());
     }
@@ -113,7 +113,7 @@ class SubjectTest {
         Student studentTestThree = new Student("Sofia", "Miora", "96547", 5.450f);
 
         subjectEleven.addStudent(studentTestOne);
-        subjectEleven.addStudent(studentTestTwo
+        subjectEleven.addStudent(studentTestTwo);
         subjectEleven.addStudent(studentTestThree);
 
         assertEquals(6.320f, subjectEleven.getMedian());
