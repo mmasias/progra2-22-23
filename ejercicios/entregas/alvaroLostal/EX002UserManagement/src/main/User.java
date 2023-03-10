@@ -1,4 +1,4 @@
-package Main;
+package main;
 
 public class User {
     private String userName;
@@ -39,4 +39,6 @@ public class User {
     public void setLogin(boolean login) {
         this.login = login;
     }
+
+    public User[] String;
 }
