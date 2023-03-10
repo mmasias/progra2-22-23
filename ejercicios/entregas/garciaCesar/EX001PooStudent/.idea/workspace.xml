@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53dccd3f-c669-4eb0-8683-a2c0c2d3713b" name="Changes" comment="" />
+    <list default="true" id="53dccd3f-c669-4eb0-8683-a2c0c2d3713b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/EX001PooStudent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EX001PooStudent.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +19,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/César/IdeaProjects/progra2-22-23"
