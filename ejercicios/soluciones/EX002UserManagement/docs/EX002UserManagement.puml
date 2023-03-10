@@ -1,0 +1,15 @@
+@startuml
+Class User {
+    -UserName: String
+    -UserPassword: String
+    +login: boolean
+    +User()
+    +User(String UserName, String userPassword)
+    +setUserName(String)
+    +getUserName(): String
+    +setUserPassword(String)
+    +getUserPassword(): String
+    +setLogin(boolean)
+    +getLogin(): boolean
+}
+@enduml
