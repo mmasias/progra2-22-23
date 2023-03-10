@@ -4,7 +4,7 @@ public class Main {
         // Although I recommend not touching this code just make sure you understand it,
         // but you can do it if you want.
 
-        // TODO: Create anew instance of the class "src.Subject" and add 5 students to it.
+        // TODO: Create anew instance of the class "Subject" and add 5 students to it.
 
         Subject subject = new Subject("Math", 5);
 
@@ -20,7 +20,10 @@ public class Main {
 
         System.out.println("The average grade is: " + subject.getAverageGrade());
         System.out.println("The best student is: " + subject.getBestStudent().getName());
-        System.out.println("The worst student is: " + subject.getWorstStudent().getName());
+        System.out.println("The worst student is: "
+                + subject.getWorstStudent().getName()
+                + " " + subject.getWorstStudent().getSurname()
+                + " with a grade of: " + subject.getWorstStudent().getGrade());
 
     }
 }
