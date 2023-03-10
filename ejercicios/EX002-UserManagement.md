@@ -43,7 +43,6 @@ Atributos recomendados:
 La clase gestor es la encargada de gestionar la autentificación de los usuarios, y de mostrar el menú de opciones personalizado al usuario.
 Atributos recomendados:
 * Lista de usuarios
-* Lista de opciones
 * Usuario autentificado
 * Opción seleccionada
 * Número máximo de usuarios
