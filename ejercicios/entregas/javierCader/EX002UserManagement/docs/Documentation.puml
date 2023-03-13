@@ -1,0 +1,83 @@
+@startuml
+folder main {
+    class Main {
+        +main(): void
+    }
+    package Interfaces {
+        interface MenuItem {
+            String getText()
+            void execute()
+        }
+    }
+    package CLasses {
+        package Menu {
+            class Options {
+                -MenuItem[] studentOptions
+                -MenuItem[] teacherOptions
+                -MenuItem[] adminOptions
+                +getStudentOptions(): MenuItem[]
+                +getAdminOptions(): MenuItem[]
+                +getTeacherOptions(): MenuItem[]
+            }
+            class MenuItemImpl implements MenuItem {
+                -String text
+                -Runnable action
+                +MenuItemImpl(String text, Runnable action)
+                +getText(): String
+                +execute(): void
+            }
+        }
+        package Users {
+            class User {
+                #Options GeneralOptions
+                #String username
+                #String password;
+                #boolean login
+                +setUsername(String userName): void
+                +setPassword(String password): void
+                +setLogin(): void
+                +getUsername(): String
+                +getPassword(): String
+                +isLogin(): boolean
+            }
+            class Student extends User {
+                -MenuItem[] options
+                -String[] subjects
+                -int[] grades
+                +Student(String username, String password, int[] grades)
+                +getGrades(): int[]
+                +getOptions(): MenuItem[]
+                +getSubjects(): String[]
+            }
+            class Teacher extends User {
+                -MenuItem[] options
+                -String subject
+                +Teacher(String userName, String password, String subject)
+                +getOptions(): MenuItem[]
+                +getSubject(): String
+            }
+            class Admin extends User {
+                -MenuItem[] options
+                +Admin(String userName, String password)
+                +getOptions(): MenuItem[]
+            }
+        }
+        class Manager {
+            -boolean runSystem
+            -User currentUser
+            -User[] users
+            -Scanner scanner
+            +Manager(User[] users)
+            +login(): void
+            +validateUserName(String userName): boolean
+            +validatePassword(String password): boolean
+            +getValidatedUser(String userName): User
+            +displayOptions(): void
+            +getOptions(): MenuItem[]
+        }
+    }
+
+
+}
+
+@enduml
