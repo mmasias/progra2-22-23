@@ -20,7 +20,10 @@ public class Main {
 
         System.out.println("The average grade is: " + subject.getAverageGrade());
         System.out.println("The best student is: " + subject.getBestStudent().getName());
-        System.out.println("The worst student is: " + subject.getWorstStudent().getName());
+        System.out.println("The worst student is: "
+                + subject.getWorstStudent().getName()
+                + " " + subject.getWorstStudent().getSurname()
+                + " with a grade of: " + subject.getWorstStudent().getGrade());
 
     }
 }

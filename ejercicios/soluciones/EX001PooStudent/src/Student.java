@@ -12,43 +12,41 @@ public class Student {
      * @param grade The grade of the student.
      */
     public Student(String name, String surname, String id, float grade) {
-        // TODO: Implement this method.
-    }
-
-    public Student(){
-
-
-    }
-
-    public void setGrade(float grade){
-        // TODO: Implement this method.
-    }
-
-    public float getGrade() {
-        // TODO: Implement this method.
+        this.name = name;
+        this.surname = surname;
+        this.id = id;
+        this.grade = grade;
     }
 
     public String getName() {
-        // TODO: Implement this method.
+        return name;
     }
 
     public void setName(String name) {
-        // TODO: Implement this method.
+        this.name = name;
     }
 
     public String getSurname() {
-        // TODO: Implement this method.
+        return surname;
     }
 
     public void setSurname(String surname) {
-        // TODO: Implement this method.
+        this.surname = surname;
     }
 
     public String getId() {
-        // TODO: Implement this method.
+        return id;
     }
 
     public void setId(String id) {
-        // TODO: Implement this method.
+        this.id = id;
+    }
+
+    public float getGrade() {
+        return grade;
+    }
+
+    public void setGrade(float grade) {
+        this.grade = grade;
     }
 }
