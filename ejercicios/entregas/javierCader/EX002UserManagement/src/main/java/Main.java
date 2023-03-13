@@ -8,11 +8,13 @@ import Interfaces.MenuItem;
 
 public class Main {
     public static void main(String args[]) {
-        Student student1 = new Student("JavierC", "12345", new int[] {10, 8, 9, 10});
-        Student student2 = new Student("JavierS", "12345", new int[] {8, 8, 9, 10});
-        Admin elder = new Admin("elderbol", "18910");
-        Teacher jorge = new Teacher("jorgercresp", "222333", "Física");
+        User[] users =  new User[] {
+                new Student("JavierC", "12345", new int[] {10, 8, 9, 10}),
+                new Student("JavierS", "12345", new int[] {8, 8, 9, 10}),
+                new Admin("elderbol", "18910"),
+                new Teacher("jorgercresp", "222333", "Física")
+        };
 
-        Manager manager = new Manager(new User[]{student1, student2, elder, jorge});
+        Manager manager = new Manager(users);
     }
 }

@@ -1,6 +1,8 @@
 @startuml
 folder main {
     class Main {
+        +Manager manager
+        +User[] users
         +main(): void
     }
     package Interfaces {
@@ -9,7 +11,7 @@ folder main {
             void execute()
         }
     }
-    package CLasses {
+    package Classes {
         package Menu {
             class Options {
                 -MenuItem[] studentOptions
@@ -19,7 +21,7 @@ folder main {
                 +getAdminOptions(): MenuItem[]
                 +getTeacherOptions(): MenuItem[]
             }
-            class MenuItemImpl implements MenuItem {
+            class MenuItemImpl implements main.Interfaces.MenuItem {
                 -String text
                 -Runnable action
                 +MenuItemImpl(String text, Runnable action)
@@ -76,6 +78,11 @@ folder main {
             +getOptions(): MenuItem[]
         }
     }
+    Main *--  Manager : requires
+    Main o--  User : has
+    User *--  Options : requires
+    Options *--  main.Interfaces.MenuItem : requires
+
 
 
 }
