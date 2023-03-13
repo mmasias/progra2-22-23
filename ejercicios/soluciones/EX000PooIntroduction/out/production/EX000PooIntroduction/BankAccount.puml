@@ -1,0 +1,16 @@
+@startuml
+class BankAccount {
+    - String owner
+    - float amount
+
+    + BankAccount(String, float)
+    + BankAccount()
+
+    + String getOwner()
+    + float getAmount()
+    + void setOwner(String)
+    + void setAmount(float)
+    + void deposit(float)
+    + float withdraw(float)
+}
+@enduml
