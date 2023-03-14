@@ -1,29 +1,28 @@
+
 package main;
 
 public class User {
-    private boolean login;
+    private boolean login = false;
     private String userPassword;
     private String userName;
 
     public User() {
-        this.login = false;
         this.userPassword = "user";
         this.userName = "user";
     }
+
     public User(String name, String password) {
-        this.login = false;
         this.userPassword = password;
         this.userName = name;
     }
 
     public String getUserPassword() {
-        return userPassword;
+        return this.userPassword;
     }
 
     public String getUserName() {
-        return userName;
+        return this.userName;
     }
-
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
@@ -34,11 +33,11 @@ public class User {
     }
 
     public boolean isLogin() {
-        return login;
+        return this.login;
     }
 
     public void setLogin(boolean login) {
         this.login = login;
     }
-
 }
+

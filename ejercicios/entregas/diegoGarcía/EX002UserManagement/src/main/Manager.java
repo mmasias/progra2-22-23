@@ -1,4 +1,5 @@
 package main;
+
 import java.util.Scanner;
 public class Manager {
 
@@ -9,32 +10,40 @@ public class Manager {
 
         User[] userList = new User[maxNumberOfUsers];
         boolean authenticated = false;
-        String[] optionList = {"Change password", "Change user", "Exit"};
+        Option optionList = new Option (new String[] {"Change password", "Change user", "Show users"});
 
         signUp(maxNumberOfUsers, userList);
-        authenticated = signIn(userList, authenticated);
 
-        if(authenticated){
-            showOptions(optionList);
-        }
+        logIn(userList, authenticated, optionList);
 
 
 
     }
 
-    public static String scannerString(){
+    public static String scannerString(){   //reed the input from the user
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
         return string;
     }
 
-    public static int scannerInt(){
+    public static int scannerInt(){  //reed the input from the user
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
         return number;
     }
 
-    public static void signUp(int maxNumberOfUsers, User[] userList){
+    public static void addUser(User user, int maxNumberOfUsers, User[] userList) {  //add the user to the user list
+        if(maxNumberOfUsers <= 10) {
+            for (int i = 0; i < maxNumberOfUsers; i++) {
+                if (userList[i] == null) {
+                    userList[i] = user;
+                    break;
+                }
+            }
+        }
+    }
+
+    public static void signUp(int maxNumberOfUsers, User[] userList){   //create the users with a name and a password
         for (int i = 0; i < maxNumberOfUsers; i++) {
             System.out.println("SIGN UP");
 
@@ -49,80 +58,113 @@ public class Manager {
         }
     }
 
-    public static Boolean signIn(User[] userList, boolean authenticated){
+    public static Boolean signIn(User[] userList, boolean authenticated ){  //introduce the username and the password to the authentication method
         System.out.println("SIGN IN");
         System.out.print("User name: ");
         String userName = scannerString();
         System.out.print("Password: ");
         String userPassword = scannerString();
-
+        System.out.println("\n");
 
 
         return authentication(userName, userPassword, userList, authenticated);
     }
 
-    public static boolean authentication(String userName, String userPassword, User[] userList, boolean authenticated){
-        int auxUser = 0;
+    public static boolean authentication(String userName, String userPassword, User[] userList, boolean authenticated){ //check if the username and the password are correct
         for (int i = 0; i < userList.length; i++) {
             if (userList[i] != null) {
                 if (userList[i].getUserName().equals(userName) && userList[i].getUserPassword().equals(userPassword)) {
-                    System.out.println("Welcome " + userList[i].getUserName());
+                    System.out.println("Welcome " + userList[i].getUserName() + "\n");
                     authenticated = true;
                     userList[i].setLogin(true);
-                    auxUser = i;
                     break;
                 }
 
             }
 
-        }
-
-        if(!userList[auxUser].getUserName().equals(userName) || !userList[auxUser].getUserPassword().equals(userPassword)){
-            System.out.println("Wrong password or user name try again \n" );
-            signIn(userList, authenticated);
         }
 
         return authenticated;
     }
 
-    public static void addUser(User user, int maxNumberOfUsers, User[] userList) {
-        if(maxNumberOfUsers <= 10) {
-            for (int i = 0; i < maxNumberOfUsers; i++) {
-                if (userList[i] == null) {
-                    userList[i] = user;
-                    break;
-                }
-            }
+    public static void logIn(User[] userList, boolean authenticated, Option optionList){    //check if the user is authenticated
+        if(signIn(userList, authenticated)){
+            optionList.showOptions();
+            optionChoose(optionList, userList);
+
+        }else{
+            System.out.println("Wrong password or user name try again \n" );
         }
     }
 
-    public static void showOptions(String[] optionList) {
-        for (int i = 0; i < optionList.length; i++) {
-            if (optionList[i] != null) {
-                System.out.println((i+1) + ". " + optionList[i]);
-            }
-        }
-    }
-/**
-    public void addOption(String option) {
-        for (int i = 0; i < optionList.length; i++) {
-            if (optionList[i] == null) {
-                optionList[i] = option;
+    public static void optionChoose(Option optionList, User[] userList){  //choose the option and execute it
+        System.out.print("\n Choose an option: ");
+        switch (scannerInt()){
+
+            case 1:
+                System.out.println("\n Change password");
+                System.out.println("----------------");
+                optionList.changePassword(userList);
                 break;
-            }
+            case 2:
+                System.out.println("\n Change user");
+                System.out.println("----------------");
+                optionList.changeUser(userList, false, optionList);
+                break;
+            case 3:
+                System.out.println("\n Show users");
+                System.out.println("----------------");
+                optionList.showUsers(userList);
+                break;
+            default:
+                System.out.println("Wrong option");
+                System.out.println("----------------");
+                break;
         }
+
     }
 
 
+    public static class User {
+        private boolean login;
+        private String userPassword;
+        private String userName;
 
-    public void showUsers() {
-        for (int i = 0; i < userList.length; i++) {
-            if (userList[i] != null) {
-                System.out.println(userList[i].getUserName());
-            }
+        public User() {
+            this.login = false;
+            this.userPassword = "user";
+            this.userName = "user";
         }
+        public User(String name, String password) {
+            this.login = false;
+            this.userPassword = password;
+            this.userName = name;
+        }
+
+        public String getUserPassword() {
+            return userPassword;
+        }
+
+        public String getUserName() {
+            return userName;
+        }
+
+
+        public void setUserPassword(String userPassword) {
+            this.userPassword = userPassword;
+        }
+
+        public void setUserName(String userName) {
+            this.userName = userName;
+        }
+
+        public boolean isLogin() {
+            return login;
+        }
+
+        public void setLogin(boolean login) {
+            this.login = login;
+        }
+
     }
-**/
-
-
 }
