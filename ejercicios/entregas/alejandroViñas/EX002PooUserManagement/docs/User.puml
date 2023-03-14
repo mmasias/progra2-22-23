@@ -1,0 +1,56 @@
+@startuml
+Class User{
+ -userName : String
+ -userPassword : String
+ +login : boolean
+ +User()
+ +User(userName : String, userPassword : String)
+ +setUserName(userName : String)
+ +getUserName() : String
+ +setUserPassword(userPassword : String)
+ +getUserPassword() : String
+ +setLogin(login : boolean)
+ +getLogin() : boolean
+ +login(userName : String, userPassword : String) : boolean
+ +logout() : boolean
+ +changePassword(userPassword : String) : String
+ +changeUserName(userName : String) : String
+}
+Class Manager{
+ -users : ArrayList<User>
+ -maxUsers : int
+ -login : boolean
+ -options : Option
+ +Manager()
+ +setMaxUsers(maxUsers : int)
+ +getMaxUsers() : int
+ +setLogin(login : boolean)
+ +getLogin() : boolean
+ +setOptions(options : Option)
+ +getOptions() : Option
+ +setUsers(users : ArrayList<User>)
+ +getUsers() : ArrayList<User>
+ +addUser()
+ +logIn()
+}
+Class Option{
+ -maxOption : int
+ -options : String[]
+ -optionStatus : boolean[]
+ -manager : Manager
+ -user : User
+ +Option()
+ +setOption(option : String, index : int)
+ +getOption(index : int) : String
+ +setOptionStatus(optionStatus : boolean, index : int)
+ +getOptionStatus(index : int) : boolean
+ +setMaxOption(maxOption : int)
+ +getMaxOption() : int
+ +setManager(manager : Manager)
+ +getManager() : Manager
+ +setUser(user : User)
+ +getUser() : User
+ +selectedOption()
+ +showOptions()
+ }
+@enduml
