@@ -1,26 +1,19 @@
 package Classes.Users;
-
-import Interfaces.MenuItem;
-
 public class Student extends User {
-    private MenuItem[] options;
-    private String[] subjects;
-    private int[] grades;
+    private final String[] subjects;
+    private final int[] grades;
     public Student (String username, String password, int[] grades) {
-        this.username = username;
-        this.password = password;
-        this.login = false;
+        super(username, password, false);
         this.subjects = new String[] {"Programación II", "TIC", "IGPS", "Física"};
         this.grades = grades;
-        this.options = this.GeneralOptions.getStudentOptions();
     }
 
     public int[] getGrades() {
         return grades;
     }
 
-    public MenuItem[] getOptions() {
-        return options;
+    public void setGrade(int index, int newGrade) {
+        this.grades[index] = newGrade;
     }
 
     public String[] getSubjects() {

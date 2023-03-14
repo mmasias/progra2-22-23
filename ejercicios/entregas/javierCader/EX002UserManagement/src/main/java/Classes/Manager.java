@@ -1,10 +1,7 @@
 package Classes;
 
-import Classes.Menu.MenuItemImpl;
+import Classes.Menu.Options;
 import Interfaces.MenuItem;
-import Classes.Users.Admin;
-import Classes.Users.Student;
-import Classes.Users.Teacher;
 import Classes.Users.User;
 
 import java.util.Scanner;
@@ -12,9 +9,9 @@ import java.util.Scanner;
 public class Manager {
     private boolean runSystem;
     private User currentUser;
-    private User[] users;
-    private Scanner scanner = new Scanner(System.in);
-
+    private final User[] users;
+    private final Scanner scanner = new Scanner(System.in);
+    private final Options options = new Options(this);
 
     public Manager(User[] users) {
         this.users = users;
@@ -31,9 +28,10 @@ public class Manager {
             if (usernameValidation) {
                 System.out.println("Input password:");
                 String password = scanner.nextLine();
-                boolean passwordValidation = this.validatePassword(password);
+                boolean passwordValidation = this.validatePassword(userName, password);
                 if (passwordValidation) {
                     this.currentUser = getValidatedUser(userName);
+                    this.currentUser.setLogin(true);
                     this.displayOptions();
                 } else {
                     System.out.println("Invalid password");
@@ -53,10 +51,12 @@ public class Manager {
         return false;
     }
 
-    public boolean validatePassword(String password) {
+    public boolean validatePassword(String username, String password) {
         for (User user: users) {
-            if (user.getPassword().equals(password)) {
-                return true;
+            if (user.getUsername().equals(username)) {
+                if (user.getPassword().equals(password)) {
+                    return true;
+                }
             }
         }
         return false;
@@ -72,36 +72,37 @@ public class Manager {
     }
 
     public void displayOptions() {
-        boolean displayOptions = true;
         int selectedOption;
-        MenuItem[] options = getOptions(this.currentUser);
+        MenuItem[] optionsMenu = this.options.getSelectedUserOptions();
 
-        while (displayOptions) {
+        if (optionsMenu == null) {
+            throw new IllegalStateException("Invalid Options");
+        }
+
+        while (this.currentUser.isLogin()) {
             System.out.println("*".repeat(30));
-            for (MenuItem option: options) {
+            for (MenuItem option: optionsMenu) {
                 System.out.printf("%c %s %s", '>', option.getText(), System.lineSeparator());
             }
             System.out.println("Input the action you want to execute:");
             selectedOption = scanner.nextInt();
-            if (selectedOption < 1 || selectedOption > options.length) {
+            if (selectedOption < 1 || selectedOption > optionsMenu.length) {
                 System.out.println("Invalid choice.");
             } else {
-                options[selectedOption -1].execute();
+                optionsMenu[selectedOption -1].execute();
             }
-        }
-    }
-
-    public MenuItem[] getOptions(User user) {
-        if (user instanceof Student) {
-            return ((Student) user).getOptions();
-        } else if (user instanceof Teacher) {
-            return ((Teacher) user).getOptions();
-        } else {
-            return ((Admin) user).getOptions();
         }
     }
 
     public User getCurrentUser() {
         return this.currentUser;
+    }
+
+    public User[] getAllUsers() {
+        return this.users;
+    }
+
+    public void setRunSystem(boolean runSystem) {
+        this.runSystem = runSystem;
     }
 }

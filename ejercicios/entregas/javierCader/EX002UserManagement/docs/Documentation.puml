@@ -2,7 +2,7 @@
 folder main {
     class Main {
         +Manager manager
-        +User[] users
+        +UserDataBase userDataBase
         +main(): void
     }
     package Interfaces {
@@ -14,12 +14,24 @@ folder main {
     package Classes {
         package Menu {
             class Options {
-                -MenuItem[] studentOptions
-                -MenuItem[] teacherOptions
-                -MenuItem[] adminOptions
-                +getStudentOptions(): MenuItem[]
-                +getAdminOptions(): MenuItem[]
-                +getTeacherOptions(): MenuItem[]
+                -final MenuItem quit
+                -final MenuItem logout
+                -final Manager manager
+                -final Scanner scanner
+                -final MenuItem[] studentOptions
+                -final MenuItem[] teacherOptions
+                -final MenuItem[] adminOptions
+                +Options(Manager manager)
+                -logout(): void
+                -quit(): void
+                -displayGrades(): void
+                -studentSendEmail(): void
+                -validateSubject: boolean
+                -getSubjectTeacher: String
+                -getStudentOptions(): MenuItem[]
+                -getAdminOptions(): MenuItem[]
+                -getTeacherOptions(): MenuItem[]
+                +getSelectedUserOptions(): MenuItem[]
             }
             class MenuItemImpl implements main.Interfaces.MenuItem {
                 -String text
@@ -30,8 +42,7 @@ folder main {
             }
         }
         package Users {
-            class User {
-                #Options GeneralOptions
+            abstract class User {
                 #String username
                 #String password;
                 #boolean login
@@ -43,32 +54,27 @@ folder main {
                 +isLogin(): boolean
             }
             class Student extends User {
-                -MenuItem[] options
                 -String[] subjects
                 -int[] grades
                 +Student(String username, String password, int[] grades)
                 +getGrades(): int[]
-                +getOptions(): MenuItem[]
                 +getSubjects(): String[]
             }
             class Teacher extends User {
-                -MenuItem[] options
                 -String subject
                 +Teacher(String userName, String password, String subject)
-                +getOptions(): MenuItem[]
                 +getSubject(): String
             }
             class Admin extends User {
-                -MenuItem[] options
                 +Admin(String userName, String password)
-                +getOptions(): MenuItem[]
             }
         }
         class Manager {
-            -boolean runSystem
+            -final boolean runSystem
             -User currentUser
-            -User[] users
-            -Scanner scanner
+            -final User[] users
+            -final Scanner scanner
+            -final Options options
             +Manager(User[] users)
             +login(): void
             +validateUserName(String userName): boolean
@@ -76,12 +82,21 @@ folder main {
             +getValidatedUser(String userName): User
             +displayOptions(): void
             +getOptions(): MenuItem[]
+            +setRunSystem(): void
         }
+        class UserDataBase {
+            -final users
+            +UserDataBase()
+            +getUsers(): User[]
+        }
+
+
     }
-    Main *--  Manager : requires
-    Main o--  User : has
-    User *--  Options : requires
-    Options *--  main.Interfaces.MenuItem : requires
+    Main --*  Manager : requires
+    Main --*  UserDataBase : requires
+    UserDataBase --*  User : requires
+    Options *--  Manager : requires
+    Options --*  main.Interfaces.MenuItem : requires
 
 
 
