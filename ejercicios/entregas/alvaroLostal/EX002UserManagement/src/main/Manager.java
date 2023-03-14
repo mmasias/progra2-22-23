@@ -8,7 +8,7 @@ public class Manager {
     private Option optionMenu;
     private int maxUsers;
 
-    public Manager(int maxUsers) {
+    public Manager() {
         this.users = new ArrayList<String>();
         this.authenticatedUser = null;
         this.optionMenu = new Option(5);

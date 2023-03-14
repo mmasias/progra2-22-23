@@ -4,7 +4,7 @@ public class User {
     private String userName;
     private String userPassword;
     public boolean login;
-    public User() {
+    public User(java.lang.String user3, java.lang.String password3, java.lang.String jack) {
         userName = "user";
         userPassword = "user";
         login = false;
