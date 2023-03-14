@@ -3,7 +3,7 @@
 ## 📝 Instrucciones de entrega
 
 1. Clonar el repositorio de la materia o actualizarlo si ya lo tenías clonado.
-2. En la carpeta `ejercicios/entregas` tal como se indica en [este archivo](./entregas/readme.md), crear un proyecto el nombre `EX000PooIntroduction` basado en este [ejemplo](../temario/PooSession2).
+2. En la carpeta `ejercicios/entregas` tal como se indica en [este archivo](./entregas/readme.md), crear un proyecto con el nombre `EX000PooIntroduction` basado en este [ejemplo](../temario/PooSession2).
 3. Implementar la clase `BankAccount` tal como se indica en el enunciado.
 4. Implementar la clase `BankAccountTest` tal como se indica en el enunciado.
 5. Crear el diagrama de clases para  `BankAccount` con `PlantUML` tal como se indica en el enunciado.
@@ -14,7 +14,7 @@
 ## 🧠 Enunciado
 
 ### Cuenta bancaria
-Crea una clase llamada `CuentaBancaria` que tendrá los siguientes atributos privados: 
+Crea una clase llamada `BankAccount` que tendrá los siguientes atributos privados: 
 - Titular
 - Cantidad (puede tener decimales).
 - Crea sus métodos get, set.
