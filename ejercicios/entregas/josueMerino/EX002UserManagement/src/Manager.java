@@ -34,9 +34,18 @@ public class Manager {
         this.maxUsers = maxUsers;
     }
 
-    public void login(User user)
+    public boolean login(User user)
     {
+        for (User userToFind:users) {
+            if((userToFind.getName() == user.getName()) &&
+                    (userToFind.getPassword() == user.getPassword())
+            ){
 
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void register(User user)
