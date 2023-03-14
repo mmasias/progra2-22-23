@@ -17,7 +17,7 @@ public class Option {
         }
     }
 
-    public void changePassword(Manager.User[] userList){
+    public void changePassword(User[] userList){
         for(int i= 0; i < userList.length; i++){
             if(userList[i].isLogin()){
                 System.out.println("Enter the new password: ");
@@ -30,11 +30,11 @@ public class Option {
 
 
 
-    public void changeUser(Manager.User[] userList, boolean authenticated, Option optionList){
+    public void changeUser(User[] userList, boolean authenticated, Option optionList){
         logIn(userList, authenticated, optionList);
     }
 
-    public void showUsers(Manager.User[] userList){
+    public void showUsers(User[] userList){
         for (int i = 0; i < userList.length; i++) {
             if (userList[i] != null) {
                 System.out.println(userList[i].getUserName());
