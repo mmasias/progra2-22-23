@@ -1,0 +1,16 @@
+@startuml
+class Poo.BankAccount {
+   ~ String accountHolder
+   ~ Double amount
+   ~ Double amountWithdraw
+   ~ Double deposit
+   + String getAccountHolder()
+   + void setAccountHolder(String)
+   + Double getAmount()
+   + void setAmount(Double)
+   + Double getAmountWithdraw()
+   + void setAmountWithdraw(Double)
+   + Double getDeposit()
+   + void setDeposit(Double)
+}
+@enduml
