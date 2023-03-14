@@ -12,10 +12,24 @@ class User {
 }
 
 class Option {
-
+    -ArraysList: List<String>
+    -selectedOption: int
+    -maxOptions: int
+    +Option()
+    +addOption(String)
+    +getOptions(): List<String>
+    +getSelectedOption(): int
+    +setSelectedOption(int)
 }
 
 class Manager {
-
+    -ArrayList: List<users>
+    -authenticatedUser: User
+    -optionMenu: int
+    -maxUsers: int
+    +Manager()
+    +addUser(User)
+    +authenticateUser(String, String): boolean
+    +showOptionMenu(): int
 }
 @enduml

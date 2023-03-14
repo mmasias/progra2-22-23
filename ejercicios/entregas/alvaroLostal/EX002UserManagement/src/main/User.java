@@ -8,6 +8,7 @@ public class User {
         userName = "user";
         userPassword = "user";
         login = false;
+        
     }
 
     public User(String userName, String userPassword, boolean login) {
