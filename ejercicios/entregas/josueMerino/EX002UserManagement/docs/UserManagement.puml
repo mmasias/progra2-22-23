@@ -25,19 +25,19 @@ class Option {
     + setSelectedOption(String option)
     + getMaxOptions()
     + setMaxOption(int maxOptions)
-    + getOption(String option)
-    + addOption(String option)
 }
 
 class Manager {
     - User[] users
     - User[] usersAuthenticated
     - int maxUsers
-    + Manager(User[] users, Option options, int maxUsers)
+    + Manager(User[] users, int maxUsers)
     + login(User user)
+    + register(User user)
     + getUserOptions(User user)
     + getUsers()
     + setUsers(User[] users)
     + addUser(User user)
+    + getUser(User user)
 }
 @enduml

@@ -1,13 +1,13 @@
 public class User {
     private String name;
     private String password;
-    private boolean isLogged;
+    private Option items;
 
-    public User(String name, String password)
+    public User(String name, String password, Option option)
     {
         this.name = name;
         this.password = password;
-        this.isLogged = false;
+        this.items = option;
     }
 
     public String getName() {
@@ -26,11 +26,11 @@ public class User {
         this.password = password;
     }
 
-    public boolean isLogged() {
-        return isLogged;
+    public Option getItems() {
+        return items;
     }
 
-    public void setLogged(boolean logged) {
-        isLogged = logged;
+    public void setItems(Option items) {
+        this.items = items;
     }
 }
