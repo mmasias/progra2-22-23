@@ -1,0 +1,45 @@
+@startuml
+Class User {
+    -UserName: String
+    -UserPassword: String
+    +login: boolean
+    +User()
+    +User(String UserName, String userPassword)
+    +setUserName(String)
+    +getUserName(): String
+    +setUserPassword(String)
+    +getUserPassword(): String
+    +setLogin(boolean)
+    +getLogin(): boolean
+}
+
+Class Options {
+    -options : String[]
+    -manager : Manager
+    -user : User
+    +Option()
+    +getOption(index : int) : String
+    +setOption(option : String, index : int)
+    +setManager(manager : Manager)
+    +setUser(user : User)
+    +getManager() : Manager
+    +getUser() : User
+    +showOptions()
+    +getSelectedOption()
+}
+
+Class Manager{
+ -users : ArrayList<User>
+ -login : boolean
+ -options : Option
+ +Manager()
+ +setLogin(login : boolean)
+ +getLogin() : boolean
+ +setOptions(options : Option)
+ +getOptions() : Option
+ +setUsers(users : ArrayList<User>)
+ +getUsers() : ArrayList<User>
+ +addUser()
+ +logIn()
+}
+@enduml
