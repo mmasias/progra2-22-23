@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Manager {
     private User[] users;
     private User[] usersAuthenticated;
@@ -6,7 +8,7 @@ public class Manager {
     public Manager(User[] users, int maxUsers)
     {
         this.users = users;
-        this.usersAuthenticated = null;
+        this.usersAuthenticated = new User[maxUsers];
         this.maxUsers = maxUsers;
     }
 
@@ -40,7 +42,7 @@ public class Manager {
             if((userToFind.getName() == user.getName()) &&
                     (userToFind.getPassword() == user.getPassword())
             ){
-
+                this.addUserToUsersAuthenticated(userToFind);
                 return true;
             }
         }
@@ -50,11 +52,28 @@ public class Manager {
 
     public void register(User user)
     {
-
+        if(this.users.length < this.maxUsers) {
+            for (int i = 0; i < this.maxUsers; i++) {
+                if (this.users[i] == null) {
+                    this.users[i] = user;
+                    break;
+                }
+            }
+        }
+        else {
+            System.out.println("No hay espacio en el servidor :(");
+        }
     }
 
-    public User getUser(User user)
+    private void addUserToUsersAuthenticated(User userToFind)
     {
-        return null;
+        for (int i = 0; i < this.maxUsers; i++) {
+            if(this.usersAuthenticated[i] == null)
+            {
+                this.usersAuthenticated[i] = userToFind;
+                break;
+            }
+        }
     }
+
 }
