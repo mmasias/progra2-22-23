@@ -1,6 +1,6 @@
 package Classes.Menu;
 
-import Interfaces.MenuItem;
+import Utils.Interfaces.MenuItem;
 
 public class MenuItemImpl implements MenuItem {
     private final String text;

@@ -1,7 +1,7 @@
 package Classes;
 
 import Classes.Menu.Options;
-import Interfaces.MenuItem;
+import Utils.Interfaces.MenuItem;
 import Classes.Users.User;
 
 import java.util.Scanner;

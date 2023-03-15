@@ -5,12 +5,24 @@ folder main {
         +UserDataBase userDataBase
         +main(): void
     }
-    package Interfaces {
-        interface MenuItem {
-            String getText()
-            void execute()
+    package Utils {
+        package Interfaces {
+            interface MenuItem {
+                String getText()
+                void execute()
+            }
+        }
+        package Enums {
+            enum Subjects {
+                PROGRAMMING_II,
+                MATHEMATICS_II,
+                LOGIC,
+                DISCRETE_MATHEMATICS,
+                ICT
+            }
         }
     }
+
     package Classes {
         package Menu {
             class Options {
@@ -33,7 +45,7 @@ folder main {
                 -getTeacherOptions(): MenuItem[]
                 +getSelectedUserOptions(): MenuItem[]
             }
-            class MenuItemImpl implements main.Interfaces.MenuItem {
+            class MenuItemImpl implements main.Utils.Interfaces.MenuItem {
                 -String text
                 -Runnable action
                 +MenuItemImpl(String text, Runnable action)
@@ -95,8 +107,10 @@ folder main {
     Main --*  Manager : requires
     Main --*  UserDataBase : requires
     UserDataBase --*  User : requires
+    Student --o main.Utils.Enums.Subjects : has
+    Teacher --o main.Utils.Enums.Subjects : has
     Options *--  Manager : requires
-    Options --*  main.Interfaces.MenuItem : requires
+    Options --*  main.Utils.Interfaces.MenuItem : requires
 
 
 

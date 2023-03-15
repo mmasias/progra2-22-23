@@ -1,16 +1,16 @@
 package Classes.Users;
 
+import Utils.Enums.Subjects;
+
 public class Teacher extends User {
+    final private Subjects subject;
 
-    final private String subject;
-
-    public Teacher(String username, String password, String subject) {
+    public Teacher(String username, String password, Subjects subject) {
         super(username, password, false);
         this.subject = subject;
     }
 
-
-    public String getSubject() {
+    public Subjects getSubject() {
         return subject;
     }
 }

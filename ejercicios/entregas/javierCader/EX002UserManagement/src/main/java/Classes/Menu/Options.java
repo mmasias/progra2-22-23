@@ -3,8 +3,10 @@ import Classes.Manager;
 import Classes.Users.Student;
 import Classes.Users.Teacher;
 import Classes.Users.User;
-import Interfaces.MenuItem;
+import Utils.Enums.Subjects;
+import Utils.Interfaces.MenuItem;
 
+import javax.security.auth.Subject;
 import java.util.Scanner;
 
 public class Options {
@@ -48,7 +50,7 @@ public class Options {
     }
 
     private void displayGrades() {
-        String[] subjects = ((Student) this.manager.getCurrentUser()).getSubjects();
+        Subjects[] subjects = ((Student) this.manager.getCurrentUser()).getSubjects();
         int[] grades = ((Student) this.manager.getCurrentUser()).getGrades();
         for (int i = 0; i < subjects.length; i++) {
             System.out.printf("%c %s: %d %s", '>', subjects[i], grades[i], System.lineSeparator());
@@ -70,14 +72,14 @@ public class Options {
     }
 
     private void seeAllStudentGrades() {
-        String teacherSubject = ((Teacher) this.manager.getCurrentUser()).getSubject();
+        Subjects teacherSubject = ((Teacher) this.manager.getCurrentUser()).getSubject();
         System.out.printf("Notas de %s:%n", teacherSubject);
         for (User user : this.manager.getAllUsers()) {
             if (user instanceof Student student) {
                 int subjectIndex = -1;
-                String[] subjects = student.getSubjects();
+                Subjects[] subjects = student.getSubjects();
                 for (int i = 0; i < subjects.length; i++) {
-                    if (subjects[i].equalsIgnoreCase(teacherSubject)) {
+                    if (subjects[i].equals(teacherSubject)) {
                         subjectIndex = i;
                         break;
                     }
@@ -93,7 +95,7 @@ public class Options {
     }
 
     private void changeStudentGrade() {
-        String teacherSubject = ((Teacher) this.manager.getCurrentUser()).getSubject();
+        Subjects teacherSubject = ((Teacher) this.manager.getCurrentUser()).getSubject();
         System.out.println("Student to change grade");
         String student = scanner.nextLine();
         if (!validateStudent(student)) {
@@ -102,7 +104,7 @@ public class Options {
         for (User user : this.manager.getAllUsers()) {
             if (user instanceof Student studentInst && (studentInst.getUsername().equalsIgnoreCase(student))){
                 int[] grades = studentInst.getGrades();
-                String[] subjects = studentInst.getSubjects();
+                Subjects[] subjects = studentInst.getSubjects();
                 for (int i = 0; i < subjects.length; i++) {
                     if (subjects[i].equals(teacherSubject)) {
                         System.out.printf("%c %s: %d %n", '>', studentInst.getUsername(), grades[i]);
@@ -127,8 +129,8 @@ public class Options {
     }
 
     private boolean validateSubject(String subject) {
-        for (String studentSubject : ((Student) this.manager.getCurrentUser()).getSubjects()) {
-            if (studentSubject.equalsIgnoreCase(subject)) {
+        for (Subjects studentSubject : ((Student) this.manager.getCurrentUser()).getSubjects()) {
+            if (studentSubject.getStringValue().equalsIgnoreCase(subject)) {
                 return true;
             }
         }
@@ -137,7 +139,7 @@ public class Options {
 
     private String getSubjectTeacher(String subject) {
         for (User user : manager.getAllUsers()) {
-            if (user instanceof Teacher && ((Teacher) user).getSubject().equalsIgnoreCase(subject)) {
+            if (user instanceof Teacher && ((Teacher) user).getSubject().getStringValue().equalsIgnoreCase(subject)) {
                 return user.getUsername();
             }
         }
