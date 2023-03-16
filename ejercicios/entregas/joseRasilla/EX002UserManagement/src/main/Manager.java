@@ -6,6 +6,7 @@ public class Manager {
         SelectMenuOpt();
     }
 
+    // Selects the option in the main menu
     public static void SelectMenuOpt(){
         Texts.PrintOptions(Texts.MAIN_OPTIONS);
         switch (Utilities.InputInt()){
@@ -64,11 +65,12 @@ public class Manager {
 
 
 
-
+    // Opens page menu when logged
     public static void LoggedMenu(){
         Texts.PrintHeader(Texts.LOGIN_WELCOME(UsersDataBase.loggedUser));
         SelectLoggedOpt();
     }
+    // Selects the option int the logged menu
     public static void SelectLoggedOpt(){
         Texts.PrintOptions(Texts.LOGGED_OPTIONS);
         switch (Utilities.InputInt()){
@@ -91,6 +93,7 @@ public class Manager {
         }
     }
 
+    // Asks the current password, checks if it's correct, then asks for the new and changes the password to it
     public static void ChangePassword(){
         User user = UsersDataBase.loggedUser;
         Texts.PrintHeader(Texts.LOGIN_PASSWORD);

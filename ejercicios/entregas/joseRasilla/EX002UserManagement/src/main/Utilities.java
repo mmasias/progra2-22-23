@@ -1,10 +1,7 @@
 package main;
-
 import java.util.Scanner;
 
 public class Utilities {
-
-
     //INPUTS
     public static String InputS(){
         Scanner scan = new Scanner(System.in);

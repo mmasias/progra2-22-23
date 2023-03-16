@@ -7,6 +7,7 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ManagerTests {
+    // Tests various registers and Log Ins
     @Test
     public void TestRegisterUsers(){
         UsersDataBase.AddUser("User1", "Password1");
