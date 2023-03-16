@@ -1,0 +1,60 @@
+@startuml
+class User {
+- userName: String
+- userPassword: String
+- private boolean login
+- private String userType
++ User(String userName, String userPassword)
++ User()
++ setUserName(String)
++ getUserName(): String
++ setUserPassword(String)
++ getUserPassword(): String
++ setLogin(boolean)
++ getLogin(): boolean
++ setUserType(String)
++ getUserType(): String
+}
+
+class Manager {
+- User[] userList
+- int position
+- int capacity
+- boolean userExist
++ Manager(int capacity)
++ Manager()
++ checkUser(String): boolean
++ addUser(User, String)
++ createUser(User, String)
++ getUsers(int): User
++ setCapacity(int)
++ getUserPosition(String): int
++ getCapacity(): int
++ getPosition(): int
++ authUser(String, String): boolean
++ canChangeUser(User, String): boolean
++ usersAll(): String
+}
+
+class Option {
+- String username
+- String password
+- String passwordConfirm
+- boolean exit
++ Option()
++ menuPrimary()
++ menuLogged(User)
++ selectedOption(String)
++ selectedOptionLogged(String)
++ listAllUsers()
++ changeCapacityOption()
++ logOutOption(User)
++ changeUserOption(User)
++ changePassOption(User)
++ loginOption()
++ registerOption()
++ createAdminUser(String, String)
++ checkEnteredUser()
++ checkEnteredPass(String, String): boolean
+}
+@enduml
