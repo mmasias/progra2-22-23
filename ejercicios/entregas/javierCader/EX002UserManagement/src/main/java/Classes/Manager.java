@@ -54,7 +54,7 @@ public class Manager {
     public boolean validatePassword(String username, String password) {
         for (User user: users) {
             if (user.getUsername().equals(username)) {
-                if (Enigma.decrypt(user.getPassword()).equals(password)) {
+                if ((user.getPassword()).equals(Enigma.encrypt(password))) {
                     return true;
                 }
             }

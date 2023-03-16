@@ -57,20 +57,4 @@ public class Enigma {
         }
         return new String(letters);
     }
-
-    public static String decrypt(String password) {
-        Map<Character, Character> decryptionMap = new HashMap<>();
-        for (int i = 0; i < shuffledList.size(); i++) {
-            decryptionMap.put(shuffledList.get(i), list.get(i));
-        }
-
-        char[] letters = password.toCharArray();
-        for (int i = 0; i < letters.length; i++) {
-            Character decryptedChar = decryptionMap.get(letters[i]);
-            if (decryptedChar != null) {
-                letters[i] = decryptedChar;
-            }
-        }
-        return new String(letters);
-    }
 }
