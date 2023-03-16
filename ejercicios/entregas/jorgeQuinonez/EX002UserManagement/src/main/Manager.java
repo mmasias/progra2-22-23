@@ -6,10 +6,8 @@ public class Manager {
 
     private int maxUsers;
     private User[] users;
-    private int selectedOption;
     private String inputUser;
     private String inputPassword;
-    private boolean isLogged;
 
     User firstUser = new User("Jorge", "Jorge85015", "12345");
     User secondUser = new User("Tomi", "TMar1023", "100223");
@@ -37,19 +35,20 @@ public class Manager {
             if (this.users[i].getUser().equals(this.inputUser)
                     && this.users[i].getPassword().equals(this.inputPassword)) {
                 this.users[i].setLogin(true);
+                System.out.println("Login successful");
+            } else {
+                System.out.println("Login failed");
+                break;
             }
         }
     }
 
     public void printMenu() {
-        Option menu = new Option();
-        String[] options = menu.getOptions();
-
-        for (int i = 0; i < this.maxUsers; i++) {
-            if (this.users[i].getLogin() == true) {
-                System.out.println(options[0]);
-            }
-        }
+        System.out.println("1. Show profile");
+        System.out.println("2. Edit profile");
+        System.out.println("3. Change password");
+        System.out.println("4. Change username");
+        System.out.println("5. Logout");
     }
 
     public static void main(String[] args) {
@@ -58,5 +57,4 @@ public class Manager {
         manager.validate();
         manager.printMenu();
     }
-
 }

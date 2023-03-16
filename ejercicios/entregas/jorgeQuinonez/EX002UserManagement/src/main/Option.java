@@ -13,6 +13,6 @@ public class Option {
     }
 
     public String[] getOptions() {
-        return this.options;
+        return options;
     }
 }
