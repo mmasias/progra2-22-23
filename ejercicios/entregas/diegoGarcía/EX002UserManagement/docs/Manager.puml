@@ -5,6 +5,7 @@ class Manager{
     + authenticated : boolean
     + optionList : Option
 
+    + main()
     + scannerString()
     + scannerInt()
     + addUser(user,maxNumberOfUsers,userList)

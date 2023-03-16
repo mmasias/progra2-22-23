@@ -31,7 +31,7 @@ public class Option {
 
 
     public void changeUser(User[] userList, boolean authenticated, Option optionList){
-        logIn(userList, authenticated, optionList);
+        logIn(userList, optionList);
     }
 
     public void showUsers(User[] userList){
