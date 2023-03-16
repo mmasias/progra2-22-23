@@ -1,0 +1,12 @@
+@startuml
+class Manager{
++ String scannerText()
++ int scannerData()
++ void addUsers(User user, int maxUsers,User[] usersList)
++ void register(int maxUsers,User[] usersList)
++ boolean enter(User[] usersList)
++ boolean check(String name,String password,User[] usersList)
++ void signIn(User[] usersList, Option optionList)
++ void chooseOption(Option optionList, User[] usersList)
+}
+@enduml

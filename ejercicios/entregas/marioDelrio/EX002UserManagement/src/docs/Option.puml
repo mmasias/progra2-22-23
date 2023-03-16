@@ -1,0 +1,11 @@
+@startuml
+class Option{
+- private int maxOptions
+- private String[] optionList
++ Option(String[] optionList)
++ void displayOption()
++ void changePassword(User[] usersList)
++ void changeUser(User[] usersList, boolean checked, Option optionList)
++ showUsers(User[] usersList)
+}
+@enduml
