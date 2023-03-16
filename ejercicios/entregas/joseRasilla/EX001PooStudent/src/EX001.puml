@@ -1,0 +1,32 @@
+@startuml
+class Student{
+    - String name
+    - String surname
+    - String id
+    - float grade
+    + void setGrade(float grade)
+    + float getGrade()
+    + void setName(String name)
+    + String getName()
+    + void setSurname(String surname)
+    + String getSurname()
+    + void setId(String id)
+    + String getId()
+}
+
+class Subject{
+    - String name
+    - Student[] students
+    - boolean isOrdered
+    - int position
+    - int capacity
+
+    + void addStudent(Student student)
+    + void orderStudents()
+    + double getAverageGrade()
+    + int getPosition()
+    + Student getBestStudent()
+    + Student getWorstStudent()
+    + float getMedian()
+}
+@enduml
