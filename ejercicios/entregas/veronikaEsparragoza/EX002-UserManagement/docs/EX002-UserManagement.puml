@@ -1,0 +1,62 @@
+@startuml
+class Manager{
++ Manager(UserRepository userRepository, OptionRepository optionRepository)
++ login(String userName, String userPassword)
++ validateUser(String userName, String userPassword)
++ userRole(int Index)
++ getIndex(int Index)
+}
+
+class UserRepository{
+- User[] users
+- User[] FAKE_DATA
++ UserRepository()
++ getInitialFakeData()
++ User[] get()
++ User[] add(User user)
++ User[] delete(int index)
++ User[] update(int index, User user)
++ add(String userName, String userPassword, String userRole)
+}
+
+class OptionRepository{
+- Option[] FAKE_DATA
++ OptionRepository()
++ Option[] getOptionArray()
+}
+
+class Option{
+- String optionDescription[]
+- Roles role
+- int (int Index)
++ Option(String optionDescription[], Roles role)
++ String getOptionDescription()
++ Roles getRole()
++ int getIndex()
++ showOption(Roles role)
++ optionMenu(int inputOptionSelect)
+}
+
+class User{
+- int idCounter
+- int id
+- String userName
+- String userPassword
+- Roles role
++ User(String userName, String userPassword, Roles role)
++ getUserName()
++ setUserName(String userName)
++ getUserPassword()
++ setUserPassword(String userPassword)
++ getRole()
++ setRole(Roles role)
++ getId()
+}
+
+ENUM Roles{
++ ADMIN
++ AUTHOR
++ SUBSCRIBER
+- Roles(String role)
+}
+@enduml
