@@ -1,0 +1,51 @@
+@startuml
+
+class Manager{
+
+    - User[] listOfUsers;
+    - Option[] listOfOptions;
+    - int userListCapacity;
+
+    +Manager(int userListCapacity)
+    +setUserListCapacity(int capacity)
+    +getUserListCapacity()
+    +addUser(User user)
+    +addOption(Option option, int userOptionPos)
+    +deleteUser(int position)
+    +deleteOpt(int position)
+    +showUsers()
+    +inspectUsername(String username)
+}
+
+class Option{
+    -private String[] options;
+    -private int actualOption;
+    -private String description;
+    -private int capacity;
+
+    +Option(String description, int capacity)
+    +setDescription(String description)
+    +getDescription()
+    +setActualOption(int position)
+    +getActualOption()
+    +setCapacity(int capacity)
+    +getCapacity()
+    +addOption(String option)
+    +showOptions()
+
+}
+
+class User{
+    -private String password;
+    -private String username;
+    -private boolean login;
+
+    +Login(String username, String password)
+    +getLogin()
+    +getPassword()
+    +setPassword(String password)
+    +getUsername()
+    +setUsername(String username)
+}
+
+@enduml
