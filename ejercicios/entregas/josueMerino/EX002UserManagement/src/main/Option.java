@@ -1,3 +1,5 @@
+package main;
+
 public class Option {
     private String[] options;
     private String selectedOption;
@@ -19,7 +21,13 @@ public class Option {
     }
 
     public String getSelectedOption() {
-        return selectedOption;
+        for (String option: this.options) {
+            if (option == this.selectedOption)
+            {
+                return option;
+            }
+        }
+        return "No existe esa opción";
     }
 
     public void setSelectedOption(String selectedOption) {
@@ -33,4 +41,6 @@ public class Option {
     public void setMaxOptions(int maxOptions) {
         this.maxOptions = maxOptions;
     }
+
+
 }

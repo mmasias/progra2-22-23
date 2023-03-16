@@ -1,13 +1,15 @@
-import java.util.Arrays;
+package main;
 
 public class Manager {
     private User[] users;
+    private int numberUsersRegistered;
     private User[] usersAuthenticated;
+    private int numberUsersAuthenticated;
     private int maxUsers;
 
-    public Manager(User[] users, int maxUsers)
+    public Manager(int maxUsers)
     {
-        this.users = users;
+        this.users = new User[maxUsers];
         this.usersAuthenticated = new User[maxUsers];
         this.maxUsers = maxUsers;
     }
@@ -36,6 +38,22 @@ public class Manager {
         this.maxUsers = maxUsers;
     }
 
+    public int getNumberUsersRegistered() {
+        return numberUsersRegistered;
+    }
+
+    public void setNumberUsersRegistered(int numberUsersRegistered) {
+        this.numberUsersRegistered = numberUsersRegistered;
+    }
+
+    public int getNumberUsersAuthenticated() {
+        return numberUsersAuthenticated;
+    }
+
+    public void setNumberUsersAuthenticated(int numberUsersAuthenticated) {
+        this.numberUsersAuthenticated = numberUsersAuthenticated;
+    }
+
     public boolean login(User user)
     {
         for (User userToFind:users) {
@@ -43,6 +61,7 @@ public class Manager {
                     (userToFind.getPassword() == user.getPassword())
             ){
                 this.addUserToUsersAuthenticated(userToFind);
+                this.numberUsersAuthenticated++;
                 return true;
             }
         }
@@ -52,10 +71,11 @@ public class Manager {
 
     public void register(User user)
     {
-        if(this.users.length < this.maxUsers) {
+        if(this.numberUsersRegistered < this.maxUsers) {
             for (int i = 0; i < this.maxUsers; i++) {
                 if (this.users[i] == null) {
                     this.users[i] = user;
+                    this.numberUsersRegistered++;
                     break;
                 }
             }
@@ -63,6 +83,11 @@ public class Manager {
         else {
             System.out.println("No hay espacio en el servidor :(");
         }
+    }
+
+    public User getUserAuthenticated(int index)
+    {
+        return this.usersAuthenticated[index];
     }
 
     private void addUserToUsersAuthenticated(User userToFind)
