@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ejercicios/soluciones/EX000PooIntroduction/EX000PooIntroduction.iml" filepath="$PROJECT_DIR$/ejercicios/soluciones/EX000PooIntroduction/EX000PooIntroduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/temario/EX001PooStudent/EX001PooStudent.iml" filepath="$PROJECT_DIR$/temario/EX001PooStudent/EX001PooStudent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ejercicios/soluciones/EX001PooStudent/EX001PooStudent1.iml" filepath="$PROJECT_DIR$/ejercicios/soluciones/EX001PooStudent/EX001PooStudent1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/temario/PooSession2/PooSession2.iml" filepath="$PROJECT_DIR$/temario/PooSession2/PooSession2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ejercicios/entregas/entregas.iml" filepath="$PROJECT_DIR$/ejercicios/entregas/entregas.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/progra2-22-23.iml" filepath="$PROJECT_DIR$/.idea/progra2-22-23.iml" />
     </modules>
   </component>
