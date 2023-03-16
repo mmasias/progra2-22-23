@@ -1,0 +1,27 @@
+@startuml
++class Manager{
+    -User userList
+    -Option option
+    -User authenticatedUser
+    -int maxUsers
+    -int realOptions
+
+
+    +public Manager(int maxUsers)
+    +public User[] getUserList()
+    +public void setUserList(User[] userList)
+    +public Option[] getOption()
+    +public void setOption(Option[] option)
+    +public User getAuthenticatedUser()
+    +void setAuthenticatedUser(User authenticatedUser)
+    +int getMaxUsers()
+    +void setMaxUsers(int maxUsers)
+    +int getRealOptions()
+    +void setRealOptions(int realOptions)
+    +Option verify(String name, String password)
+    +void insert(User user,Option option)
+
+
+
+}
+@enduml

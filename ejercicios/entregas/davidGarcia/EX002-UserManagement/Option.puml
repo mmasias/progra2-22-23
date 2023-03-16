@@ -1,0 +1,18 @@
+@startuml
++class Option {
+    -String optionList[];
+    -int maxOptions;
+    -int realOptions;
+
+    +Option(int maxOptions)
+    +String[] getOptionList()
+    +void setOptionList(String[] optionList)
+    +int getMaxOptions()
+    +void setMaxOptions(int maxOptions)
+    +int getRealOptions()
+    +void setRealOptions(int realOptions)
+    +void newOptionsMenu(String newOptions)
+    +void showMenu()
+
+}
+@enduml
