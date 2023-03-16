@@ -1,0 +1,10 @@
+@startuml
+class Manager{
+    + isLogged: boolean
+
+    - scannerString(): String
+    - getIsLogged(): boolean
+    - setIsLogged(boolean): void
+}
+
+@enduml
