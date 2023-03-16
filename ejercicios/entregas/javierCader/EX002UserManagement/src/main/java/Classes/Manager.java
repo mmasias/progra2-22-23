@@ -7,15 +7,15 @@ import Classes.Users.User;
 import java.util.Scanner;
 
 public class Manager {
-    private boolean runSystem;
-    private User currentUser;
-    private final User[] users;
+    public static boolean runSystem;
+    public static User currentUser;
+    public static User[] users;
     private final Scanner scanner = new Scanner(System.in);
-    private final Options options = new Options(this);
+    private final Options options = new Options();
 
     public Manager(User[] users) {
-        this.users = users;
-        this.runSystem = true;
+        Manager.users = users;
+        Manager.runSystem = true;
         this.login();
     }
 
@@ -30,8 +30,8 @@ public class Manager {
                 String password = scanner.nextLine();
                 boolean passwordValidation = this.validatePassword(userName, password);
                 if (passwordValidation) {
-                    this.currentUser = getValidatedUser(userName);
-                    this.currentUser.setLogin(true);
+                    currentUser = getValidatedUser(userName);
+                    currentUser.setLogin(true);
                     this.displayOptions();
                 } else {
                     System.out.println("Invalid password");
@@ -54,7 +54,7 @@ public class Manager {
     public boolean validatePassword(String username, String password) {
         for (User user: users) {
             if (user.getUsername().equals(username)) {
-                if (user.getPassword().equals(password)) {
+                if (Enigma.decrypt(user.getPassword()).equals(password)) {
                     return true;
                 }
             }
@@ -79,10 +79,12 @@ public class Manager {
             throw new IllegalStateException("Invalid Options");
         }
 
-        while (this.currentUser.isLogin()) {
+        while (currentUser.isLogin()) {
             System.out.println("*".repeat(30));
+            int index = 1;
             for (MenuItem option: optionsMenu) {
-                System.out.printf("%c %s %s", '>', option.getText(), System.lineSeparator());
+                System.out.printf("%d. %s %n", index, option.getText());
+                index++;
             }
             System.out.println("Input the action you want to execute:");
             selectedOption = scanner.nextInt();
@@ -92,17 +94,5 @@ public class Manager {
                 optionsMenu[selectedOption -1].execute();
             }
         }
-    }
-
-    public User getCurrentUser() {
-        return this.currentUser;
-    }
-
-    public User[] getAllUsers() {
-        return this.users;
-    }
-
-    public void setRunSystem(boolean runSystem) {
-        this.runSystem = runSystem;
     }
 }

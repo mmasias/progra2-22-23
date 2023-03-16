@@ -11,10 +11,11 @@ public class UserDataBase {
 
     public UserDataBase() {
         this.users = new User[] {
-                new Student("JavierC", "12345", new int[] {10, 8, 9, 10, 7}),
-                new Student("JavierS", "12345", new int[] {8, 8, 9, 10, 6}),
-                new Teacher("jorgercresp", "222333", Subjects.MATHEMATICS_II),
-                new Admin("admin", "admin"),
+                new Student("JavierC", Enigma.encrypt("12345"), new int[] {10, 8, 9, 10, 7}),
+                new Student("JavierS", Enigma.encrypt("12345"), new int[] {8, 8, 9, 10, 6}),
+                new Teacher("jorgercresp", Enigma.encrypt("222333"), Subjects.MATHEMATICS_II),
+                new Teacher("breñosa", Enigma.encrypt("123456"), Subjects.LOGIC),
+                new Admin("admin", Enigma.encrypt("admin")),
         };
     }
     public User[] getUsers() {

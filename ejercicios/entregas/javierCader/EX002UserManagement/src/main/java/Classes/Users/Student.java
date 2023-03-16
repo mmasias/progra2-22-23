@@ -17,13 +17,6 @@ public class Student extends User {
         this.grades = grades;
     }
 
-    public Student(String username, String password, int[] grades, Subjects[] subjects) {
-        super(username, password, false);
-        this.subjects = subjects;
-        this.grades = grades;
-
-    }
-
     public int[] getGrades() {
         return grades;
     }

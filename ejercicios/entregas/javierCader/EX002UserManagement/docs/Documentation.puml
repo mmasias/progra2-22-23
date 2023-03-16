@@ -1,9 +1,10 @@
 @startuml
 folder main {
     class Main {
-        +Manager manager
+        +Enigma enigma
         +UserDataBase userDataBase
-        +main(): void
+        +Manager manager(userDataBase)
+        +static main(): void
     }
     package Utils {
         package Interfaces {
@@ -14,11 +15,11 @@ folder main {
         }
         package Enums {
             enum Subjects {
-                PROGRAMMING_II,
-                MATHEMATICS_II,
-                LOGIC,
-                DISCRETE_MATHEMATICS,
-                ICT
+                PROGRAMMING_II("Programming II"),
+                MATHEMATICS_II("Mathematics II"),
+                LOGIC("Logic"),
+                DISCRETE_MATHEMATICS("Discrete Mathematics"),
+                ICT("ICT"),
             }
         }
     }
@@ -28,26 +29,32 @@ folder main {
             class Options {
                 -final MenuItem quit
                 -final MenuItem logout
-                -final Manager manager
                 -final Scanner scanner
                 -final MenuItem[] studentOptions
                 -final MenuItem[] teacherOptions
                 -final MenuItem[] adminOptions
-                +Options(Manager manager)
                 -logout(): void
                 -quit(): void
                 -displayGrades(): void
                 -studentSendEmail(): void
-                -validateSubject: boolean
-                -getSubjectTeacher: String
+                -validateSubject(String): boolean
+                -getSubjectTeacher(String): String
+                -displayAllStudentGrades(): void
+                -getGrades(Student student, Subject teacherSubject): int
+                -changeStudentGrade(): void
+                -validateStudent(String): boolean
+                -displayAllUsers(): boolean
+                -editUser(String operationType): void
+                -validateUser(int selectedUserIndex, User[] users): User
+                -getEnigmaKey(): void
                 -getStudentOptions(): MenuItem[]
                 -getAdminOptions(): MenuItem[]
                 -getTeacherOptions(): MenuItem[]
                 +getSelectedUserOptions(): MenuItem[]
             }
             class MenuItemImpl implements main.Utils.Interfaces.MenuItem {
-                -String text
-                -Runnable action
+                -final String text
+                -final Runnable action
                 +MenuItemImpl(String text, Runnable action)
                 +getText(): String
                 +execute(): void
@@ -58,6 +65,7 @@ folder main {
                 #String username
                 #String password;
                 #boolean login
+                +User(String username, String password, boolean login)
                 +setUsername(String userName): void
                 +setPassword(String password): void
                 +setLogin(): void
@@ -70,21 +78,33 @@ folder main {
                 -int[] grades
                 +Student(String username, String password, int[] grades)
                 +getGrades(): int[]
-                +getSubjects(): String[]
+                +setGrade(int index, int newGrade)
+                +getSubjects(): Subjects[]
             }
             class Teacher extends User {
-                -String subject
-                +Teacher(String userName, String password, String subject)
-                +getSubject(): String
+                -final Subjects subject
+                +Teacher(String username, String password, Subjects subject)
+                +getSubject(): Subjects
             }
             class Admin extends User {
                 +Admin(String userName, String password)
             }
         }
+        class Enigma {
+            -static ArrayList<Character> list;
+            -static ArrayList<Character> shuffledList
+            -static char character;
+            +Enigma()
+            -static newKey(): void
+            +static getKey(): void
+            +static encrypt(String password): String
+            +static decrypt(String password): String
+        }
+
         class Manager {
-            -final boolean runSystem
-            -User currentUser
-            -final User[] users
+            +static boolean runSystem
+            +static User currentUser
+            +static User[] users
             -final Scanner scanner
             -final Options options
             +Manager(User[] users)
@@ -93,27 +113,21 @@ folder main {
             +validatePassword(String password): boolean
             +getValidatedUser(String userName): User
             +displayOptions(): void
-            +getOptions(): MenuItem[]
-            +setRunSystem(): void
         }
         class UserDataBase {
             -final users
             +UserDataBase()
             +getUsers(): User[]
         }
-
-
     }
     Main --*  Manager : requires
     Main --*  UserDataBase : requires
+    Main --*  Enigma : requires
     UserDataBase --*  User : requires
     Student --o main.Utils.Enums.Subjects : has
     Teacher --o main.Utils.Enums.Subjects : has
-    Options *--  Manager : requires
+    Manager --* Options : requires
     Options --*  main.Utils.Interfaces.MenuItem : requires
-
-
-
 }
 
 @enduml

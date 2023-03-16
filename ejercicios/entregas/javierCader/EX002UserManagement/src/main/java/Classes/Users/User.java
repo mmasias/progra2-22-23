@@ -23,7 +23,6 @@ public abstract class User {
         this.login = login;
     }
 
-
     public String getUsername() {
         return username;
     }
