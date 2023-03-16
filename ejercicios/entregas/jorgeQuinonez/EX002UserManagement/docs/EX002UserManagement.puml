@@ -1,0 +1,24 @@
+@startuml EX002UserManagement
+class User{
+    -user: String
+    -password: String
+    -name: String
+    +User(user: String, password: String, name: String)
+    +User()
+    +getUser(): String
+    +setUser(user: String): void
+    +getPassword(): String
+    +setPassword(password: String): void
+    +getName(): String
+    +setName(name: String): void
+}
+class Options{
+    -optionList: String[]
+    -currentPosition: int
+    -maxOptions: int
+    +Option(int maxOptions)
+    +Option()
+    +addNewOption(String newOption):void
+    
+}
+@enduml
