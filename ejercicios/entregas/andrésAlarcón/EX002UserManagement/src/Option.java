@@ -1,11 +1,32 @@
 public class Option {
     private String optionList [];
     private int selectedOption;
-    private int maxOptions;
+    private int maxOptions = 20;
 
     public Option() {
         this.optionList = new String[maxOptions];
         this.selectedOption = 0;
+    }
+
+    public String[] getOptionList() {
+        return optionList;
+    }
+
+    public void setOptionList(){
+        this.optionList = optionList;
+    }
+
+    public int getSelectedOption() {
+        return selectedOption;
+    }
+    private void setSelectedOption(int selectedOption) {
+        this.selectedOption = selectedOption;
+    }
+
+    public int getMaxOptions() {
+        return maxOptions;
+    }
+    private void setMaxOptions(int maxOptions) {
         this.maxOptions = maxOptions;
     }
 
@@ -17,20 +38,14 @@ public class Option {
         }
     }
 
-    public String getOptions() {
-        return options;
-    }
-
-    private void setSelectedOption(int selectedOption) {
-        if (selectedOption > 0 && selectedOption < optionList.length) {
-            this.selectedOption = selectedOption;
-        } else {
-            System.out.println("Invalid option");
+    public String getOption(int index) {
+        String returnedOption = "";
+        for (int i = 0; i < maxOptions; i++) {
+            if (i == index) {
+                returnedOption = optionList[index];
+            }
         }
+        ;
+        return returnedOption;
     }
-
-    public String getSelectedOption() {
-        return optionList[selectedOption];
-    }
-
 }
