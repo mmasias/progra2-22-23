@@ -1,0 +1,16 @@
+@startuml
+
+class Option {
+
+    + maxNumberOfOptions : int
+    + optionList : String[]
+
+    + option(String[] optionList)
+    + showOptions()
+    + changePassword(User[] userList)
+    + changeUser(User[] userList,bool authenticated,Option optionList)
+    + showUsers(User[] userList)
+
+}
+
+@enduml
