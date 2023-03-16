@@ -3,6 +3,8 @@ package Main;
 public class User {
     private String userName;
     private String userPassword;
+    public String Name;
+
     public boolean login;
     public User(){
         userName = "user";
@@ -10,9 +12,10 @@ public class User {
         login =false;
     }
 
-    public User(String userName, String userPassword, boolean login) {
+    public User(String userName, String userPassword, String name, boolean login) {
         this.userName = userName;
         this.userPassword = userPassword;
+        Name = name;
         this.login = login;
     }
 
@@ -32,6 +35,14 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
     public boolean isLogin() {
         return login;
     }
@@ -40,3 +51,5 @@ public class User {
         this.login = login;
     }
 }
+
+
