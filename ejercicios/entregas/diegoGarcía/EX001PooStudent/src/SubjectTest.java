@@ -102,6 +102,10 @@ class SubjectTest {
 
         assertEquals(testStudent2, actualName[0]);
         assertEquals(testStudent, actualName[1]);
+<<<<<<< HEAD
+
+=======
+>>>>>>> dd61cc0edecdf4433e94e539f60d714fe828f20a
     }
 
     @Test
