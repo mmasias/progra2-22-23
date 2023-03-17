@@ -1,13 +1,19 @@
 package main;
+
 public class User {
     private String userName;
     private String userPassword;
     public boolean login;
+    public User() {
+        userName = "user";
+        userPassword = "user";
+        login = false;
+    }
 
-    public User(String userName, String userPassword) {
+    public User(String userName, String userPassword, boolean login) {
         this.userName = userName;
         this.userPassword = userPassword;
-        this.login = false;
+        this.login = login;
     }
 
     public String getUserName() {
@@ -30,15 +36,9 @@ public class User {
         return login;
     }
 
-    public void login() {
-        this.login = true;
-    }
-
-    public void logout() {
-        this.login = false;
-    }
     public void setLogin(boolean login) {
         this.login = login;
     }
 
+    public User[] String;
 }
