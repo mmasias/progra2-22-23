@@ -24,12 +24,14 @@ public class Option {
     }
 
     public void setSelectedOption(String option) {
-        if (options.contains(option)) {
-            selectedOption = option;
-        } else {
+        int optionIndex = options.indexOf(option);
+        if (optionIndex >= 0 && optionIndex < options.size()) {
+            selectedOption = options.get(optionIndex);
+        }else {
             System.out.println("Error: Invalid option selected.");
         }
     }
+
 
     public String getSelectedOption() {
         return selectedOption;
