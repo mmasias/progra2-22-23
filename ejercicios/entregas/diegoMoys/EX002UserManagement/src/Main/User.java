@@ -6,6 +6,7 @@ public class User {
     private String userName;
 
     public User() {
+
         this.login = false;
         this.userName = "Diego";
         this.password = "123";
