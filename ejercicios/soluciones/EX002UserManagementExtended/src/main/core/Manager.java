@@ -1,4 +1,4 @@
-package main;
+package main.core;
 
 public class Manager {
     int capacity;
