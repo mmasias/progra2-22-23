@@ -8,6 +8,7 @@ public class Student {
 
     /*
      * Creates a new student with the given name, surname, id and grade.
+     * Test
      * @param name The name of the student.
      * @param surname The surname of the student.
      * @param id The id of the student.
