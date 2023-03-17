@@ -7,7 +7,7 @@ public enum Subjects {
     DISCRETE_MATHEMATICS("Discrete Mathematics"),
     ICT("ICT");
 
-    final private String stringValue;
+    private final String stringValue;
     Subjects(String stringValue) {
         this.stringValue = stringValue;
     }

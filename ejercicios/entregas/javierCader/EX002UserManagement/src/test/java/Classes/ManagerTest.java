@@ -1,32 +1,25 @@
 package Classes;
 
-import static org.junit.jupiter.api.Assertions.*;
+import Classes.Cypher.Enigma;
+import Classes.Manager.Manager;
+import Classes.Users.Student;
+import Classes.Users.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class ManagerTest {
-    Enigma enigma = new Enigma();
-    UserDataBase userDataBase = new UserDataBase();
-    Manager manager = new Manager(userDataBase.getUsers());
+    Manager manager;
+    User user;
+
     @BeforeEach
     void setUp() {
+        user = new Student("JavierC", Enigma.encrypt("12345"), new int[] {10, 8, 9, 10, 7});
+        manager = new Manager(user);
+        user.setLogin(true);
     }
 
     @Test
-    void login() {
-        manager.login();
-        assertEquals("JavierC", Manager.currentUser.getUsername());
-    }
-
-    @Test
-    void validateUserName() {
-    }
-
-    @Test
-    void validatePassword() {
-    }
-
-    @Test
-    void getValidatedUser() {
+    void displayOptions() {
+        manager.displayOptions();
     }
 }

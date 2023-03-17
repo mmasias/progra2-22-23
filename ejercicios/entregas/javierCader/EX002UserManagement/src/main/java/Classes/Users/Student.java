@@ -1,6 +1,9 @@
 package Classes.Users;
 
+import Classes.Options.Options;
 import Utils.Enums.Subjects;
+import Utils.Functions.UserActions;
+import Utils.Interfaces.MenuItem;
 
 public class Student extends User {
     private final Subjects[] subjects;
@@ -15,6 +18,12 @@ public class Student extends User {
                     Subjects.LOGIC,
         };
         this.grades = grades;
+        this.options = new MenuItem[]{
+                new Options("Display Grades", UserActions::displayGrades),
+                new Options("Send Email", UserActions::studentSendEmail),
+                UserActions.logout,
+                UserActions.quit,
+        };
     }
 
     public int[] getGrades() {

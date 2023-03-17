@@ -1,32 +1,28 @@
-package Classes;
+package Classes.Cypher;
 
 import java.util.*;
 
-public class Enigma {
-    private static ArrayList<Character> list;
-    private static ArrayList<Character> shuffledList;
-    private static char character;
+public abstract class Enigma {
+    private static ArrayList<Character> list = setList();
+    private static ArrayList<Character> shuffledList = setShuffledList();
 
-    public Enigma() {
+    private static ArrayList<Character> setList() {
         list = new ArrayList<Character>();
         shuffledList = new ArrayList<Character>();
-        character = ' ';
-        newKey();
-    }
-
-    private static void newKey() {
-        character = ' ';
-        list.clear();
-        shuffledList.clear();
+        char character = ' ';
 
         //Loops over the range of ASCII values I'm using for the substitution cipher
         for (int i=32; i < 127; i++) {
             list.add(character);
             character += 1;
         }
+        return list;
+    }
 
+    public static ArrayList<Character> setShuffledList() {
         shuffledList = new ArrayList<Character>(list);
         Collections.shuffle(shuffledList);
+        return shuffledList;
     }
 
     public static void getKey() {
@@ -40,7 +36,6 @@ public class Enigma {
         }
         System.out.println();
     }
-
 
     public static String encrypt(String password) {
         Map<Character, Character> encryptionMap = new HashMap<>();

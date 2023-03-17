@@ -1,11 +1,17 @@
-import Classes.Enigma;
-import Classes.Manager;
-import Classes.UserDataBase;
+import Classes.Login.Login;
+import Classes.Manager.Manager;
+import Classes.Users.User;
 
 public class Main {
     public static void main(String[] args) {
-        new Enigma();
-        UserDataBase userDataBase = new UserDataBase();
-        new Manager(userDataBase.getUsers());
+        while (true) {
+            Login.login();
+            User loggedUser = Login.getLoggedUser();
+            if (loggedUser.isLogin()) {
+                new Manager(loggedUser);
+            } else {
+                throw new IllegalStateException("Invalid Login!");
+            }
+        }
     }
 }

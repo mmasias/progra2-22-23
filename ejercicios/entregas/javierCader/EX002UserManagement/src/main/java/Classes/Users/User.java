@@ -8,11 +8,10 @@ public abstract class User {
     protected boolean login;
     protected MenuItem[] options;
 
-    public User(String username, String password, boolean login, MenuItem[] options) {
+    public User(String username, String password, boolean login) {
         this.username = username;
         this.password = password;
         this.login = login;
-        this.options = options;
     }
 
     public void setUsername(String username) {
@@ -37,5 +36,9 @@ public abstract class User {
 
     public boolean isLogin() {
         return login;
+    }
+
+    public MenuItem[] getOptions() {
+        return this.options;
     }
 }
