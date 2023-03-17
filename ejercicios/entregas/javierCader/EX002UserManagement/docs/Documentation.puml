@@ -140,4 +140,16 @@
         }
     }
 
+    .Classes.Manager.Manager *-- .Classes.Login.Login : is accessed through
+    .Classes.Login.Login *-- .Classes.DataBase.UserDataBase : has access to
+    .Classes.DataBase.UserDataBase *-- .Classes.Users.User : needs
+    .Classes.DataBase.UserDataBase *-- .Classes.Cypher.Enigma : requires
+    .Classes.Options.Options *-- .Utils.Functions.UserActions : must have
+    User o-- .Classes.Options.Options : has
+    Teacher o-- .Utils.Enums.Subjects : has single
+    Teacher o-- .Classes.Email.Email : has multiple
+    Student o-- .Utils.Enums.Subjects : has multiple
+    .Utils.Functions.UserActions *-- .Utils.Enums.EditTypes : requires
+    .Utils.Functions.UserActions *-- .Classes.Email.Email : requires
+
 @enduml
