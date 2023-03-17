@@ -1,4 +1,4 @@
-package main;
+package main.core;
 
 public class Options {
     String items[];
