@@ -4,9 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+        String[] option = {"pizza", "pasta", "salad", "hamburger", "exit"};
+
         Manager manager = new Manager();
         User user = new User("user", "password");
-        Option options = new Option();
+        Options options = new Options(option);
         System.out.println("Welcome!");
         System.out.println("username and password:");
         System.out.println("Username: ");

@@ -1,4 +1,3 @@
-package main;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -6,15 +5,16 @@ public class Manager {
 
     private ArrayList<User> users;
     private boolean login;
-    private Option options;
+    private Options options;
 
+    String[] list = {"pizza", "pasta", "salad", "hamburger", "exit"};
     public Manager() {
         this.login = false;
         this.users = new ArrayList<User>();
-        this.options = new Option();
+        this.options = new Options(list);
     }
 
-    public Option getOptions() {
+    public Options getOptions() {
         return this.options;
     }
 
@@ -30,7 +30,7 @@ public class Manager {
         return this.users;
     }
 
-    public void setOptions(Option options) {
+    public void setOptions(Options options) {
         this.options = options;
     }
 
@@ -44,7 +44,7 @@ public class Manager {
         String userName = scanner.nextLine();
         System.out.println("Password: ");
         String userPassword = scanner.nextLine();
-        for (int i = 0; i < this.maxUsers; i++) {
+        for (int i = 0; i < 10; i++) {
             if (this.users.get(i).getUserName().equals(userName) && this.users.get(i).getUserPassword().equals(userPassword)) {
                 this.users.get(i).setLogin(true);
                 this.users.set(i, this.users.get(i));
