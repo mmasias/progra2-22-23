@@ -1,39 +1,59 @@
 package main;
-import java.util.ArrayList;
+
 public class Option {
-    private ArrayList<String> options;
-    private String selectedOption;
-    private int maxOptions;
+    String items[];
+    int capacity;
+    int size;
+    int defaultSelection;
 
-    public Option(int maxOptions) {
-        this.options = new ArrayList<String>();
-        this.selectedOption = null;
-        this.maxOptions = maxOptions;
+    public Options() {
+        this.capacity = 10;
+        this.size = 0;
+        this.defaultSelection = 0;
+        this.items = new String[capacity];
     }
 
-    public void addOption(String option) {
-        if (options.size() < maxOptions) {
-            options.add(option);
-        } else {
-            System.out.println("Error: Reached maximum number of options.");
+    public Options(int capacity) {
+        this.capacity = capacity;
+        this.size = 0;
+        this.defaultSelection = 0;
+        this.items = new String[capacity];
+    }
+
+    public void add(String item) {
+        if (size < capacity) {
+            items[size] = item;
+            size++;
         }
     }
 
-    public ArrayList<String> getOptions() {
-        return options;
+    public String[] getItems() {
+        return items;
     }
 
-    public void setSelectedOption(String option) {
-        int optionIndex = options.indexOf(option);
-        if (optionIndex >= 0 && optionIndex < options.size()) {
-            selectedOption = options.get(optionIndex);
-        }else {
-            System.out.println("Error: Invalid option selected.");
+    public String getItem(int index) {
+
+        if (index < 0 || index >= size) {
+            return null;
         }
+
+        return items[index];
     }
 
+    public int getSize() {
+        return size;
+    }
 
-    public String getSelectedOption() {
-        return selectedOption;
+    public int getDefaultSelection() {
+        return defaultSelection;
+    }
+    public void setDefaultSelection(int defaultSelection) {
+        this.defaultSelection = defaultSelection;
+    }
+
+    public void print() {
+        for (int i = 0; i < size; i++) {
+            System.out.println(i + ". " + items[i]);
+        }
     }
 }
