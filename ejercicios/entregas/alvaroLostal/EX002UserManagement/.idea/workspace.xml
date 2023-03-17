@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05c15840-cffa-46ea-b942-e14b50b04392" name="Changes" comment="just tried to code on the main, but it's still incorrect" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Sequence" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../.." value="EX002UserManagement" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2Moj6RRkslW7RcBGQlKEKa40PsD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/alvar/IdeaProjects/progra2-22-23",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alvar\IdeaProjects\progra2-22-23\ejercicios\entregas\alvaroLostal\EX002UserManagement" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05c15840-cffa-46ea-b942-e14b50b04392" name="Changes" comment="" />
+      <created>1678440654330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678440654330</updated>
+      <workItem from="1678440655499" duration="472000" />
+      <workItem from="1678441218358" duration="4006000" />
+      <workItem from="1678449267286" duration="194000" />
+      <workItem from="1678449569651" duration="1082000" />
+      <workItem from="1678450676207" duration="140000" />
+      <workItem from="1678450834628" duration="175000" />
+      <workItem from="1678451595095" duration="321000" />
+      <workItem from="1678451983114" duration="115000" />
+      <workItem from="1678641881490" duration="3887000" />
+      <workItem from="1678777513413" duration="162000" />
+      <workItem from="1678777757665" duration="275000" />
+      <workItem from="1678778048002" duration="70000" />
+      <workItem from="1678778135836" duration="683000" />
+      <workItem from="1678778838937" duration="1123000" />
+      <workItem from="1678779999250" duration="218000" />
+      <workItem from="1678780234571" duration="48000" />
+      <workItem from="1678780301862" duration="631000" />
+      <workItem from="1678780954657" duration="1855000" />
+      <workItem from="1678784923002" duration="2852000" />
+      <workItem from="1678787881760" duration="100000" />
+      <workItem from="1678787993605" duration="1197000" />
+      <workItem from="1678789529111" duration="4958000" />
+      <workItem from="1678824399631" duration="603000" />
+      <workItem from="1678863967808" duration="5644000" />
+      <workItem from="1678871666699" duration="1033000" />
+      <workItem from="1678950288389" duration="352000" />
+      <workItem from="1679004144975" duration="568000" />
+      <workItem from="1679046286771" duration="81000" />
+    </task>
+    <task id="LOCAL-00001" summary="Creation of the java classes">
+      <created>1678440992231</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678440992231</updated>
+    </task>
+    <task id="LOCAL-00002" summary=".gitignore posted correctly">
+      <created>1678441722802</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678441722802</updated>
+    </task>
+    <task id="LOCAL-00003" summary="I just created the new directories and organised the files">
+      <created>1678442179257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678442179257</updated>
+    </task>
+    <task id="LOCAL-00004" summary="I just created the .puml file and coded the User class">
+      <created>1678443912287</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678443912287</updated>
+    </task>
+    <task id="LOCAL-00005" summary="renamed some files">
+      <created>1678444903773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678444903773</updated>
+    </task>
+    <task id="LOCAL-00006" summary="i coded on the three classes and finished the .puml file">
+      <created>1678789024518</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678789024518</updated>
+    </task>
+    <task id="LOCAL-00007" summary="just tried to code on the main, but it's still incorrect">
+      <created>1678794791129</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678794791129</updated>
+    </task>
+    <task id="LOCAL-00008" summary="just tried to code on the main, but it's still incorrect">
+      <created>1678796901504</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678796901504</updated>
+    </task>
+    <task id="LOCAL-00009" summary="just tried to code on the main, but it's still incorrect">
+      <created>1679004216799</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679004216799</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creation of the java classes" />
+    <MESSAGE value=".gitignore posted correctly" />
+    <MESSAGE value="I just created the new directories and organised the files" />
+    <MESSAGE value="I just created the .puml file and coded the User class" />
+    <MESSAGE value="renamed some files" />
+    <MESSAGE value="i coded on the three classes and finished the .puml file" />
+    <MESSAGE value="just tried to code on the main, but it's still incorrect" />
+    <option name="LAST_COMMIT_MESSAGE" value="just tried to code on the main, but it's still incorrect" />
+  </component>
+</project>
