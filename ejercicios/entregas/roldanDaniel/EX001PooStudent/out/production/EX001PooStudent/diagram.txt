@@ -1,0 +1,82 @@
+@startuml
+Class Student {
+
+-name :String
+-surname : String
+-id : String
+-grade : float
+
++public void setGrade(float grade)
++public float getGrade()
++public String getName()
++public void setName(String name)
++public String getSurname()
++public void setSurname(String surname)
++public String getId()
++public void setId(String id)
+
+}
+
+
+Class Subject {
+
+-name : String
+-[] students : Student
+-isOrdered : boolean
+-position : int
+-capacity : int
+
++public void addStudent(Student student)
++public void orderStudents()
++public float getMedian()
++public float getAverageGrade()
++public int getPosition()
++public Student getBestStudent()
++public Student getWorstStudent()
+
+}
+
+Class Main {
+Subject subject : Object
+Student [] students : Object
+
++public static void main(String[] args)
++addStudent()
++getAverageGrade()
++getBestStudent()
++getWorstStudent()
+
+
+
+}
+
+Class StudentTest{
+
++public void validateConstructorWithId()
++public void validateConstructorWithoutId()
++public void validateSettersAndGetters()
+
+
+}
+
+Class SubjectTest {
+
++public void setUp()
++public void validateAddStudent()
++public void validateOrderStudents()
++public void validateGetMedian()
++public void validateGetAverageGrade()
++public void validateGetBestStudent()
++public void validateGetWorstStudent()
+
+
+
+
+}
+
+Subject "1" *- "*" Student : use
+Main  *- "1" Subject : use
+Main  *- "*" Student : use
+Student <--> StudentTest
+Subject <--> SubjectTest
+@enduml
