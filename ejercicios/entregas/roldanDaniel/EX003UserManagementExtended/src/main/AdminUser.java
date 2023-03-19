@@ -10,4 +10,13 @@ public class AdminUser extends User{
         this.isAdmin=true;
 
     }
+
+    public void setAdmin(boolean isAdmin){
+        this.isAdmin=isAdmin;
+    }
+
+    public boolean isAdmin(){
+        return this.isAdmin;
+    }
+
 }
