@@ -6,7 +6,7 @@ Se recomienda que antes de empezar a programar, leas el enunciado completo y te 
 
 1. Clonar tu repositorio de la asignatura o actualizarlo si ya lo tenías clonado.
 2. Crear una rama con el nombre `EX003Inheritance` tal como se indica en [este archivo](./entregas/readme.md).
-3. En la carpeta `ejercicios/entregas` tal como se indica en [este archivo](./entregas/readme.md), crear un proyecto con el nombre `EX002UserManagement` basado en este [ejemplo](../temario/EX001PooStudent).
+3. En la carpeta `ejercicios/entregas` tal como se indica en [este archivo](./entregas/readme.md), crear un proyecto con el nombre `EX003Inheritance` basado en este [ejemplo](../temario/EX001PooStudent).
 4. Implementar la solución del ejercicio en el proyecto `EX003Inheritance` con las clases que se indican en el enunciado.
 5. Ejecutar los tests y verificar que todos pasen.
 6. Subir el proyecto a tu repositorio de GitHub.
@@ -24,7 +24,7 @@ La estructura de las clases podría quedar así:
 
 ###  Clase `User`
 
-- login: String
+- userName: String
 - password: String
 - name: String
 - getUsername(): String
@@ -45,7 +45,7 @@ La estructura de las clases podría quedar así:
 
 ### Clase `Option`
 
-- options: List<String>
+- options: String[]
 - selectedOption: int
 - maxOptions: int
 - addOption(String option): void
@@ -61,7 +61,7 @@ La estructura de las clases podría quedar así:
 
 ### Clase `Manager`
 
-- users: List<User>
+- users: User[]
 - authenticatedUser: User
 - selectedOption: MenuOption
 - maxUsers: int
@@ -69,7 +69,7 @@ La estructura de las clases podría quedar así:
 - authenticateUser(String username, String password): boolean
 - showMenu(): void
 
-Clase `UserManager` (hereda de Manager)
+### Clase `UserManager` (hereda de Manager)
 
 - registerUser(User user): void
 - isUserAdmin(User user): boolean
