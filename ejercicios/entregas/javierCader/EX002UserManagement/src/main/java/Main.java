@@ -9,16 +9,19 @@ public class Main {
     static String username;
     static String password;
     static User loggedInUser;
+
     public static void main(String[] args) {
         while (true) {
             System.out.println("Input username:");
             username = scanner.nextLine();
-            if (Login.validateUserName(username)) {
+
+            if (isValidUserName(username)) {
                 password = scanner.nextLine();
-                if (Login.validatePassword(username, password)) {
-                    Login.login(username);
-                    loggedInUser = Login.getLoggedUser();
-                    new Manager(loggedInUser);
+
+                if (isValidPassword(username, password)) {
+                    login(username);
+                    loggedInUser = getLoggedUser();
+                    startManager(loggedInUser);
                 } else {
                     System.out.println("Invalid password!");
                 }
@@ -26,5 +29,26 @@ public class Main {
                 System.out.println("Invalid username!");
             }
         }
+    }
+
+    private static boolean isValidUserName(String username) {
+        return Login.validateUserName(username);
+    }
+
+    private static boolean isValidPassword(String username, String password) {
+        return Login.validatePassword(username, password);
+    }
+
+    private static void login(String username) {
+        Login.login(username);
+    }
+
+    private static User getLoggedUser() {
+        return Login.getLoggedUser();
+    }
+
+    private static void startManager(User loggedInUser) {
+        Manager manager = new Manager(loggedInUser);
+        manager.start();
     }
 }
