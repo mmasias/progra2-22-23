@@ -1,8 +1,8 @@
 package test;
 
-import main.Manager;
-import main.Options;
-import main.User;
+import main.core.Manager;
+import main.core.Options;
+import main.core.User;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
