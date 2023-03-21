@@ -25,8 +25,8 @@ public class Manager {
 
     public void showMenu() {
         System.out.println("Menu");
-        System.out.println("1. " + this.selectedOption[0].getDescription());
-        System.out.println("2. " + this.selectedOption[1].getDescription());
+        System.out.println("1. " + this.selectedOption[0].getDescription(1));
+        System.out.println("2. " + this.selectedOption[1].getDescription(2));
         System.out.println("3. Exit");
     }
 

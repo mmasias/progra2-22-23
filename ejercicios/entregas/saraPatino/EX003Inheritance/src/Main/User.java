@@ -36,11 +36,7 @@ public class User {
     }
 
     public boolean isAdmin() {
-        if(this.username == username && this.password == password){
-            return true;
-        }  else {
-            return false;
-        }
+        return true;
     }
 
 }

@@ -2,7 +2,7 @@ package Main;
 
 public class Option {
     private String[] options;
-    private int selectedOption;
+    public int selectedOption;
     private int maxOptions;
 
     public Option(String[] options, int selectedOption, int maxOptions) {
