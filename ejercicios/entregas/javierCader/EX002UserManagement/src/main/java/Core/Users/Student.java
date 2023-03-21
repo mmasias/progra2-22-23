@@ -1,6 +1,6 @@
-package Classes.Users;
+package Core.Users;
 
-import Classes.Options.Options;
+import Core.Options.Options;
 import Utils.Enums.Subjects;
 import Utils.Functions.UserActions;
 import Utils.Interfaces.MenuItem;

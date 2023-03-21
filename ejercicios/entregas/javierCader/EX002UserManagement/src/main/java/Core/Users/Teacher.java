@@ -1,7 +1,7 @@
-package Classes.Users;
+package Core.Users;
 
-import Classes.Email.Email;
-import Classes.Options.Options;
+import Core.Email.Email;
+import Core.Options.Options;
 import Utils.Enums.Subjects;
 import Utils.Functions.UserActions;
 import Utils.Interfaces.MenuItem;

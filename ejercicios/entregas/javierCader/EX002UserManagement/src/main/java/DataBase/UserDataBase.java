@@ -1,10 +1,10 @@
-package Classes.DataBase;
+package DataBase;
 
-import Classes.Cypher.Enigma;
-import Classes.Users.Admin;
-import Classes.Users.Student;
-import Classes.Users.Teacher;
-import Classes.Users.User;
+import Core.Cypher.Enigma;
+import Core.Users.Admin;
+import Core.Users.Student;
+import Core.Users.Teacher;
+import Core.Users.User;
 import Utils.Enums.Subjects;
 
 public abstract class UserDataBase {

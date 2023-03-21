@@ -1,4 +1,4 @@
-package Classes.Cypher;
+package Core.Cypher;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package Classes.Options;
+package Core.Options;
 
 import Utils.Interfaces.MenuItem;
 

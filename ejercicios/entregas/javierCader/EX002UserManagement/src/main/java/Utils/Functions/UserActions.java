@@ -1,13 +1,13 @@
 package Utils.Functions;
 
-import Classes.Cypher.Enigma;
-import Classes.DataBase.UserDataBase;
-import Classes.Email.Email;
-import Classes.Manager.Manager;
-import Classes.Options.Options;
-import Classes.Users.Student;
-import Classes.Users.Teacher;
-import Classes.Users.User;
+import Core.Cypher.Enigma;
+import DataBase.UserDataBase;
+import Core.Email.Email;
+import Core.Manager.Manager;
+import Core.Options.Options;
+import Core.Users.Student;
+import Core.Users.Teacher;
+import Core.Users.User;
 import Utils.Enums.EditTypes;
 import Utils.Enums.Subjects;
 import Utils.Interfaces.MenuItem;
@@ -15,14 +15,15 @@ import Utils.Interfaces.MenuItem;
 import java.util.Scanner;
 
 public abstract class UserActions {
-    private static void logout() {
+    private static void logOutUser() {
         Manager.currentUser.setLogin(false);
     }
-    private static void quit() {
+    private static void exitProgram() {
         System.exit(0);
     }
-    public static final MenuItem quit = new Options("Quit", UserActions::quit);
-    public static final MenuItem logout = new Options("Logout", UserActions::logout);
+    public static final MenuItem exitProgram = new Options("Exit Program", UserActions::exitProgram);
+    public static final MenuItem logOutUser = new Options("Log Out User", UserActions::logOutUser);
+
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void displayGrades() {

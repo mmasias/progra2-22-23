@@ -1,6 +1,6 @@
-package Classes.Users;
+package Core.Users;
 
-import Classes.Cypher.Enigma;
+import Core.Cypher.Enigma;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

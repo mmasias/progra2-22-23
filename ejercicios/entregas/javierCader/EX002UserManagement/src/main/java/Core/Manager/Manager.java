@@ -1,10 +1,8 @@
-package Classes.Manager;
+package Core.Manager;
 
 import Utils.Functions.InputReader;
 import Utils.Interfaces.MenuItem;
-import Classes.Users.User;
-
-import java.util.Scanner;
+import Core.Users.User;
 
 public class Manager {
     public static User currentUser;

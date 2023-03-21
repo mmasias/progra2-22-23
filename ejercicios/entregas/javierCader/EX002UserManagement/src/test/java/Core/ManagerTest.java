@@ -1,9 +1,9 @@
-package Classes;
+package Core;
 
-import Classes.Cypher.Enigma;
-import Classes.Manager.Manager;
-import Classes.Users.Student;
-import Classes.Users.User;
+import Core.Cypher.Enigma;
+import Core.Manager.Manager;
+import Core.Users.Student;
+import Core.Users.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

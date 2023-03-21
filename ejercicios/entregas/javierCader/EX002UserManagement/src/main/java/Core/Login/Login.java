@@ -1,8 +1,8 @@
-package Classes.Login;
+package Core.Login;
 
-import Classes.Cypher.Enigma;
-import Classes.DataBase.UserDataBase;
-import Classes.Users.User;
+import Core.Cypher.Enigma;
+import DataBase.UserDataBase;
+import Core.Users.User;
 
 import java.util.Scanner;
 

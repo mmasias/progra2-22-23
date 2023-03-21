@@ -1,4 +1,4 @@
-package Classes.Users;
+package Core.Users;
 
 import Utils.Interfaces.MenuItem;
 

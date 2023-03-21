@@ -1,6 +1,6 @@
-import Classes.Login.Login;
-import Classes.Manager.Manager;
-import Classes.Users.User;
+import Core.Login.Login;
+import Core.Manager.Manager;
+import Core.Users.User;
 
 import java.util.Scanner;
 

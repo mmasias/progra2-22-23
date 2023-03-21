@@ -1,4 +1,4 @@
-package Classes.Email;
+package Core.Email;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
