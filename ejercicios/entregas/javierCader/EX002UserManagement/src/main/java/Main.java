@@ -16,6 +16,7 @@ public class Main {
             username = scanner.nextLine();
 
             if (isValidUserName(username)) {
+                System.out.println("Input password:");
                 password = scanner.nextLine();
 
                 if (isValidPassword(username, password)) {
