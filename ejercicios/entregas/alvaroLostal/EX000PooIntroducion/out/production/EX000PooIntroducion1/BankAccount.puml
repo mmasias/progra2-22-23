@@ -1,0 +1,8 @@
+@startuml
+class BankAccount {
+  - String titular
+  - double cantidad
+  + deposit(double amount)
+  + withdraw(double amount)
+}
+@enduml

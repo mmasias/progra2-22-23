@@ -1,0 +1,17 @@
+@startuml
+class Poo.Subject {
+    + name
+    + students
+    + isOrdered
+    + position
+    + capacity
+
+    - addStudent(Student student)
+    - orderStudents()
+    - getStudent(int index)
+    - getBestStudent()
+    - getWorstStudent()
+    - getAverage()
+    - getMedian()
+}
+@enduml
