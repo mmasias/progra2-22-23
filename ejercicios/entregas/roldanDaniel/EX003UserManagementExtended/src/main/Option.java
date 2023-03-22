@@ -47,15 +47,11 @@ public class Option {
 
     public void addOption(String option) {
 
-        if (this.maxOptions < this.options.length) {
+
 
             this.options[0] = option;
 
-        } else {
 
-            System.out.println("no capacity");
-
-        }
 
     }
 }

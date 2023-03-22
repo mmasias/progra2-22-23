@@ -8,4 +8,5 @@ public class RegularUser extends User {
         super();
 
     }
+
 }
