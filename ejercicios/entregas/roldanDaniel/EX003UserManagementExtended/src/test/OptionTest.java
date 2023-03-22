@@ -22,10 +22,16 @@ class OptionTest {
     @Test
     void validateAddOption(){
 
-        Option optionTest = new Option();
-        optionTest.addOption("hola");
-        optionTest.selectOption(1);
-        Assertions.assertEquals(,"hola");
+
+        String [] optionsTest = new String[2];
+
+        Option option = new Option();
+
+        option.addOption(optionsTest[0])=;
+
+
+
+        Assertions.assertEquals(optionsTest[0], "Holas");
 
 
     }
