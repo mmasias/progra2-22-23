@@ -34,7 +34,7 @@ public class TestUser  {
     }
 
     @Test
-    void setLogin() {
+    void setLogin(String dani) {
 
         User userTest = new User();
         Assertions.assertEquals(userTest.getLogin(),null);
