@@ -1,0 +1,5 @@
+@startuml
+class RegularUser {
+   +RegularUser(String userName, String password, String completeName)
+}
+@enduml
