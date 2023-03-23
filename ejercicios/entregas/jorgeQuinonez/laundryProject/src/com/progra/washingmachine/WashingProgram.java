@@ -20,7 +20,7 @@ public class WashingProgram {
             System.out.println("Fase " + i);
 
         if (this.spin)
-            System.out.println("centrifugado");
+            System.out.println("Centrifugado");
 
         System.out.println("Fin del programa " + this.name);
     }
