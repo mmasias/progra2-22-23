@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class EncryptionProgram {
 
-    private Scanner scanner;
-    private ArrayList<Character> list;
+    private final Scanner scanner;
+    private final ArrayList<Character> list;
     private ArrayList<Character> shuffledList;
     private char character;
-    private String line;
     private char[] letters;
 
     EncryptionProgram() {
@@ -29,23 +28,12 @@ public class EncryptionProgram {
             char response = Character.toUpperCase(scanner.nextLine().charAt(0));
 
             switch (response) {
-                case 'N':
-                    newKey();
-                    break;
-                case 'G':
-                    getKey();
-                    break;
-                case 'E':
-                    encrypt();
-                    break;
-                case 'D':
-                    decrypt();
-                    break;
-                case 'Q':
-                    quit();
-                    break;
-                default:
-                    System.out.println("Not a valid answer");
+                case 'N' -> newKey();
+                case 'G' -> getKey();
+                case 'E' -> encrypt();
+                case 'D' -> decrypt();
+                case 'Q' -> quit();
+                default -> System.out.println("Not a valid answer");
             }
         }
     }
