@@ -1,4 +1,4 @@
-public class Main {
+    public class Main {
     public static void main(String[] args) {
         // Is this the best way to do it?, What if I want to add more students?
         // Although I recommend not touching this code just make sure you understand it,
