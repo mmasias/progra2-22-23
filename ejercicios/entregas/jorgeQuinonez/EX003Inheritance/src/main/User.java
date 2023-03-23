@@ -2,9 +2,18 @@ package main;
 
 public class User {
 
-    private String userName;
-    private String password;
-    private String name;
+    protected String userName;
+    protected String password;
+    protected String name;
+
+    public User(String userName, String password, String name) {
+        this.userName = userName;
+        this.password = password;
+        this.name = name;
+    }
+
+    public User() {
+    }
 
     public void setUsername(String userName) {
         this.userName = userName;

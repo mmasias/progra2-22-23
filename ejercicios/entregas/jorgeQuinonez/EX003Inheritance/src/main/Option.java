@@ -2,13 +2,19 @@ package main;
 
 public class Option {
 
-    private String[] options;
-    private int selectedOption;
-    private int maxOptions;
+    protected String[] options;
+    protected int selectedOption;
+    protected int maxOptions;
+
+    public Option(String[] options, int selectedOption, int maxOptions) {
+        this.options = options;
+        this.selectedOption = selectedOption;
+        this.maxOptions = maxOptions;
+    }
 
     public void addOption(String newOption) {
         int currentOption = 0;
-        while (this.maxOptions > currentOption) {
+        while (maxOptions > currentOption) {
             options[currentOption] = newOption;
             currentOption++;
         }
@@ -23,6 +29,7 @@ public class Option {
     }
 
     public String getSelectedOption() {
-        return options[this.selectedOption];
+        return options[selectedOption];
     }
+
 }
