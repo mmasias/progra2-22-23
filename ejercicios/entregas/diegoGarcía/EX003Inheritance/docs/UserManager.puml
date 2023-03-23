@@ -1,0 +1,6 @@
+@startuml
+class UserManager{
++registerUser(user)
++isUserAdmin(user)
+}
+@enduml

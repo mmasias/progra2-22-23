@@ -1,0 +1,10 @@
+@startuml
+class Admin{
+    + isAdmin: boolean
+
+    + Admin(String username, String password, String name)
+    + isAdmin()
+    + setAdmin(boolean isAdmin)
+
+}
+@enduml
