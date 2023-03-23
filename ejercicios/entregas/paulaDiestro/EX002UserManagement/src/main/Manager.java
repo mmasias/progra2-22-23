@@ -1,49 +1,42 @@
 package main;
 
 public class Manager {
-    private String userList;
-    private String optionList;
-    private boolean authenticatedUser;
-    private String selectedOption;
-    private int maximumUsers;
+    int capacity;
+    int size;
+    User users[];
 
-    public Manager(){
-        userList = "user";
-        optionList = "option";
-        authenticatedUser = false;
-        selectedOption = "selected";
-        maximumUsers = 50;
-    }
+    User currentUser;
 
-    public String getUserList() {
-        return userList;
-    }
-    public String getOptionList() {
-        return optionList;
-    }
-    public boolean isAuthenticatedUser() {
-        return authenticatedUser;
-    }
-    public String getSelectedOption() {
-        return selectedOption;
-    }
-    public int getMaximumUsers() {
-        return maximumUsers;
+    String selectedOption;
+
+    public Manager() {
+        this.capacity = 10;
+        this.size = 0;
+        this.users = new User[capacity];
     }
 
-    public void setUserList(String userList) {
-        this.userList = userList;
+    public Manager(int capacity) {
+        this.capacity = capacity;
+        this.size = 0;
+        this.users = new User[capacity];
     }
-    public void setOptionList(String optionList) {
-        this.optionList = optionList;
+
+    public void add(User user) {
+        if (size < capacity) {
+            users[size] = user;
+            size++;
+        }
     }
-    public void setAuthenticatedUser(boolean authenticatedUser) {
-        this.authenticatedUser = authenticatedUser;
+
+    public User login(String userName, String password) {
+        for (int i = 0; i < size; i++) {
+            if (users[i].login(userName, password)) {
+                currentUser = users[i];
+                return currentUser;
+            }
+        }
+        System.out.println("Invalid username or password");
+        return null;
     }
-    public void setSelectedOption(String selectedOption) {
-        this.selectedOption = selectedOption;
-    }
-    public void setMaximumUsers(int maximumUsers) {
-        this.maximumUsers = maximumUsers;
-    }
+
 }
