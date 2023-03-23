@@ -1,0 +1,84 @@
+@startuml
+
+class User {
+    - userName: String
+    - password: String
+    - name: String
+    - login: boolean
+    + setUsername(String userName): void
+    + setPassword(String password): void
+    + getUsername(): String
+    + getName(): String
+    + setName(String name): void
+    + login(String userName, String password): boolean
+}
+
+class Admin {
+
+    + isAdmin: boolean
+    + isAdmin(): boolean
+    + setAdmin(boolean isAdmin): void
+
+}
+
+User <|-- Admin
+
+class RegularUser {
+}
+
+User <|-- RegularUser
+
+class Option {
+
+    - options: String[]
+    selectedOption: int
+    maxOptions: int
+    + addOption(String option): void
+    + getOption(int index): String
+    + setMaxOptions(int maxOptions): void
+    + getMaxOptions(): int
+    + selectOption(int index): void
+    + getSelectedOption(): String
+
+}
+
+class MenuOption {
+
+    description: String
+    + getDescription(): String
+    + setDescription(String description): void
+
+}
+
+Option <|-- MenuOption
+
+class Manager {
+
+    - userList: User[]
+    - position: int
+    - capacity: int
+    - userExist: boolean
+    + addUser(User user): void
+    + checkUser(String username): boolean
+    + createUser(User user): boolean
+    + getUserPosition(String username): int
+    + authUser(String username, String password)
+    + configureMenu(int max): MenuOption
+    + showMenu(): void
+    + getUsers(int position): User
+    + setCapacity(int capacity): void
+    + getCapacity(): int
+    + getPosition(): int
+
+}
+
+class UserManager {
+
+    + registerUser(User user): boolean
+    + isUserAdmin(User user): boolean
+
+}
+
+Manager <|-- UserManager
+
+@enduml
