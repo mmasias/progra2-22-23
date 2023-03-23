@@ -51,6 +51,10 @@ public class Option {
         this.defaultSelection = defaultSelection;
     }
 
+    public void setItems(String[] items) {
+        this.items = items;
+    }
+
     public void print() {
         for (int i = 0; i < size; i++) {
             System.out.println(i + ". " + items[i]);
