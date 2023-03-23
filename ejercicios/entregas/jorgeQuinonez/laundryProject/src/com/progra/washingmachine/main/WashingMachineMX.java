@@ -84,10 +84,12 @@ public class WashingMachineMX {
             System.out.println("Program: " + activeProgram.getName());
             System.out.print("Temperature: ");
             if (selector != null) {
-                System.out.println(selector.temperature());
+                System.out.print(selector.temperature());
+                System.out.print("°C");
             } else {
                 System.out.print("0");
             }
+            System.out.println();
             System.out.println("Duration: " + activeProgram.getDuration());
             System.out.println("Water consumption: " +
                     activeProgram.getWaterConsumption());
