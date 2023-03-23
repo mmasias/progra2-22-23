@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c323626-d5c4-486c-abb4-ea9ee063f411" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../ejercicios/entregas/davidMontenegro/EX001POOStudent.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ejercicios/entregas/davidMontenegro/EX001POOStudent/src/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ejercicios/entregas/davidMontenegro/EX002UserManagement/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ejercicios/entregas/davidMontenegro/EX002UserManagement/ManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ejercicios/entregas/davidMontenegro/EX002UserManagement/Option.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ejercicios/entregas/davidMontenegro/EX002UserManagement/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ejercicios/entregas/davidMontenegro/EX002UserManagement/UserManagement.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserManagement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2N0uCxRz9jIlL5tF7FPohDyMt6k" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c323626-d5c4-486c-abb4-ea9ee063f411" name="Changes" comment="" />
+      <created>1678813196627</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678813196627</updated>
+      <workItem from="1678813197875" duration="22490000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
