@@ -3,45 +3,61 @@ import java.util.List;
 
 public class Option {
 
-    private List<String> options;
-    private int maxOptions;
-    private int selectedOption;
+    String items[];
+    int capacity;
+    int size;
+    int defaultSelection;
 
-    public Option(int maxOptions) {
-        this.options = new ArrayList<String>();
-        this.maxOptions = maxOptions;
-        this.selectedOption = 0;
+    public Option() {
+        this.capacity = 10;
+        this.size = 0;
+        this.defaultSelection = 0;
+        this.items = new String[capacity];
     }
 
-    public void addOption(String option) {
-        if (options.size() < maxOptions) {
-            options.add(option);
+    public Option(int capacity) {
+        this.capacity = capacity;
+        this.size = 0;
+        this.defaultSelection = 0;
+        this.items = new String[capacity];
+    }
+
+    public void add(String item) {
+        if (size < capacity) {
+            items[size] = item;
+            size++;
         }
     }
 
-    public String getOption(int index) {
-        if (index >= 0 && index < options.size()) {
-            return options.get(index);
+    public String[] getItems() {
+        return items;
+    }
+
+    public String getItem(int index) {
+
+        if (index < 0 || index >= size) {
+            return null;
         }
-        return null;
+
+        return items[index];
     }
 
-    public int getSelectedOption() {
-        return selectedOption;
+    public int getSize() {
+        return size;
     }
 
-    public void setSelectedOption(int selectedOption) {
-        if (selectedOption >= 0 && selectedOption < options.size()) {
-            this.selectedOption = selectedOption;
+    public int getDefaultSelection() {
+        return defaultSelection;
+    }
+
+    public void setDefaultSelection(int defaultSelection) {
+        this.defaultSelection = defaultSelection;
+    }
+
+    public void print() {
+        for (int i = 0; i < size; i++) {
+            System.out.println(i + ". " + items[i]);
         }
-    }
 
-    public int getMaxOptions() {
-        return maxOptions;
     }
-
-    public void setMaxOptions(int maxOptions) {
-        this.maxOptions = maxOptions;
-    }
-
 }
