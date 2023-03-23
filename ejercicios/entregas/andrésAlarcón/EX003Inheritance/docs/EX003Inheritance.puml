@@ -1,0 +1,71 @@
+@startuml
+class main.User {
+- String name
+- String password
+- String userName
+- Options options
++ <<Create>> User()
++ <<Create>> User(String,String,String)
++ String getName()
++ void setName(String)
++ void setUserName(String)
++ void setPassword(String)
++ String getUserName()
++ boolean login(String,String)
++ void setOptions(Options)
++ Options getOptions()
+}
+class main.Options {
+~ String[] items
+~ int capacity
+~ int size
+~ int defaultSelection
++ <<Create>> Options()
++ <<Create>> Options(int)
++ void add(String)
++ String[] getItems()
++ String getItem(int)
++ int getSize()
++ int getDefaultSelection()
++ void setDefaultSelection(int)
++ void print()
+}
+
+class main.Manager {
+~ int capacity
+~ int size
+~ User[] users
+~ User currentUser
+~ String selectedOption
++ <<Create>> Manager()
++ <<Create>> Manager(int)
++ void add(User)
++ User login(String,String)
+}
+
+class main.Admin {
+- boolean isAdmin
++ boolean isAdmin()
++ void setAdmin(boolean isAdmin)
+
+}
+
+class main.RegularUser {
+
+}
+
+class main.MenuOption {
+- String description
++ String getDescription()
++ void setDescription(String description)
+}
+
+class main.UserManager {
++ void registerUser(User user)
++ boolean isUserAdmin(User user)
+}
+User <|-- RegularUser
+User <|-- Admin
+Options <|-- MenuOption
+Manager <|-- UserManager
+@enduml
