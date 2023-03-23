@@ -22,9 +22,9 @@ public class WashingMachineTest {
         manipulate(washingMachine);
     }
 
-    private static void manipulate(WashingMachineMX machineMX3) {
-        machineMX3.setProgram();
-        machineMX3.infoProgram();
-        machineMX3.start();
+    private static void manipulate(WashingMachineMX washingMachine) {
+        washingMachine.setProgram();
+        washingMachine.infoProgram();
+        washingMachine.start();
     }
 }
