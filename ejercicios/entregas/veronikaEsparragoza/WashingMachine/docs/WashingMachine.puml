@@ -1,0 +1,43 @@
+@startuml
+class WashingProgram
+{
+  - name : String
+  - numberOfSteps : int
+  - times : int
+  - waterConsumption : int
+  - isSpin : boolean
+  - preWash : boolean
+  + WashinProgram(String name, int numberOfSteps, int times, int waterConsumption, boolean isSpin, boolean preWash)
+  + startWashingProgram() : void
+  + waterConsumption() : int
+  + name() : String
+  + duration() : int
+  }
+
+class SelectorTemperature
+{
+  - temperature : int
+  - maxTemperature : int
+  + SelectorTemperature() : void
+  + setTemperature(int temperature) : void
+  + getTemperature() : int
+  + getMaxTemperature() : int
+  + electricalConsumption() : int
+}
+class WashingMachineMX
+{
+  - electricalConsumption : int
+  - washingProgram : WashingProgram[]
+  - selectedProgram : WashingProgram
+  - selectorTemperature : SelectorTemperature
+  + WashingMachineMX()
+  + startWashingProgram() : void
+  + program() : void
+  + infoProgram() : void
+}
+WashingProgram o-- WashingMachineMX
+WashingMachineMX o-- SelectorTemperature
+WashingMachineMX <|-- WashingMachineMX1
+WashingMachineMX1 <|-- WashingMachineMX2
+WashingMachineMX <|-- WashingMachineMX3deLuxe
+@enduml
