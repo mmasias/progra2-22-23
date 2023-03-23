@@ -1,0 +1,17 @@
+@startuml
+class Option {
+   +option: String[]
+   +selectedOption: int
+   +maxOption: int
+   +size: int
+
+    +Option()
+    +Option(maxOption)
+    +addOption(option)
+    +getSelectedOption(): int
+    +setSelectedOption()
+    +getOption(index)
+    +getSize()
+
+}
+@enduml
