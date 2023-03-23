@@ -52,5 +52,9 @@ class UserManager {
 
 class RegularUser
 
+User <|-- RegularUser
+User <|-- Admin
+Option <|-- MenuOption
+Manager <|-- UserManager
 
 @enduml

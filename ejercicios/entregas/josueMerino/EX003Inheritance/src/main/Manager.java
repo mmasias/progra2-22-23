@@ -1,41 +1,46 @@
 package main;
 
 public class Manager {
-    int capacity;
+    int maxUsers;
     int size;
     User users[];
 
-    User currentUser;
+    User authenticatedUser;
 
     String selectedOption;
 
     public Manager() {
-        this.capacity = 10;
+        this.maxUsers = 10;
         this.size = 0;
-        this.users = new User[capacity];
+        this.users = new User[maxUsers];
     }
 
-    public Manager(int capacity) {
-        this.capacity = capacity;
+    public Manager(int maxUsers) {
+        this.maxUsers = maxUsers;
         this.size = 0;
-        this.users = new User[capacity];
+        this.users = new User[maxUsers];
     }
 
-    public void add(User user) {
-        if (size < capacity) {
+    public void addUser(User user) {
+        if (size < maxUsers) {
             users[size] = user;
             size++;
         }
     }
 
-    public User login(String userName, String password) {
+    public User authenticateUser(String userName, String password) {
         for (int i = 0; i < size; i++) {
             if (users[i].login(userName, password)) {
-                currentUser = users[i];
-                return currentUser;
+                authenticatedUser = users[i];
+                return authenticatedUser;
             }
         }
         System.out.println("Invalid username or password");
         return null;
+    }
+
+    public void showMenu()
+    {
+
     }
 }

@@ -4,7 +4,7 @@ public class User {
     private String name;
     private String password;
     private String userName;
-
+    private boolean isAdmin;
     private Option options;
 
     /**
@@ -29,6 +29,7 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.name = name;
+        this.isAdmin = false;
     }
 
     public String getName() {
@@ -62,5 +63,13 @@ public class User {
 
     public Option getOptions() {
         return options;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 }
