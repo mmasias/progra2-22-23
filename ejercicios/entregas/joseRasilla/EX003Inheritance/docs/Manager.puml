@@ -1,0 +1,14 @@
+@startuml
+class Manager{
+    +User[] users
+    +User authenticatedUser
+    +int maxUsers
+    +int size
+
+    +Manager()
+    +Manager(int maxUsers)
+    +addUser(User newUser)
+    +authenticateUser(String username, String password)
+    +getAuthenticatedUser()
+}
+@enduml

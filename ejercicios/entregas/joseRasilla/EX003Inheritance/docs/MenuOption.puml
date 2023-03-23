@@ -1,0 +1,11 @@
+@startuml
+class MenuOption{
+    + String description
+
+    + getDescription()
+    + setDescription(String description)
+    + MenuOption(String description)
+    + MenuOption(int capacity, String description)
+}
+
+@enduml

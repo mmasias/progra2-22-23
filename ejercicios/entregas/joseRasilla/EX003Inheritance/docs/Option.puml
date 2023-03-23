@@ -1,0 +1,17 @@
+@startuml
+class Option {
+    +String[] items
+    +int selectedOption
+    +int size
+    +int capacity
+
+    +Option()
+    +Option(int capacity)
+    +String[] getOptions()
+    +addOption(String option)
+    +String getOption(int index)
+    +setSelectedOption(int selectedOption)
+    +int getSelectedOption()
+    +int getSize()
+}
+@enduml
