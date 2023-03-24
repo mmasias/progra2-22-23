@@ -17,7 +17,7 @@ public class User {
     public User() {
         this.userName = "user";
         this.password = "password";
-        this.name = "User";
+
     }
 
     /**
@@ -29,7 +29,7 @@ public class User {
     public User(String userName, String password) {
         this.userName = userName;
         this.password = password;
-        this.name = name;
+
     }
 
 
@@ -56,7 +56,7 @@ public class User {
 
 
     public boolean login(String userName, String password) {
-        if (this.userName.equals(userName) && this.password.equals(password)&& this.name.equals(name)) {
+        if (this.userName.equals(userName) && this.password.equals(password)) {
             return true;
         }
         return false;
