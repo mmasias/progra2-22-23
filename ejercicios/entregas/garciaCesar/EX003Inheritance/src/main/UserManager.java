@@ -1,4 +1,4 @@
-package main;
+package src.main;
 
 public class UserManager extends Manager {
 	public void registerUser(User user) {

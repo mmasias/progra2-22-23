@@ -1,4 +1,4 @@
-package main;
+package src.main;
 
 public class MenuOption extends Options {
 	private String description;

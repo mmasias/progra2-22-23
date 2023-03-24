@@ -1,4 +1,4 @@
-package main;
+package src.main;
 
 import main.MenuOption;
 import main.User;

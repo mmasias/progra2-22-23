@@ -1,4 +1,4 @@
-package main;
+package src.main;
 
 public class Admin extends User {
 	private boolean isAdmin;

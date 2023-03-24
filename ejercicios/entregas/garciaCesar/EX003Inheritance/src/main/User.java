@@ -1,4 +1,4 @@
-package main;
+package src.main;
 public class User {
     private String userName;
     private String password;
