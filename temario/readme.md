@@ -7,17 +7,23 @@
     - ☑️ Declarativo
      - ☑️ Funcional
      - ☑️ Lógico
-- ☑️ Programación orientado a objetos y diagrama de clases
+- ☑️ Programación orientada a objetos y diagrama de clases
     - ☑️ ¿Qué es POO?
     - ☑️ Clase - Atributos y métodos
     - ☑️ Mis primeras clases en Java
     - ☑️ UML
-- 🔲 Abstracción y encapsulamiento
+- ☑️ Abstracción y encapsulamiento
     - ☑️ Objetos y clases
     - ☑️ Abstracción
-    - 🔲 Encapsulamiento
-- 🔲 Herencia
-- 🔲 Poliformismo
+    - ☑️ Encapsulamiento
+- ☑️ Herencia
+  - ☑️ Herencia en Java 
+  - ☑️ Visibilidad de los elementos heredados
+- ☑️ Polimorfismo
+    - ☑️ Polimorfismo en Java
+    - ☑️ Clases abstractas
+    - ☑️ Interfaces
+    - ☑️ ¿Herencia múltiple?
 - 🔲 Mapas, conjuntos y arraylists
 - 🔲 Errores
 - 🔲 Programación visual
