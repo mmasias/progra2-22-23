@@ -14,7 +14,7 @@ class WashingMachineMX {
     }
     public void programming () {
         BufferedReader in = new BufferedReader ( new InputStreamReader(System.in) ); String line;
-        int opcion=0;
+        int option=0;
         int temp=0;
 
         System.out.println("Washing Maxine MX"); System.out.println("Programming Mode"); System.out.println(); System.out.println("0 - Off");
@@ -24,15 +24,15 @@ class WashingMachineMX {
         System.out.println("Selection: "); do {
             try {
                 line = in.readLine();
-                opcion = Integer.parseInt (line);
+                option = Integer.parseInt (line);
             }
             catch (Exception e) {
-                System.err.println(e);
+                System.err.println("e");
             }
 
         } while ( (option < 0) || (option > _av_program.length) );
         if (option == 0) _av_program = null;
-        else _active_program = _av_program[opcion-1];
+        else _active_program = _av_program[option-1];
 
         if (_selector != null) {
             do {
@@ -41,7 +41,7 @@ class WashingMachineMX {
                     temp = Integer.parseInt (line);
                 }
                 catch (Exception e) {
-                    System.err.println(e);
+                    System.err.println("e");
                 }
             } while ( (temp < 0) || (temp > _selector.maxTemperature()) );
             _selector.setTemperature(temp); }
@@ -68,7 +68,7 @@ class WashingMachineMX {
         }
     }
 
-    private int _electricity_cons;
+    private final int _electricity_cons;
     protected WashingProgram[] _av_program;
     private WashingProgram _active_program;
     protected TemperatureSelector _selector;
