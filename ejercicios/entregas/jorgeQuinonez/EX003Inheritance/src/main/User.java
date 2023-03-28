@@ -12,6 +12,11 @@ public class User {
         this.name = name;
     }
 
+    public User(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
     public User() {
     }
 
@@ -32,10 +37,11 @@ public class User {
     }
 
     public String getPassword() {
-        return this.password;
+        return Integer.toString(this.password.hashCode()); // Hashing the password : int -> converting to String
     }
 
     public String getName() {
         return this.name;
     }
+
 }

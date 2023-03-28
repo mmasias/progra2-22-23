@@ -10,7 +10,7 @@ public class UserManager extends Manager {
         addUser(user);
     }
 
-    public boolean isUserAdmin(User user) {
+    public boolean isUszrAdmin(User user) {
         if (((Admin) user).getAdmin() == true) {
             return true;
         }

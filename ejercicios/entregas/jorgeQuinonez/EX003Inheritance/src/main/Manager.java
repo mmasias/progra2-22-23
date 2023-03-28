@@ -7,6 +7,7 @@ public class Manager {
     private MenuOption selectedOption;
     private int maxUsers;
     private MenuOption[] options;
+    private int userCount;
 
     public Manager() {
         this.maxUsers = 10;
@@ -23,12 +24,14 @@ public class Manager {
     }
 
     public void addUser(User newUser) {
-        for (int i = 0; i < maxUsers; i++) {
-            if (users[i] == null) {
-                users[i] = newUser;
-                break;
-            }
+        if (userCount < maxUsers) {
+            users[userCount] = newUser;
+            userCount++;
         }
+    }
+
+    public int getUsersLenght() {
+        return userCount;
     }
 
     public boolean authenticatedUser(String userName, String password) {
@@ -47,5 +50,9 @@ public class Manager {
         for (int i = 0; i < options.length; i++) {
             System.out.println((i + 1) + ". " + options[i].getOption(i));
         }
+    }
+
+    public int getMax() {
+        return maxUsers;
     }
 }

@@ -15,7 +15,9 @@ class Admin{
     + setAdmin(isAdmin: boolean): void
     + getAdmin(): boolean
 }
-class RegularUser{}
+class RegularUser{
+    - User: String
+}
 class Option{
     - options: String[]
     - selectedOption: int
@@ -46,6 +48,7 @@ class UserManager{
 }
 
 User *-- RegularUser
+User *-- Admin
 Manager *-- UserManager
-Admin --* User
+Option *-- MenuOption
 @enduml

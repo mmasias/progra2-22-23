@@ -6,6 +6,11 @@ public class Admin extends User {
 
     public Admin(String userName, String password, String name, boolean isAdmin) {
         super(userName, password, name);
+        this.isAdmin = isAdmin;
+    }
+
+    public Admin(String userName, String password) {
+        super(userName, password);
         this.isAdmin = false;
     }
 
