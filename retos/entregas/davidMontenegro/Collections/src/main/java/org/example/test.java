@@ -26,7 +26,7 @@ public class test {
             if (marca.equals("Citroen")) {
                 it.remove();
             }
-            System.out.println(listaMarcasCoches.toString());
         }
+        System.out.println(listaMarcasCoches.toString());
     }
 }
