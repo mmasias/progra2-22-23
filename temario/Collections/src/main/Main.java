@@ -22,9 +22,7 @@ public class Main {
         carsBrandsList.remove("Seat");
         carsBrandsList.remove("Mercedes");
 
-        System.out.println(
-                "Number of elements after delete of Seat and Mercedes:" + carsBrandsList.size()
-        );
+        System.out.println("Number of elements after delete of Seat and Mercedes:" + carsBrandsList.size());
 
         System.out.println(carsBrandsList.toString());
 
