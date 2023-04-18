@@ -20,7 +20,8 @@ public class Complex implements IComparable {
     }
 
     public double getModulus() {
-        return Math.sqrt(Math.pow(real, 2) + Math.pow(imaginary, 2));
+        return Math.sqrt(
+                Math.pow(real, 2) + Math.pow(imaginary, 2));
     }
 
     public String toString() {
