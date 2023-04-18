@@ -32,6 +32,34 @@
 - Crear un atributo en Java.
 - Crear un objeto en Java.
 
+# 📘 Abstracción y encapsulamiento
+- Concepto de abstracción.
+- Concepto de encapsulamiento y ámbito de las variables y clases.
+- Ámbito de las variables y clases y su representación con UML.
+
+# 📘 Herencia
+- Concepto de herencia y representación con UML.
+- Herencia en Java.
+- Jerarquía de clases.
+- Visibilidad de los elementos heredados (`Protected`).
+
+# 📘 Polimorfismo
+- Concepto de polimorfismo.
+- Polimorfismo en Java.
+- Clases abstractas.
+- Interfaces.
+- Herencia múltiple en Java.
+
+# 📘 Colecciones
+- Concepto de colecciones y su jerarquía de clases en Java.
+- Memoria dinámica con colecciones.
+- Uso de la interfaz `List`.
+- Uso de la interfaz `Set`.
+- Uso de la interfaz `Map`.
+- Iterar sobre colecciones.
+- Uso de la interfaz `Iterator`.
+- Usar adecuadamente las colecciones en Java.
+
 
 
 
