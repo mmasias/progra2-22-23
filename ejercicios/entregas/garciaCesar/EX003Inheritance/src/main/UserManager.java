@@ -1,6 +1,10 @@
 package src.main;
 
 public class UserManager extends Manager {
+	public UserManager() {
+		super(maxUsers);
+	}
+
 	public void registerUser(User user) {
 		// registrar usuario
 	}

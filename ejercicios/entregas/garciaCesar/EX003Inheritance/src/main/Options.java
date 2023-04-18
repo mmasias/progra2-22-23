@@ -1,12 +1,13 @@
 package src.main;
 public class Options {
-    private String[] options;
+    private String options[];
     private int selectedOption;
     private int maxOptions;
 
-    public Options(int maxOptions) {
+    public Options() {
         this.maxOptions = maxOptions;
         this.options = new String[maxOptions];
+        this.selectedOption = 0;
     }
 
     public void addOption(String option) {
@@ -22,6 +23,9 @@ public class Options {
     public void selectOption(int index) {
         if (index >= 0 && index < maxOptions) {
             selectedOption = index;
+            if (options[selectedOption] == null) {
+                selectedOption = 0;
+            }
         }
     }
 

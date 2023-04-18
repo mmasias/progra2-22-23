@@ -1,13 +1,14 @@
 package src.main;
 
-import main.MenuOption;
-import main.User;
-
 public class Manager {
-	private User[] users;
+	private User users[];
 	private User authenticatedUser;
 	private MenuOption selectedOption;
 	private int maxUsers;
+
+	public Manager() {
+		maxUsers = 10;
+	}
 
 	public void addUser(User user) {
 		// agregar usuario

@@ -3,8 +3,8 @@ package src.main;
 public class Admin extends User {
 	private boolean isAdmin;
 
-	public Admin(String userName, String password, String name, boolean isAdmin) {
-		super(userName, password, name);
+	public Admin(String userName, String password, boolean isAdmin) {
+		super(userName, password);
 		this.isAdmin = isAdmin;
 	}
 
