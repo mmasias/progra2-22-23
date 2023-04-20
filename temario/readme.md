@@ -24,6 +24,12 @@
     - ☑️ Clases abstractas
     - ☑️ Interfaces
     - ☑️ ¿Herencia múltiple?
-- 🔲 Mapas, conjuntos y arraylists
+- ☑️ Colecciones: Mapas, conjuntos y arraylists
+  - ☑️ Set
+  - Como recorrer conjuntos
+  - ☑️ List
+  - ☑️ Arraylist y como recorrerlo
+  - ☑️ Map
+  - ☑️ Iterator
 - 🔲 Errores
 - 🔲 Programación visual
