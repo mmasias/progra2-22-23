@@ -1,0 +1,72 @@
+@startuml
+class main.ex1.Dog {
++ <<Create>> Dog(String,String,int)
++ String getName()
+}
+class main.ex1.CustomDate {
+- int day
+- int month
+- int year
++ <<Create>> CustomDate(int,int,int)
++ String toString()
++ String format(String)
+}
+class main.ex1.Cat {
++ <<Create>> Cat(String,String,int)
++ String getName()
+}
+class main.ex1.Appointment {
+~ Client owner
+~ Pet pet
+~ CustomDate date
+~ String description
++ <<Create>> Appointment(Pet,CustomDate,String)
++ String toString()
++ void setOwner(Client)
+}
+abstract class main.ex1.Pet {
+# String name
+# String color
+# int age
++ <<Create>> Pet(String,String,int)
++ {abstract}String getName()
+}
+class main.ex1.ManagementSystem {
+- FileHandler fileHandler
+- List<Client> clients
+- List<Appointment> appointments
++ <<Create>> ManagementSystem()
++ void loadData(String)
++ List<Client> getClients()
++ void addAppointment(Appointment,Client)
++ List<Appointment> getAppointments()
+- boolean isClient(Client)
+}
+class main.ex1.FileHandler {
+- List<String> lines
++ <<Create>> FileHandler()
++ List<String> loadFileContent(String)
+- boolean isPathEmpty(String)
+- List<String> readFileContent(String)
+}
+class main.ex1.Client {
+- String name
+- String surname
+- String address
+- String phoneNumber
++ <<Create>> Client(String,String,String,String)
++ String getFullName()
++ boolean equals(Client)
+}
+
+
+main.ex1.Pet <|-- main.ex1.Dog
+main.ex1.Pet <|-- main.ex1.Cat
+main.ex1.CustomDate <-- main.ex1.Appointment : Uses
+main.ex1.Client <-- main.ex1.Appointment : Uses
+main.ex1.Pet <-- main.ex1.Appointment : Uses
+
+main.ex1.ManagementSystem --> main.ex1.FileHandler : Uses
+main.ex1.ManagementSystem o-- "O..*" main.ex1.Client : Has
+main.ex1.ManagementSystem o-- "O..*" main.ex1.Appointment : Has
+@enduml

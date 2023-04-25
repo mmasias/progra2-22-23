@@ -1,0 +1,61 @@
+@startuml
+class main.ex2.Square {
++ double getSide()
++ void setSide(double)
++ void setLength(double)
++ String toString()
+}
+class main.ex2.Circle {
+# double radius
++ double getRadius()
++ void setRadius(double)
++ double getArea()
++ double getPerimeter()
++ String toString()
+}
+class main.ex2.Rectangle {
+# double width
+# double length
++ double getWidth()
++ double getLength()
++ void setWidth(double)
++ void setLength(double)
++ double getArea()
++ double getPerimeter()
++ String toString()
+}
+abstract class main.ex2.Shape {
+# String color
+# boolean filled
++ String getColor()
++ void setColor(String)
++ boolean isFilled()
++ void setFilled(boolean)
++ {abstract}double getArea()
++ {abstract}double getPerimeter()
++ String toString()
+}
+
+
+main.ex2.Rectangle <|-- main.ex2.Square
+main.ex2.Shape <|-- main.ex2.Circle
+main.ex2.Shape <|-- main.ex2.Rectangle
+
+note right of main.ex2.Shape::toString()
+ "Shape [ color = ?, filled = ?]"
+end note
+
+note left of main.ex2.Circle::toString()
+ "Circle [ Shape [ color = ?, filled = ?], radius = ?]"
+end note
+
+
+note left of main.ex2.Rectangle::toString()
+ "Rectangle [ Shape [ color = ?, filled = ?], width = ?, length = ?]"
+end note
+
+note left of main.ex2.Square::toString()
+ "Square [ Rectangle [ Shape [ color = ?, filled = ?], width = ?, length = ?] ]"
+end note
+
+@enduml

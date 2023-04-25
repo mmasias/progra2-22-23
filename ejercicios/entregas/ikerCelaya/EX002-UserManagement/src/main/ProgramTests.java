@@ -17,6 +17,7 @@ public class ProgramTests {
             System.out.println("Authentication failed! :(");
         }
 
+
     }
     @Test
     public void testUser2() {
