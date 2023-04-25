@@ -17,6 +17,6 @@ public  class Square extends Rectangle{
     }
     @Override
     public String toString() {
-        return super.toString();
+        return "Square [ Rectangle [ Shape [ color=" + color + ", filled=" + filled + "], width=" + width + ", length=" + length + "]]";
     }
 }
