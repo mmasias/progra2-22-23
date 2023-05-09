@@ -10,7 +10,7 @@ import java.util.List;
 public class FileHandler {
     private List<String> lines;
 
-    public FileHandler(){
+    public FileHandler() {
         this.lines = new ArrayList<>();
     }
 

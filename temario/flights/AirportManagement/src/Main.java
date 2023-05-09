@@ -15,7 +15,7 @@ public class Main {
 
         FileHandler fileHandlerExample = new FileHandler();
 
-        for (String airline: fileHandlerExample.loadFileContent("src/main/data/airlines.dat")) {
+        for (String airline : fileHandlerExample.loadFileContent("")) {
             String[] rawData;
             rawData = airline.split(",");
 
@@ -29,13 +29,13 @@ public class Main {
             country = rawData[5];
             boolean active;
 
-            if(rawData[6]=="Y") {
+            if (rawData[6] == "Y") {
                 active = true;
-            }else{
+            } else {
                 active = false;
             }
 
-            airlines.add(new Airline(id, name , country, active));
+            airlines.add(new Airline(id, name, country, active));
         }
 
         Scanner scanner = new Scanner(System.in);

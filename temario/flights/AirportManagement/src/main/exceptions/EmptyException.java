@@ -1,6 +1,6 @@
 package main.exceptions;
 
-public class EmptyException extends Exception{
+public class EmptyException extends Exception {
     public EmptyException() {
         super("Sorry, the argument is empty");
     }
