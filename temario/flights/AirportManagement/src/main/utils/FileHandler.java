@@ -1,5 +1,8 @@
 package main.utils;
 
+import main.exceptions.*;
+import main.exceptions.FileNotFoundException;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,16 +14,14 @@ public class FileHandler {
         this.lines = new ArrayList<>();
     }
 
-    public List<String> loadFileContent(String path) {
+    public List<String> loadFileContent(String path) throws EmptyException, FileNotFoundException {
         if (isPathEmpty(path)) {
-            System.err.println("Path is empty");
-            return null;
+            throw new EmptyException();
         }
 
         File file = new File(path);
         if (!file.exists()) {
-            System.err.println("File not found");
-            return null;
+            throw new FileNotFoundException();
         }
 
         return readFileContent(path);
@@ -42,7 +43,7 @@ public class FileHandler {
             } catch (IOException e) {
                 System.err.println("Error reading file");
             }
-        } catch (FileNotFoundException e) {
+        } catch (java.io.FileNotFoundException e) {
             System.err.println("File not found");
         } finally {
             if (input != null) {

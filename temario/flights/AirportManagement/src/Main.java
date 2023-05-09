@@ -1,4 +1,6 @@
 import main.core.Airline;
+import main.exceptions.EmptyException;
+import main.exceptions.FileNotFoundException;
 import main.utils.FileHandler;
 
 import java.awt.*;
@@ -8,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws EmptyException, FileNotFoundException {
         List<Airline> airlines = new ArrayList<>();
 
         FileHandler fileHandlerExample = new FileHandler();
