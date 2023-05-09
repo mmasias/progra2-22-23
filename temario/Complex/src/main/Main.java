@@ -20,6 +20,10 @@ public class Main {
 
         }
 
+        Complex[] array = new Complex[2];
+        int[] array2 = new int[2];
+        array[0] = a;
+        array2[0] = 5;
 
         // Print the list
         ArrayList<Complex> list = new ArrayList<Complex>();
