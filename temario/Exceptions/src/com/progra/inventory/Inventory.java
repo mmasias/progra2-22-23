@@ -1,6 +1,7 @@
 package com.progra.inventory;
 
 import com.progra.inventory.exceptions.FullStorageException;
+import com.progra.inventory.exceptions.ItemNotFoundException;
 
 import java.util.ArrayList;
 
@@ -43,7 +44,16 @@ public class Inventory implements  IInventory{
         return this.items;
     }
 
+    public void removeItem(String item) throws ItemNotFoundException {
+        if(!this.items.contains(item))
+        {
+            throw new ItemNotFoundException("Not found item to delete");
+        }
+
+        this.items.remove(item);
+    }
+
     private Boolean hasAvailableStorage(){
-        return this.items.size() < this.capacity ? true: false;
+        return this.items.size() < this.capacity;
     }
 }
