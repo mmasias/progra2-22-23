@@ -1,4 +1,5 @@
 import main.core.Airline;
+import main.exceptions.EmptyException;
 import main.utils.FileHandler;
 
 import java.awt.*;
@@ -8,12 +9,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws EmptyException {
         List<Airline> airlines = new ArrayList<>();
 
         FileHandler fileHandlerExample = new FileHandler();
 
-        for (String airline: fileHandlerExample.loadFileContent("src/main/data/airlines.dat")) {
+        for (String airline: fileHandlerExample.loadFileContent("")) {
             String[] rawData;
             rawData = airline.split(",");
 
