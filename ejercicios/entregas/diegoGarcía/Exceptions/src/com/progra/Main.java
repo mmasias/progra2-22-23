@@ -13,7 +13,7 @@ public class Main {
         String newObject = "";
 
         System.out.println("Ingresa la capacidad de tu inventario: ");
-        int capacity = input.nextInt();
+        int capacity = Integer.parseInt(input.nextLine()); //nextInt has problems with EOL
         Inventory inv = new Inventory(capacity);
         do{
             try {
@@ -24,9 +24,9 @@ public class Main {
             } catch (FullStorageException e) {
                 // HERE you can do something with the exception :)
                 System.err.println(e.getMessage());
-
             }
-        } while (true);
+        }
+        while (true);
 
         //TODO Borrar Elementos del inventario, Añadir Elementos a través de un archivo externo y manejar excepciones
         // como FileNotFoundException, también crear validaciones por medio de Excepciones personalizadas
