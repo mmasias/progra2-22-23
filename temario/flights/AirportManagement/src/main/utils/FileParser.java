@@ -1,5 +1,7 @@
 package main.utils;
 
+import main.exceptions.EmptyException;
+
 public class FileParser extends FileHandler {
 
     public FileParser() {
@@ -11,7 +13,7 @@ public class FileParser extends FileHandler {
         return parsearDatos;
     }
 
-    public void setParsearDatos(String path) {
+    public void setParsearDatos(String path) throws EmptyException {
 
         FileParser f1 = new FileParser();
 
