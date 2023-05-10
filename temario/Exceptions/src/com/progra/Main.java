@@ -11,9 +11,15 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         String newObject = "";
-
-        System.out.println("Ingresa la capacidad de tu inventario: ");
-        int capacity = Integer.parseInt(input.nextLine()); //nextInt has problems with EOL
+        int capacity=0;
+        do {
+            System.out.println("Ingresa la capacidad de tu inventario: ");
+            try {
+                capacity = Integer.parseInt(input.nextLine()); //nextInt has problems with EOL
+            } catch (NumberFormatException ex) {
+                System.out.println("Number is not valid");
+            }
+        }while(capacity==0);
         Inventory inv = new Inventory(capacity);
         do{
             try {
@@ -24,6 +30,7 @@ public class Main {
             } catch (FullStorageException e) {
                 // HERE you can do something with the exception :)
                 System.err.println(e.getMessage());
+                break;
             }
         }
         while (true);
