@@ -18,19 +18,10 @@ public class Main {
         Inventory inv = new Inventory(capacity);
         int option = 0;
         do{
-            System.out.println("Selecciona el número de opción que quieres llevar a cabo en tu inventario");
-            System.out.println("1. Crear un nuevo item en tu inventario manualmente");
-            System.out.println("2. Eliminar un item de tu inventario");
-            System.out.println("3. Añadir items a tu inventario a partir de un archivo");
-            System.out.println("0. Salir del programa");
-            option = Integer.parseInt(input.nextLine());
-
-            switch (option){
-                case 1:
-                    try {
-                        System.out.println("Ingresa un objeto a tu inventario: ");
-                        newObject = input.nextLine();
-                        inv.setItem(newObject);
+            try {
+                System.out.println("Ingresa un objeto a tu inventario: ");
+                newObject = input.nextLine();
+                inv.setItem(newObject);
 
                     } catch (FullStorageException e) {
                         throw new FullStorageException(e.getMessage());
@@ -48,11 +39,11 @@ public class Main {
                     }
             }
 
-        }
-        while (option != 0);
+        }while(option!=0);
 
-        //TODO Borrar Elementos del inventario, Añadir Elementos a través de un archivo externo y manejar excepciones
-        // como FileNotFoundException, también crear validaciones por medio de Excepciones personalizadas
+    // TODO Borrar Elementos del inventario, Añadir Elementos a través de un archivo
+    // externo y manejar excepciones
+    // como FileNotFoundException, también crear validaciones por medio de
+    // Excepciones personalizadas
 
-    }
-}
+}}
