@@ -18,10 +18,10 @@ public class Main {
         String newObject = "";
 
         System.out.println("Ingresa la capacidad de tu inventario: ");
-        int capacity = Integer.parseInt(input.nextLine()); //nextInt has problems with EOL
+        int capacity = Integer.parseInt(input.nextLine()); // nextInt has problems with EOL
         Inventory inv = new Inventory(capacity);
         int option = 0;
-        do{
+        do {
             System.out.println("Selecciona el número de opción que quieres llevar a cabo en tu inventario");
             System.out.println("1. Crear un nuevo item en tu inventario manualmente");
             System.out.println("2. Eliminar un item de tu inventario");
@@ -30,7 +30,7 @@ public class Main {
             System.out.println("0. Salir del programa");
             option = Integer.parseInt(input.nextLine());
 
-            switch (option){
+            switch (option) {
                 case 1:
                     try {
                         System.out.println("Ingresa un objeto a tu inventario: ");
@@ -47,42 +47,41 @@ public class Main {
                         newObject = input.nextLine();
                         inv.removeItem(newObject);
 
-                    }
-                    catch (ItemNotFoundException e) {
+                    } catch (ItemNotFoundException e) {
                         throw new ItemNotFoundException(e.getMessage());
                     }
                     break;
                 case 3:
                     try {
-                        System.out.println("Ingresa la ruta del archivo") ;
+                        System.out.println("Ingresa la ruta del archivo");
                         String path = input.nextLine();
 
                         BufferedReader fileToRead = new BufferedReader(new FileReader(path));
                         String line;
-                        while (fileToRead.readLine() != null)
-                        {
+                        while (fileToRead.readLine() != null) {
                             line = fileToRead.readLine();
                             inv.setItem(line);
                         }
 
-                    }catch (FileNotFoundException e){
+                    } catch (FileNotFoundException e) {
                         throw new FileNotFoundException(e.getMessage());
                     } catch (IOException e) {
                         throw new IOException(e.getMessage());
                     }
                     break;
                 case 4:
-                    for (String item: inv.getItems()) {
+                    for (String item : inv.getItems()) {
                         System.out.println(item);
                     }
 
             }
 
-        }
-        while (option != 0);
+        } while (option != 0);
 
-        //TODO Borrar Elementos del inventario, Añadir Elementos a través de un archivo externo y manejar excepciones
-        // como FileNotFoundException, también crear validaciones por medio de Excepciones personalizadas
+        // TODO Borrar Elementos del inventario, Añadir Elementos a través de un archivo
+        // externo y manejar excepciones
+        // como FileNotFoundException, también crear validaciones por medio de
+        // Excepciones personalizadas
 
     }
 }
