@@ -1,7 +1,8 @@
-package com.progra;
+package src.com.progra;
 
-import com.progra.inventory.Inventory;
+import src.com.progra.inventory.Inventory;
 import com.progra.inventory.exceptions.FullStorageException;
+import src.com.progra.inventory.Inventory;
 
 import java.util.Scanner;
 
@@ -39,4 +40,23 @@ public class Main {
         // como FileNotFoundException, también crear validaciones por medio de Excepciones personalizadas
 
     }
+    public static int menu(){
+        Scanner input = new Scanner(System.in);
+        int option = 0;
+        do {
+            System.out.println("1. Add object");
+            System.out.println("2. List object");
+            System.out.println("3. Load file");
+            System.out.println("4. Exit");
+            try {
+                option = Integer.parseInt(input.nextLine()); //nextInt has problems with EOL
+            } catch (NumberFormatException ex) {
+                System.out.println("Number is not valid");
+            }
+        }while(option==0);
+        return option;
+
+    }
+
+
 }

@@ -1,4 +1,4 @@
-package com.progra.inventory;
+package src.com.progra.inventory;
 
 import com.progra.inventory.exceptions.FullStorageException;
 
