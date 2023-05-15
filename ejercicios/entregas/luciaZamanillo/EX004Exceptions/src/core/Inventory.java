@@ -4,7 +4,6 @@ import exceptions.FullStorageException;
 import exceptions.UnableToRemoveException;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -13,6 +12,7 @@ import java.util.ArrayList;
 
 public class Inventory implements IInventory {
     int capacity = 0;
+    static final int maxCapacity = 10;
     ArrayList<String> items;
 
     /**
@@ -25,7 +25,7 @@ public class Inventory implements IInventory {
     }
 
     public Inventory () {
-        this.capacity = 10;
+        this.capacity = maxCapacity;
         this.items = new ArrayList<String>();
     }
 
@@ -117,8 +117,41 @@ public class Inventory implements IInventory {
 
 
     private Boolean hasAvailableStorage(){
-        return this.items.size() < this.capacity ? true: false;
+        if (this.items.size() < this.capacity || this.items.size() < maxCapacity) {
+            return true;
+        }
+        return false;
     }
+
+    private boolean isFull() {
+        if (!hasAvailableStorage()) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isEmpty() {
+        int numberElementsInventory = items.size();
+        if (numberElementsInventory == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public String[] getItemsArray() {
+        String[] itemsArray = new String[items.size()];
+        itemsArray = items.toArray(itemsArray);
+
+        return itemsArray;
+    }
+    public int getItemsCount() {
+        return items.size();
+    }
+
+    public String getItem (int index) {
+        return items.get(index);
+    }
+
 
 
 

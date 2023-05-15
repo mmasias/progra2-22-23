@@ -11,5 +11,5 @@ public interface IInventory {
     public void loadItems(String[] itemsToLoad) throws FullStorageException;
     public void loadItemsFromFile(String fileName) throws FullStorageException;
     public void removeItem(String val) throws UnableToRemoveException;
-    public ArrayList<String> getItems();
+    ArrayList<String> getItems();
 }
