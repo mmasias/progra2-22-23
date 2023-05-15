@@ -7,6 +7,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class Inventory implements IInventory {
@@ -63,9 +65,13 @@ public class Inventory implements IInventory {
     @Override
     public void loadItemsFromFile(String fileName) throws FullStorageException {
         BufferedReader br = null;
+        Path path = Paths.get(fileName);
+        Path filePath = path.toAbsolutePath();
+        String stringFilePath = filePath.toString();
+
         if (hasAvailableStorage()) {
             try {
-                br = new BufferedReader(new FileReader(fileName));
+                br = new BufferedReader(new FileReader(stringFilePath));
                 String data = br.readLine();
 
                 while (data != null) {
