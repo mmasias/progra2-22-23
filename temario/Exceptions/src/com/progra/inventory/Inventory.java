@@ -8,21 +8,17 @@ public class Inventory implements  IInventory{
     int capacity = 0;
     ArrayList<String> items;
 
-    /**
-     * @param capacity  The number of items that the inventory can handle
-     */
 
+    public Inventory() {
+        this.capacity = 10;
+        this.items = new ArrayList<String>();
+    }
     public Inventory(int capacity) {
         this.capacity = capacity;
         this.items = new ArrayList<String>();
     }
 
-    /**
-     * AddItem method lets you add a new item to the inventory
-     *
-     * @param val       The String value that you want to add to inventory
-     * @exception FullStorageException  If the number of items has reached the capacity of the inventory
-     */
+
     @Override
     public void setItem(String val) throws FullStorageException {
             if(hasAvailableStorage()){
@@ -33,11 +29,10 @@ public class Inventory implements  IInventory{
             }
     }
 
-    /**
-     * getItems method gives you the actual items in the inventory
-     *
-     * @return          Returns an ArrayList of the actual state of the inventory
-     */
+    public void addItem(String val) throws FullStorageException {
+        this.setItem(val);
+    }
+
     @Override
     public ArrayList<String> getItems() {
         return this.items;
@@ -45,5 +40,15 @@ public class Inventory implements  IInventory{
 
     private Boolean hasAvailableStorage(){
         return this.items.size() < this.capacity ? true: false;
+    }
+
+    public void loadItems(ArrayList<String> data){
+        for(String item: data){ // recorre la lista data para comprobar si esta lleno y si lo este que salte la excepcion
+            try {
+                this.setItem(item);
+            } catch (FullStorageException e) {
+                System.err.println(e.getMessage());
+            }
+        }
     }
 }

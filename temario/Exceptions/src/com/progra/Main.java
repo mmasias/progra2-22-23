@@ -27,9 +27,23 @@ public class Main {
             }
         }
         while (true);
+    }
 
-        //TODO Borrar Elementos del inventario, Añadir Elementos a través de un archivo externo y manejar excepciones
-        // como FileNotFoundException, también crear validaciones por medio de Excepciones personalizadas
+    public static int menu(){
+        Scanner input = new Scanner(System.in);
+        int election = 0;
+        do{
+        System.out.println("1. Add products");
+        System.out.println("2. Order inventory items");
+        System.out.println("3. Initial inventory");
+        System.out.println("4. Exit");
+            try {
+            election=input.nextInt();
+            }catch (NumberFormatException e) {
+            System.out.println("Enter a valid number");
+            }
+        }while (election < 1 || election > 4);
 
+        return election;
     }
 }
