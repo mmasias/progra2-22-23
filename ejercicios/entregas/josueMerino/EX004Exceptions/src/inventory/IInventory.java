@@ -1,6 +1,5 @@
 package inventory;
 
-import com.progra.inventory.exceptions.FullStorageException;
 import inventory.exceptions.FullStorageException;
 
 import java.util.ArrayList;

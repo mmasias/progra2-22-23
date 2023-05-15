@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Inventory implements  IInventory{
     int capacity = 0;
@@ -77,13 +78,12 @@ public class Inventory implements  IInventory{
         }
     }
 
-    public void loadItemsFromFile(String path) throws IOException {
+    public void loadItemsFromFile(String path) throws IOException, FullStorageException {
         try{
             BufferedReader fileToRead = new BufferedReader(new FileReader(path));
             String line;
-            while (fileToRead.readLine() != null) {
-                line = fileToRead.readLine();
-                this.items.add(line);
+            while ((line = fileToRead.readLine()) != null) {
+                setItem(line);
             }
         }
         catch (FileNotFoundException e) {
@@ -94,5 +94,17 @@ public class Inventory implements  IInventory{
     }
     private Boolean hasAvailableStorage(){
         return this.items.size() < this.capacity;
+    }
+
+    public void loadItems(String[] items) throws FullStorageException {
+        for (String item: items)
+        {
+            if (hasAvailableStorage()) {
+                this.items.add(item);
+            }
+            else{
+                throw new FullStorageException("No space left");
+            }
+        }
     }
 }

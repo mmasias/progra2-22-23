@@ -63,6 +63,16 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("¿Cuántos elementos quieres introducir?");
+                    int times = Integer.parseInt(input.nextLine());
+                    String[] items = new String[times];
+                    for (int i = 0; i < times; i++) {
+                        System.out.println("Insertando " + (i + 1) + " de "+ times);
+                        items[i] = input.nextLine();
+                        System.out.println();
+                    }
+                    inv.loadItems(items);
+                    System.out.println();
+                    break;
 
             }
 
