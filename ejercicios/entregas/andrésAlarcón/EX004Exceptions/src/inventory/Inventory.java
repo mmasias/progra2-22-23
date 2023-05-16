@@ -65,6 +65,14 @@ public class Inventory implements IInventory {
         }
     }
 
+    public void deleteItem(String val) throws IOException {
+        if (this.items.contains(val)) {
+            this.items.remove(val);
+        } else {
+            throw new IOException("Item not found");
+        }
+    }
+
     public void itemList() {
         for (String item : this.items) {
             System.out.println(item);
