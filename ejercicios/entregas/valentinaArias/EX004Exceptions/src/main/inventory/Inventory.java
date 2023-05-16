@@ -3,61 +3,74 @@ package main.inventory;
 import main.exceptions.FullStorageException;
 
 import java.util.ArrayList;
-import java.util.List;
+;
 
-public class Inventory {
-	private static final int MAX_CAPACITY = 10;
-	private int capacity;
-	private List<Item> items;
+public class Inventory implements  IInventory{
+	int capacity = 0;
+	ArrayList<String> items;
 
-	public Inventory(int capacity) {
-		this.capacity = capacity;
-		this.items = new ArrayList<>();
+	public int maximumcapacity;
+
+	/**
+	 * @param capacity  The number of items that the inventory can handle
+	 */
+
+	public void Inventory(int capacity) {
+		this.maximumcapacity = 10;
+		this.items = new ArrayList<String>();
 	}
 
-	public void addItem(Item item) throws FullStorageException {
-		if (isFull()) {
-			throw new FullStorageException("Inventory is full");
+	public String addItem(String item) {
+		if (this.items.size() < this.maximumcapacity) {
+			this.items.add(item);
+			return "Item added";
+		} else {
+			return "Inventory is full";
 		}
-		items.add(item);
+	}
+
+	public void listItems() {
+		for (int i = 0; i < this.items.size(); i++) {
+			System.out.println((i + 1) + ". " + this.items.get(i));
+		}
 	}
 
 	public boolean isFull() {
-		return items.size() >= capacity;
+		return this.items.size() == this.maximumcapacity;
+	}
+	public Inventory(int capacity) {
+		this.capacity = capacity;
+		this.items = new ArrayList<String>();
 	}
 
-	public boolean isEmpty() {
-		return items.isEmpty();
-	}
+	/**
+	 * AddItem method lets you add a new item to the inventory
+	 *
+	 * @param val       The String value that you want to add to inventory
+	 * @exception FullStorageException  If the number of items has reached the capacity of the inventory
+	 */
 
-	public List<Item> getItems() {
-		return new ArrayList<>(items);
-	}
-
-	public int getItemsCount() {
-		return items.size();
-	}
-
-	public Item getItem(int index) {
-		if (index >= 0 && index < items.size()) {
-			return items.get(index);
+	public void setItem(String val) throws FullStorageException {
+		if(hasAvailableStorage()){
+			this.items.add(val);
 		}
-		return null;
-	}
-
-	public static class Item {
-		private String name;
-
-		public Item(String name) {
-			this.name = name;
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
+		else {
+			throw new FullStorageException("No space left");
 		}
 	}
+
+	/**
+	 * getItems method gives you the actual items in the inventory
+	 *
+	 * @return          Returns an ArrayList of the actual state of the inventory
+	 */
+
+	public ArrayList<String> getItems() {
+		return this.items;
+	}
+
+	private Boolean hasAvailableStorage(){
+		return this.items.size() < this.capacity ? true: false;
+	}
+
 }
