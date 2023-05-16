@@ -15,7 +15,7 @@ public class Main {
 		String newObject = "";
 		int capacity = 0;
 		do {
-			System.out.println("Ingresa la capacidad de tu inventario: ");
+			System.out.println("Set inventory capacity ");
 			try {
 				capacity = Integer.parseInt(input.nextLine()); //nextInt has problems with EOL
 			} catch (NumberFormatException ex) {
