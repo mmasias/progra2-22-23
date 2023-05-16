@@ -1,49 +1,63 @@
-package com.progra.inventory;
+package main.inventory;
 
-
+import main.exceptions.FullStorageException;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Inventory implements  IInventory{
-	int capacity = 0;
-	ArrayList<String> items;
-
-	/**
-	 * @param capacity  The number of items that the inventory can handle
-	 */
+public class Inventory {
+	private static final int MAX_CAPACITY = 10;
+	private int capacity;
+	private List<Item> items;
 
 	public Inventory(int capacity) {
 		this.capacity = capacity;
-		this.items = new ArrayList<String>();
+		this.items = new ArrayList<>();
 	}
 
-	/**
-	 * AddItem method lets you add a new item to the inventory
-	 *
-	 * @param val       The String value that you want to add to inventory
-	 * @exception FullStorageException  If the number of items has reached the capacity of the inventory
-	 */
-
-	public void setItem(String val) throws FullStorageException {
-		if(hasAvailableStorage()){
-			this.items.add(val);
+	public void addItem(Item item) throws FullStorageException {
+		if (isFull()) {
+			throw new FullStorageException("Inventory is full");
 		}
-		else {
-			throw new FullStorageException("No space left");
+		items.add(item);
+	}
+
+	public boolean isFull() {
+		return items.size() >= capacity;
+	}
+
+	public boolean isEmpty() {
+		return items.isEmpty();
+	}
+
+	public List<Item> getItems() {
+		return new ArrayList<>(items);
+	}
+
+	public int getItemsCount() {
+		return items.size();
+	}
+
+	public Item getItem(int index) {
+		if (index >= 0 && index < items.size()) {
+			return items.get(index);
 		}
+		return null;
 	}
 
-	/**
-	 * getItems method gives you the actual items in the inventory
-	 *
-	 * @return          Returns an ArrayList of the actual state of the inventory
-	 */
+	public static class Item {
+		private String name;
 
-	public ArrayList<String> getItems() {
-		return this.items;
-	}
+		public Item(String name) {
+			this.name = name;
+		}
 
-	private Boolean hasAvailableStorage(){
-		return this.items.size() < this.capacity ? true: false;
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
 	}
 }
