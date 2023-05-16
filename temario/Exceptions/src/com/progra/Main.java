@@ -17,7 +17,7 @@ public class Main {
         Inventory inv = new Inventory(capacity);
         do{
             try {
-                System.out.println("Ingresa un objeto a tu invetario: ");
+                System.out.println("Ingresa un objeto a tu inventario: ");
                 newObject = input.nextLine();
                 inv.setItem(newObject);
 
