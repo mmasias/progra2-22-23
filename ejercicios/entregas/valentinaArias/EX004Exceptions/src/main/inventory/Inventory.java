@@ -1,6 +1,6 @@
 package com.progra.inventory;
 
-import com.progra.inventory.exceptions.FullStorageException;
+
 
 import java.util.ArrayList;
 
@@ -23,7 +23,7 @@ public class Inventory implements  IInventory{
 	 * @param val       The String value that you want to add to inventory
 	 * @exception FullStorageException  If the number of items has reached the capacity of the inventory
 	 */
-	@Override
+
 	public void setItem(String val) throws FullStorageException {
 		if(hasAvailableStorage()){
 			this.items.add(val);
@@ -38,13 +38,11 @@ public class Inventory implements  IInventory{
 	 *
 	 * @return          Returns an ArrayList of the actual state of the inventory
 	 */
-	@Override
+
 	public ArrayList<String> getItems() {
 		return this.items;
 	}
 
-	@org.jetbrains.annotations.NotNull
-	@org.jetbrains.annotations.Contract(pure = true)
 	private Boolean hasAvailableStorage(){
 		return this.items.size() < this.capacity ? true: false;
 	}
