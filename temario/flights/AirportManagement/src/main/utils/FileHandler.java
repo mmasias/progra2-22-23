@@ -1,5 +1,7 @@
 package main.utils;
 
+import main.exceptions.EmptyException;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +12,10 @@ public class FileHandler {
     public FileHandler(){
         this.lines = new ArrayList<>();
     }
-
-    public List<String> loadFileContent(String path) {
+// path  = ""
+    public List<String> loadFileContent(String path) throws EmptyException {
         if (isPathEmpty(path)) {
-            System.err.println("Path is empty");
-            return null;
+            throw new EmptyException();
         }
 
         File file = new File(path);
