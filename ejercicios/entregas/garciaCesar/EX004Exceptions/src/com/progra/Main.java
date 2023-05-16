@@ -28,7 +28,7 @@ public class Main {
 			switch (option) {
 				case 1:
 					try {
-						System.out.println("Ingresa un objeto a tu inventario: ");
+						System.out.println("Add an object to your inventory ");
 						newObject = input.nextLine();
 						inv.setItem(newObject);
 
