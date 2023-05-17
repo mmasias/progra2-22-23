@@ -6,27 +6,21 @@ import java.util.ArrayList;
 ;
 
 public class Inventory implements  IInventory{
-	int capacity = 0;
+	private int capacity = 0;
 	ArrayList<String> items;
 
-	public int maximumcapacity;
 
 	/**
 	 * @param capacity  The number of items that the inventory can handle
 	 */
 
-	public void Inventory(int capacity) {
-		this.maximumcapacity = 10;
+	public  Inventory() {
+		this.capacity = 10;
 		this.items = new ArrayList<String>();
 	}
-
-	public String addItem(String item) {
-		if (this.items.size() < this.maximumcapacity) {
-			this.items.add(item);
-			return "Item added";
-		} else {
-			return "Inventory is full";
-		}
+	public Inventory(int capacity) {
+		this.capacity = capacity;
+		this.items = new ArrayList<String>();
 	}
 
 	public void listItems() {
@@ -35,13 +29,25 @@ public class Inventory implements  IInventory{
 		}
 	}
 
-	public boolean isFull() {
-		return this.items.size() == this.maximumcapacity;
+	public void addItem(String val) throws FullStorageException {
+		if(hasAvailableStorage()){
+			this.items.add(val);
+		}
+		else {
+			throw new FullStorageException("No space left");
+		}
 	}
-	public Inventory(int capacity) {
-		this.capacity = capacity;
-		this.items = new ArrayList<String>();
+
+	public loadItems(String[] items) throws FullStorageException {
+		for (int i = 0; i < items.length; i++) {
+			addItem(items[i]);
+		}
 	}
+
+	public loadItemsFromFile(String filename) throws FullStorageException {
+
+	}
+
 
 	/**
 	 * AddItem method lets you add a new item to the inventory

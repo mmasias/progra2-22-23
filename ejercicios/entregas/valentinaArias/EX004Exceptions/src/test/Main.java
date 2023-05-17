@@ -12,13 +12,19 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
+
 		String newObject = "";
 		String deleteObject = "";
+		Inventory inv = new Inventory();
+		Inventory inv1 = new Inventory(10);
+
+		inv.listItems();
+
 
 
 		System.out.println("Ingresa la capacidad de tu inventario: ");
 		int capacity = Integer.parseInt(input.nextLine()); // nextInt has problems with EOL
-		Inventory inv = new Inventory(capacity);
+		Inventory inv3 = new Inventory(capacity);
 		do {
 			System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 			System.out.println("Bienvenido al inventario de objetos");
@@ -46,7 +52,7 @@ public class Main {
 					for (int i = 0; i < items.size(); i++) {
 						System.out.println((i + 1) + ". " + items.get(i));
 					}
-				} else if (userOption.equals("4")) {
+				} else if (userOption.equals("4")) {\
 					System.out.println("Adiós");
 					break;
 				} else {
