@@ -7,8 +7,9 @@ Repositorio de materiales y proyectos de la asignatura **Programación II** del 
 * 🧠 [Ejercicios](ejercicios/readme.md)
 * 🏆 [Proyectos que abordaremos](docs/proyectos.md)
 * 🏅 [Retos](retos/readme.md)
-* 🤓 Examen parcial
-* 😎 Examen final
+* 📝 [Proyecto final](https://github.com/eabol/awesome-projects-prograii)
+* 😎[ Examen parcial](https://github.com/eabol/parcial-progra2-22-23)
+* 🤓 Examen final
 
 ## Herramientas
 * [PlantUML](https://plantuml.ctdesarrollo-sdr.org)
