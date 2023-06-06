@@ -24,6 +24,20 @@
     - ☑️ Clases abstractas
     - ☑️ Interfaces
     - ☑️ ¿Herencia múltiple?
-- 🔲 Mapas, conjuntos y arraylists
-- 🔲 Errores
-- 🔲 Programación visual
+- ☑️ Colecciones: Mapas, conjuntos y arraylists
+  - ☑️ Set
+  - Como recorrer conjuntos
+  - ☑️ List
+  - ☑️ Arraylist y como recorrerlo
+  - ☑️ Map
+  - ☑️ Iterator
+- ☑️ Errores
+  - ☑️ Excepciones
+  - ☑️ Try-catch
+  - ☑️ Throws
+  - ☑️ Throw
+  - ☑️ Excepciones personalizadas
+- ☑️ Programación visual
+  - ☑️ AWT y Swing
+  - ☑️ Componentes
+  - ☑️ Eventos
