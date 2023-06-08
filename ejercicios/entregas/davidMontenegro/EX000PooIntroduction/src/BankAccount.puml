@@ -1,0 +1,13 @@
+@startuml BankAccount
+class BankAccount {
+    - String owner
+    - double amount
+    + BankAccount(String owner, double amount)
+    + getOwner()
+    + getAmount()
+    + setOwner(String Owner)
+    + setAmount(double amount)
+    + deposit(double amount)
+    + withdraw(double amount)
+}
+@enduml
