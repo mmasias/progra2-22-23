@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram'
+class Student {
+   - String name
+   - String surname
+   - String id
+   - float grade
+   + getName()
+   + getSurname()
+   + getId()
+   + getGrade()
+   + setName(String name)
+   + setSurname(String surname)
+   + setId(String id)
+   + setGrade(float grade)
+   + Student()
+   + Student(String name, String surname, String id, float grade)
+}
+
+class Subject {
+   - String name
+   - Student[] students
+   - boolean isOrdered
+   - int position
+   - int capacity
+   + getName()
+   + getsStudents()
+   + getIsOrdered()
+   + getPosition()
+   + getCapacity()
+   + setName(name: String)
+   + setStudents(students: Student[])
+   + setIsOrdered(isOrdered: boolean)
+   + setPosition(position: int)
+   + setCapacity(capacity: int)
+   + addStudent(student: Student)
+   + ordersStudents()
+   + getStudent()
+   + getBestStudent()
+   + getWorstStudent()
+   + getAverage()
+   + getMedian()
+   + Subject(String name, int capacity)
+   + Subject()
+}
+@enduml
