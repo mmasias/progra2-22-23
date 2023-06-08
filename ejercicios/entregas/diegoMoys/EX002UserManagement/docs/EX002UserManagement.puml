@@ -1,0 +1,37 @@
+@startuml
+
+class User {
+    -userName: String
+    -password: String
+    +login: boolean
+    +User()
+    +User(String userName, String password)
+    +setUserName(String)
+    +setPassword(String)
+    +setLogin(boolean)
+    +getUserName(): String
+    +getPassword(): String
+    +getLogin(): boolean
+}
+
+class Option {
+    -options: String
+    -selectedOption: int
+    -maxOptions: int
+    +setOptions(String)
+    +setSelectedOption(int)
+    +setMaxOptions(int)
+    +getOptions(): String
+    +getSelectedOption(int)
+    +getMaxOptions(int)
+}
+
+class Manager {
+    -users: String
+    -selectedUser: int
+    -selectedOption: int
+    -maxUsers: int
+    +
+}
+
+@enduml

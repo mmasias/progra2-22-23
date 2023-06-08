@@ -1,0 +1,11 @@
+@startuml
+class BankAccount {
+
+  - Headline
+  - Amount
+  + String getHeadline()
+  + double getAmount()
+  + void deposit
+  + void withdrawals
+}
+@enduml
