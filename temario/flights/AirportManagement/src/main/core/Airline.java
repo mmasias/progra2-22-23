@@ -6,3 +6,4 @@ public record Airline(int id, String name, String country, boolean active) {
     // Los records en Java nos permiten reducir la cantidad de código que escribimos para estas clases
     // ya que automáticamente generan ciertos métodos como constructores, equals(), hashCode() y toString().
 }
+
