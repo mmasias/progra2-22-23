@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0944f08d-177b-4c6a-9f50-af8534bcb4f0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Poo/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Poo/BankAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../elderBol/EX000PooIntroduction/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../elderBol/EX000PooIntroduction/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../elderBol/EX000PooIntroduction/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../elderBol/EX000PooIntroduction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../elderBol/EX000PooIntroduction/EX000PooIntroduction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EX000PooIntroduction.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../elderBol/EX000PooIntroduction/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ML2Ty5O4OdRfB5YAzvtaP1dEGp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/gomez/Desktop/progra2-22-23/ejercicios/entregas/santiagoGomez/EX000PooIntroduction/src/Poo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.BankAccountTest.testCreatingBankDepositAndWithdraw">
+    <configuration name="BankAccountTest.testCreatingAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EX000PooIntroduction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Poo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Poo" />
+      <option name="MAIN_CLASS_NAME" value="Poo.BankAccountTest" />
+      <option name="METHOD_NAME" value="testCreatingAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankAccountTest.testCreatingBankAccountAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EX000PooIntroduction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Poo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Poo" />
+      <option name="MAIN_CLASS_NAME" value="Poo.BankAccountTest" />
+      <option name="METHOD_NAME" value="testCreatingBankAccountAmount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankAccountTest.testCreatingBankDepositAndWithdraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EX000PooIntroduction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Poo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Poo" />
+      <option name="MAIN_CLASS_NAME" value="Poo.BankAccountTest" />
+      <option name="METHOD_NAME" value="testCreatingBankDepositAndWithdraw" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BankAccountTest.testCreatingBankDepositAndWithdraw" />
+        <item itemvalue="JUnit.BankAccountTest.testCreatingBankAccountAmount" />
+        <item itemvalue="JUnit.BankAccountTest.testCreatingAccount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0944f08d-177b-4c6a-9f50-af8534bcb4f0" name="Changes" comment="" />
+      <created>1677532556656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677532556656</updated>
+      <workItem from="1677532557371" duration="3774000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Poo/BankAccountTest.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
