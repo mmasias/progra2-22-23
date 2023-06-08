@@ -1,0 +1,17 @@
+@startuml
+class Manager{
+     + numMaxUsers: int
+     + user : User[]
+     + authentification : boolean
+     + options : Option
+
+     + scannerString()
+     + scannerInt()
+     + addUser(users,numMaxUsers,user)
+     + signUp(numMaxUsers,users)
+     + signIn(users, authentication)
+     + authentication(Name, password, users, authentication)
+     + logIn(users, authentification, options)
+     + optionChoose(options, users)
+ }
+@enduml
