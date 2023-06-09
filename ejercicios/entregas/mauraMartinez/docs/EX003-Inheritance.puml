@@ -1,0 +1,47 @@
+@startuml
+
+class User {
+    -login: String
+    -password: String
+    -name: String
+    +getUsername(): String
+    +getPassword(): String
+    +getName(): String
+    +setUsername(username: String): void
+    +setPassword(password: String): void
+    +setName(name: String): void
+}
+@enduml
+
+@startuml
+class Admin {
+  - isAdmin: boolean
+  
+  + isAdmin(): boolean
+  + setAdmin(isAdmin: boolean): void
+}
+@enduml
+
+@startuml
+class MenuOption {
+  - description: String
+
+  + getDescription(): String
+  + setDescription(description: String): void
+}
+@enduml
+
+@startuml
+class Manager {
+  - users: User[]
+  - authenticatedUser: User
+  - selectedOption: MenuOption
+  - maxUsers: int
+
+  + addUser(user: User): void
+  + authenticateUser(username: String, password: String): boolean
+  + showMenu(): void
+}
+@enduml
+
+
