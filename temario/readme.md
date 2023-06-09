@@ -7,14 +7,37 @@
     - ☑️ Declarativo
      - ☑️ Funcional
      - ☑️ Lógico
-- 🔲 Programación orientado a objetos y diagrama de clases
+- ☑️ Programación orientada a objetos y diagrama de clases
     - ☑️ ¿Qué es POO?
     - ☑️ Clase - Atributos y métodos
     - ☑️ Mis primeras clases en Java
     - ☑️ UML
-- 🔲 Abstracción y encapsulamiento
-- 🔲 Herencia
-- 🔲 Poliformismo
-- 🔲 Mapas, conjuntos y arraylists
-- 🔲 Errores
-- 🔲 Programación visual
+- ☑️ Abstracción y encapsulamiento
+    - ☑️ Objetos y clases
+    - ☑️ Abstracción
+    - ☑️ Encapsulamiento
+- ☑️ Herencia
+  - ☑️ Herencia en Java 
+  - ☑️ Visibilidad de los elementos heredados
+- ☑️ Polimorfismo
+    - ☑️ Polimorfismo en Java
+    - ☑️ Clases abstractas
+    - ☑️ Interfaces
+    - ☑️ ¿Herencia múltiple?
+- ☑️ Colecciones: Mapas, conjuntos y arraylists
+  - ☑️ Set
+  - Como recorrer conjuntos
+  - ☑️ List
+  - ☑️ Arraylist y como recorrerlo
+  - ☑️ Map
+  - ☑️ Iterator
+- ☑️ Errores
+  - ☑️ Excepciones
+  - ☑️ Try-catch
+  - ☑️ Throws
+  - ☑️ Throw
+  - ☑️ Excepciones personalizadas
+- ☑️ Programación visual
+  - ☑️ AWT y Swing
+  - ☑️ Componentes
+  - ☑️ Eventos

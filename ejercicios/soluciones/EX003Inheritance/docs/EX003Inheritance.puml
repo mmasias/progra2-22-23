@@ -1,0 +1,79 @@
+@startuml
+class main.RegularUser {
+    + RegularUser(String,String)
+}
+class main.Admin {
+    - boolean isAdmin
+    + Admin(String,String)
+    + boolean isAdmin()
+    + void setAdmin(boolean)
+}
+class main.User {
+    - String name
+    - String password
+    - String userName
+    - Option options
+    + User(String,String)
+    + String getName()
+    + void setName(String)
+    + String getPassword()
+    + void setPassword(String)
+    + String getUserName()
+    + void setUserName(String)
+    + String toString()
+    + boolean login(String,String)
+    + void setOptions(Option)
+    + Option getOptions()
+}
+class main.Option {
+    - String[] options
+    - int selectedOption
+    - int maxOptions
+    - int size
+    + Option()
+    + void addOption(String)
+    + String getOption(int)
+    + void selectOption(int)
+    + int getSelectedOption()
+    + void showOptions()
+    + int getSize()
+    + int getHashCode()
+}
+class main.MenuOption {
+    - String description
+    + MenuOption()
+    + void setDescription(String)
+    + String getDescription()
+}
+class main.UserManager {
+    + UserManager()
+    + void registerUser(User)
+    + boolean isUserAdmin(User)
+}
+class main.Manager {
+    - User[] users
+    - User authenticatedUser
+    - Option selectedOption
+    - int maxUsers
+    - int userCount
+    + Manager()
+    + Manager(int)
+    + void addUser(User)
+    + int getUserCount()
+    + boolean authenticateUser(String,String)
+    + void setSelectedOption(Option)
+    + Option getSelectedOption()
+    + User getAuthenticatedUser()
+    + void showMenu()
+}
+
+main.User <|-- main.RegularUser
+main.User <|-- main.Admin
+main.Option <|-- main.MenuOption
+main.Manager <|-- main.UserManager
+main.Manager o-- main.User
+main.User --> main.Option
+main.Manager --> "0..1" main.Option
+
+
+@enduml
