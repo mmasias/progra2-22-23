@@ -1,0 +1,43 @@
+@startuml
+title UserManagement
+
+class User {
+    - String name
+    - String password
+    - Option items
+    + User(String name, String password)
+    + getName()
+    + setName(String name)
+    + getPassword()
+    + setPassword(String password)
+    + getItems()
+    + setItems(Option item)
+}
+
+class Option {
+    - String[] options
+    - String selectedOption
+    - int maxOptions
+    + Option(String[] options, int maxOptions)
+    + getOptions()
+    + setOptions(String[] options)
+    + getSelectedOption()
+    + setSelectedOption(String option)
+    + getMaxOptions()
+    + setMaxOption(int maxOptions)
+}
+
+class Manager {
+    - User[] users
+    - User[] usersAuthenticated
+    - int maxUsers
+    + Manager(User[] users, int maxUsers)
+    + login(User user)
+    + register(User user)
+    + getUserOptions(User user)
+    + getUsers()
+    + setUsers(User[] users)
+    + addUser(User user)
+    + getUser(User user)
+}
+@enduml
