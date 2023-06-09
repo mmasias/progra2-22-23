@@ -14,6 +14,12 @@ public class Student {
      */
     public Student(String name, String surname, String id, float grade) {
 
+    String name;
+    String surname;
+    String id;
+    float grade;
+
+    public Student(String name, String surname, String id, float grade) {
         this.name = name;
         this.surname = surname;
         this.id = id;
@@ -48,11 +54,15 @@ public class Student {
 
     public void setName(String name) {
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
     public String getSurname() {
-
 
         return surname;
 
@@ -60,6 +70,10 @@ public class Student {
 
     public void setSurname(String surname) {
 
+        return surname;
+    }
+
+    public void setSurname(String surname) {
         this.surname = surname;
     }
 
@@ -74,5 +88,19 @@ public class Student {
     public void setId(String id) {
 
         this.id = id;
+    }
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public float getGrade() {
+        return grade;
+    }
+
+    public void setGrade(float grade) {
+        this.grade = grade;
     }
 }
