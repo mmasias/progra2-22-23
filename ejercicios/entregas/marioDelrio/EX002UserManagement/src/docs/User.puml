@@ -1,0 +1,14 @@
+@startuml
+class User {
+-private boolean login;
+-private String name;
+-private String password;
++public User(String name, String password)
++boolean isLogin()
++void setLogin(boolean login)
++String getName()
++String setName(String name)
++String getPassword()
++void setPassword(String password)
+}
+@enduml
