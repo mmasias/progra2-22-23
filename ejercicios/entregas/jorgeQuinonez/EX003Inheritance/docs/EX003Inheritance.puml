@@ -1,0 +1,54 @@
+@startuml
+class User{
+    - userName: String
+    - password: String
+    - name: String
+    + setUsername(userName: String): void
+    + setPassword(password: String): void
+    + setName(name: String): void
+    + getUsername(): String
+    + getPassword(): String
+    + getName(): String
+}
+class Admin{
+    - isAdmin: boolean
+    + setAdmin(isAdmin: boolean): void
+    + getAdmin(): boolean
+}
+class RegularUser{
+    - User: String
+}
+class Option{
+    - options: String[]
+    - selectedOption: int
+    - maxOptions: int
+    + addOption(newOption: String): void
+    + getOption(index: int): String
+    + selectOption(index: int): void
+    + getSelectedOption(): String
+}
+class MenuOption{
+    - description: String
+    + getDescription(): String
+    + setDescription(description: String): void
+}
+class Manager{
+    - users: User[]
+    - authUser: User
+    - selectedOption: MenuOption
+    - maxUsers: int
+    - options: MenuOption[]
+    + addUser(newUser: User): void
+    + authenticatedUser(userName: String, password: String): boolean
+    + showMenu(): void
+}
+class UserManager{
+    + registerUser(user: User): void
+    + isUserAdmin(user: User): boolean
+}
+
+User *-- RegularUser
+User *-- Admin
+Manager *-- UserManager
+Option *-- MenuOption
+@enduml

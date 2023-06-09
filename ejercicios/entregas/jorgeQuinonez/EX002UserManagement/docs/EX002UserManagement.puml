@@ -27,7 +27,7 @@ class Manage{
     -inputPassword: String
     +login(): void
     +validate(): void
-    printMenu(): void
+    +printMenu(): void
     +main(): void
 }
 @enduml
