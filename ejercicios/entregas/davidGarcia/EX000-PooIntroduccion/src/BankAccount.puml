@@ -1,0 +1,8 @@
+@startuml
+class BankAccount{
+~String Holder;
+~double Amount;
++void deposit(double)
++void whithdraw(double)
+}
+@enduml
