@@ -31,5 +31,18 @@
   - ☑️ Arraylist y como recorrerlo
   - ☑️ Map
   - ☑️ Iterator
+
+- ☑️ Errores
+  - ☑️ Excepciones
+  - ☑️ Try-catch
+  - ☑️ Throws
+  - ☑️ Throw
+  - ☑️ Excepciones personalizadas
+- ☑️ Programación visual
+  - ☑️ AWT y Swing
+  - ☑️ Componentes
+  - ☑️ Eventos
+
 - 🔲 Errores
 - 🔲 Programación visual
+
