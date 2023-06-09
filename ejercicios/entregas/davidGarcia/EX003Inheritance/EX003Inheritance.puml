@@ -1,0 +1,62 @@
+@startuml Inheritance
+class User {
+  -username: String
+  -password: String
+  -name: String
+  +getUsername(): String
+  +getPassword(): String
+  +getName(): String
+  +setUsername(username: String): void
+  +setPassword(password: String): void
+  +setName(name: String): void
+}
+
+class Admin {
+  -isAdmin: boolean
+  +isAdmin(): boolean
+  +setAdmin(isAdmin: boolean): void
+}
+
+class RegularUser {
+}
+
+class MenuOption {
+  -description: String
+  +getDescription(): String
+  +setDescription(description: String): void
+}
+class Option {
+  -options: String[]
+  -scanner: Scanner
+  +display(): void
+  +read(): int
+  +closeScanner(): void
+}
+
+class UserManager {
+  +registerUser(user: User): void
+  +isUserAdmin(user: User): boolean
+}
+
+
+class Manager {
+  -users: User[]
+  -authenticatedUser: User
+  -selectedOption: MenuOption
+  -maxUsers: int
+  +addUser(user: User): void
+  +authenticateUser(username: String, password: String): boolean
+  +showMenu(): void
+}
+
+
+User <|-- Admin
+User <|-- RegularUser
+Manager <|-- UserManager
+
+Admin --|> User: Inheritance
+UserManager --|> Manager: Inheritance
+RegularUser --|> User: Inheritance
+
+
+@enduml
