@@ -1,0 +1,8 @@
+@startuml
+Class BankAccount{
+Private String Headline
+Private String amount
+Public Static Void deposit
+Public Static Void withdraw
+}
+@enduml

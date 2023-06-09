@@ -1,0 +1,16 @@
+@startuml
+class Subject {
+  ~String name
+  ~String students
+  ~boolean isOrdered
+  ~int position
+  ~int capacity
+
+  +Subject(String name, int capacity, String id, float grade)
+  +String getName()
+  +String setSurname()
+  +String getStudents()
+  +String setStudents()
+  +boolean isOrdered()
+}
+@enduml
