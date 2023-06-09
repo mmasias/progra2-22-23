@@ -1,0 +1,33 @@
+@startuml EX002UserManagement
+class User{
+    -name: String
+    -user: String
+    -password: String
+    -isLogged: boolean
+    +User(name: String, user: String, password: String)
+    +User()
+    +getUser(): String
+    +setUser(user: String): void
+    +getPassword(): String
+    +setPassword(password: String): void
+    +getName(): String
+    +setName(name: String): void
+    +getLogin(): boolean
+    +setLogin(isLogged: boolean): void
+}
+class Options{
+    -options: String[]
+    +Options()
+    +getOptions(): String[]
+}
+class Manage{
+    -maxUsers: int
+    -users: User[]
+    -inputUser: String
+    -inputPassword: String
+    +login(): void
+    +validate(): void
+    printMenu(): void
+    +main(): void
+}
+@enduml
