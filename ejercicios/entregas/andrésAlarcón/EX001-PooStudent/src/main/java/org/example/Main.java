@@ -1,3 +1,5 @@
+package org.example;
+
 public class Main {
     public static void main(String[] args) {
         // Is this the best way to do it?, What if I want to add more students?
@@ -9,14 +11,19 @@ public class Main {
         Subject subject = new Subject("Math", 5);
 
 
-        Student firstStudent = new Student("John", "Doe", "123456", 5.0f);
-        Student secondStudent = new Student("Jane", "Doe", "123457", 4.0f);
-        Student thirdStudent = new Student("John", "Smith", "123458", 3.0f);
+        Student firstStudent = new Student("John", "Doe", "123456", 2.0f);
+        Student secondStudent = new Student("Jane", "Smith", "123457", 2.0f);
+        Student thirdStudent = new Student("James", "Bailey", "123458", 2.5f);
+        Student fourthStudent = new Student("Sam", "Nailor", "123459", 2.0f);
+        Student fifthStudent = new Student("Derek", "Neville", "123460", 1.9f);
+        Student sixthStudent = new Student("Josh", "Raken", "123461", 1.5f);
 
         subject.addStudent(firstStudent);
         subject.addStudent(secondStudent);
         subject.addStudent(thirdStudent);
-
+        subject.addStudent(fourthStudent);
+        subject.addStudent(fifthStudent);
+        subject.addStudent(sixthStudent);
 
 
         System.out.println("The average grade is: " + subject.getAverageGrade());
