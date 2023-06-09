@@ -1,0 +1,12 @@
+@startuml
+class BankAccount {
+- String accountHolder
+- Double somebodyAmmount
++ void setAccountHolder(String)
++ void getAccountHolder()
++ void setAmmount(double)
++ void getAmmount()
++ double deposit(ammount)
++ double withraw(ammount)
+}
+@enduml
