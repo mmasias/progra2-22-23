@@ -1,0 +1,25 @@
+@startuml
+class Poo.BankAccount {
+   - String name
+   - double balance
+   + BankAccount()
+   + void getName()
+   + void getBalance()
+   + void setName(String)
+   + void setBalance(double)
+   + void deposit(double)
+   + void withdraw(double)
+
+
+}
+
+class Poo.BankAccountTest {
+   ~ BankAccount account1
+   ~ BankAccount account2
+   ~ BankAccount account3
+   ~ Scanner scanner
+   + void CreateAccount()
+   + void AddMoney()
+   + void moveMoney()
+}
+@enduml
