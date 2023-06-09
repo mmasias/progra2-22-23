@@ -1,0 +1,155 @@
+@startuml
+    package Classes {
+        package Cypher {
+            abstract class Enigma {
+                -static ArrayList<Character> list
+                -static ArrayList<Character> shuffledList
+                -static setList(): ArrayList<Character>
+                -static setShuffledList(): ArrayList<Character>
+                +static getKey(): void
+                +static encrypt(String password): String
+            }
+        }
+        package DataBase {
+            abstract class UserDataBase {
+                -static final User[] users;
+                +static getUsers(): User[];
+            }
+        }
+        package Email {
+            class Email {
+                -final String sender
+                -final String message
+                -final String date
+                +Email(String sender, String message)
+                +getSender(): String
+                +getMessage(): String
+                +getDate(): String
+            }
+        }
+        package Login {
+            abstract class Login {
+                -static final Scanner
+                -static User loggedUser
+                +static login(): void
+                +static validateUserName(String userName): boolean
+                +static validatePassword(String userName, String password): boolean
+                +static getValidatedUser(String userName): User
+                +static getLoggedUser(): User
+            }
+        }
+        package Manager {
+            class Manager {
+                +static User currentUser
+                -final Scanner
+                +Manager(User loggedUser)
+                +displayOptions(): void
+            }
+        }
+        package Options {
+            class Options implements .Utils.Interfaces.MenuItem {
+                -final String text;
+                -final Runnable action;
+                +Options(String text, Runnable action)
+                +getText(): String
+                +execute(): void
+            }
+        }
+        package Users {
+            abstract class User {
+                #String userName
+                #String password
+                #boolean login
+                #MenuItem[] options
+                +User(String userName, String password, boolean login)
+                +setUsername(String username): void
+                +setPassword(String password): void
+                +setLogin(boolean login): void
+                +getUsername(): String
+                +getPassword(): String
+                +isLogin(): boolean
+                +getOptions(): MenuItem[]
+            }
+            class Admin extends User {
+                +Admin(String userName, String password)
+            }
+            class Student extends User {
+                -final Subjects[] subjects
+                -final int[] grades
+                +Student(String userName, String password, int[] grades)
+                +getGrades(): int[]
+                +setGrade(int index, int newGrade): void
+                +getSubjects(): Subjects[]
+            }
+            class Teacher extends User {
+                -final Subjects subject
+                -final Array<Email> emails
+                +Teacher(String username, String password, Subjects subject)
+                +getSubject(): Subjects
+                +setNewEmail(Email newEmail): void
+                +getEmailList(): ArrayList<Email>
+            }
+        }
+    }
+    package Utils {
+        package Enums {
+            enum EditTypes {
+                EDIT_PASSWORD
+                EDIT_USER
+            }
+            enum Subjects {
+                PROGRAMMING_II
+                MATHEMATICS_II
+                LOGIC
+                DISCRETE_MATHEMATICS
+                ICT
+                -final String stringValue
+                +Subjects(String stringValue)
+                +getStringValue(): String
+            }
+        }
+        package Functions {
+            abstract class UserActions {
+                +static final MenuItem quit
+                +static final MenuItem logout
+                +static final Scanner
+                -static void logout()
+                -static void quit()
+                +static void displayGrades()
+                +static void studentSendEmail()
+                +static void getGlobalAverage()
+                +static void displayAllStudentGrades()
+                +static void displayAllUsers()
+                +static void changeStudentGrade()
+                +static void displayEmails()
+                +static void editUser(EditTypes operationType)
+                +static void getEnigmaKey()
+                +static boolean validateSubject(String subject)
+                -static User getSubjectTeacher(String subject)
+                -static int getTotalStudents(Student student, Subjects teacherSubject)
+                -static int getGrades(Student student, Subjects teacherSubject)
+                -static boolean validateStudent(String studentName)
+                -static User validateUser(int selectedUserIndex)
+            }
+        }
+        package Interfaces {
+            interface MenuItem {
+                getText(): String
+                execute(): void
+            }
+        }
+    }
+
+    .Classes.Manager.Manager *-- .Classes.Login.Login : is accessed through
+    .Classes.Login.Login *-- .Classes.DataBase.UserDataBase : has access to
+    .Classes.DataBase.UserDataBase *-- .Classes.Users.User : needs
+    .Classes.DataBase.UserDataBase *-- .Classes.Cypher.Enigma : requires
+    .Classes.Options.Options *-- .Utils.Functions.UserActions : must have
+    User o-- .Classes.Options.Options : has
+    Teacher o-- .Utils.Enums.Subjects : has single
+    Teacher o-- .Classes.Email.Email : has multiple
+    Student o-- .Utils.Enums.Subjects : has multiple
+    .Utils.Functions.UserActions *-- .Utils.Enums.EditTypes : requires
+    .Utils.Functions.UserActions *-- .Classes.Email.Email : requires
+
+@enduml
