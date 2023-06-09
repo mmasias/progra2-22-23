@@ -1,0 +1,20 @@
+@startuml
+class User{
+    +userName: String
+    -_password: String
+    +completeName:String
+    +options:Option
+
+    +getUserName()
+    +set_password(String _password)
+    +tryPassword(String triedPassword)
+    +getCompleteName()
+    +setCompleteName(String completeName)
+    +getOptions()
+    +setOptions(options)
+
+    +User()
+    +User(userName,password,name)
+}
+
+@enduml

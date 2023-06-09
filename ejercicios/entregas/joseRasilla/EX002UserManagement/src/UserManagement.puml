@@ -1,0 +1,27 @@
+@startuml
+class User{
+    + String userName
+    - String password
+    + String[] posts
+
+    + boolean CheckPassword(String password)
+    + String getUserName()
+    + boolean isSameUsername(String username)
+    + void ChangePassword(String newPassword)
+    + void AddPublication(String postText)
+}
+
+class UserDataBase{
+    + User[] users
+    + User loggedUser
+
+    + void setLoggedUser(User user)
+    + void AddUser(User newUser)
+
+    + boolean AvailableUserName(String userName)
+    + boolean FormattedPassword(String password)
+
+    + User FindUser(String userName)
+    + boolean UserExists(String userName)
+}
+@enduml
