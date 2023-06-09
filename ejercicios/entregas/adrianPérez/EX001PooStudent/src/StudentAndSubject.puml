@@ -1,0 +1,42 @@
+@startuml
+class Subject {
+    -name: String
+    -students: Student[]
+    -isOrdered: boolean
+    -position: int
+    -capacity: int
+    +Subject(name: String, capacity: int)
+    +addStudent(student: Student): void
+    +orderStudents(): void
+    +getStudent(index: int): Student
+    +getBestStudent(): Student
+    +getWorstStudent(): Student
+    +getAverageGrade(): float
+    +getMedianGrade(): float
+    +getName(): String
+    +setName(name: String): void
+    +getStudents(): Student[]
+    +setStudents(students: Student[]): void
+    +isOrdered(): boolean
+    +setOrdered(isOrdered: boolean): void
+    +getPosition(): int
+    +setPosition(position: int): void
+    +getCapacity(): int
+    +setCapacity(capacity: int): void
+}
+class Student {
+    -name: String
+    -surname: String
+    -id: String
+    -grade: float
+    +Student(name: String, surname: String, id: String, grade: float)
+    +getName(): String
+    +setName(name: String): void
+    +getSurname(): String
+    +setSurname(surname: String): void
+    +getId(): String
+    +setId(id: String): void
+    +getGrade(): float
+    +setGrade(grade: float): void
+}
+@enduml
