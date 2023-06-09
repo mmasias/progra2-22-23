@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class User {
+  -userName: String
+  -password: String
+  -name: String
+  +getUsername(): String
+  +getPassword(): String
+  +getName(): String
+  +setUsername(String username): void
+  +setPassword(String password): void
+  +setName(String name): void
+}
+
+class Admin{
+  -isAdmin: boolean
+  +isAdmin(): boolean
+  +setAdmin(boolean isAdmin): void
+}
+
+class RegularUser{}
+
+class Option {
+  -options: String[]
+  -selectedOption: int
+  -maxOptions: int
+  +addOption(String option): void
+  +getOption(int index): String
+  +selectOption(int index): void
+  +getSelectedOption(): String
+  +showOptions(): void
+}
+class MenuOption {
+  -description: String
+  +getDescription(): String
+  +setDescription(String description): void
+}
+class Manager {
+  -users: User[]
+  -authenticatedUser: User
+  -selectedOption: MenuOption
+  -maxUsers: int
+  +addUser(User user): void
+  +authenticateUser(String username, String password): boolean
+  +showMenu(Option option): void
+}
+class UserManager {
+  +registerUser(User user): void
+  +isUserAdmin(User admin): boolean
+}
+User --* RegularUser
+Manager *-- UserManager
+Admin *-- User
+@enduml
