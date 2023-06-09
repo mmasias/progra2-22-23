@@ -1,0 +1,30 @@
+@startuml UserManagement
+
+class UserManager{
+    -username: String
+    -Password: String
+    -numbUsers
+
+    +User(String username, String password)
+    -getUsername()
+    -getPassword()
+    +setPassword(String password)
+
+    +UserManager()
+    +addUser(String username, String password)
+    +authenticate(String username, String password)
+    +createAccount(String username, String password)
+    +modifyAccount(String username, String password, String newPassword)
+}
+
+class Option{
+    -options: String
+    
+    +Option(String[] options)
+    +display()
+    +read()
+    +closeScanner()
+
+}
+
+@enduml 
