@@ -1,0 +1,31 @@
+@startuml
+class WashingProgram {
+  + activate()
+  + int waterConsumption()
+  + String name()
+  + int time()
+ }
+class WashingMachineMX {
+  + start()
+  + setProgram()
+  + infoProgram()
+}
+
+class TemperatureSelector {
+  +setTemperature()
+  +int temperature()
+  +int maxTemperature()
+  +int electricalConsumption()
+}
+
+class WashingMachineMX1
+class WashingMachineMX3Deluxe
+class WashingMachineMX2
+
+WashingProgram - WashingMachineMX
+WashingProgram -* WashingMachineMX
+WashingMachineMX <|-- WashingMachineMX1
+WashingMachineMX <|-- WashingMachineMX3Deluxe
+WashingMachineMX2 --|> WashingMachineMX1
+TemperatureSelector --* WashingMachineMX
+@enduml
