@@ -1,0 +1,9 @@
+@startuml
+start
+: input = "Hola Mundo";
+: key = "criptografia";
+: Eliminación de caracteres repetidos;
+: alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+: Reemplazamos las primeras letras 
+de la variable alfabeto con la key modificada;
+@enduml

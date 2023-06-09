@@ -1,0 +1,28 @@
+@startuml
+class Subject {
+    - String name
+    - Student[] students
+    - boolean isOrdered
+    - int position
+    - int capacity
+    + Subject(String name, int capacity)
+    + getName()
+    + setName(String name)
+    + getStudents()
+    + setStudents(Student[] students)
+    + getIsOrdered()
+    + setIsOrdered(boolean isOrdered)
+    + getPosition()
+    + setPosition(int position)
+    + getCapacity()
+    + setCapacity(int capacity)
+    + addStudent(Student student)
+    + orderStudents()
+    + getBestStudent()
+    + getStudent(int position)
+    + getWorstStudent()
+    + getAverage()
+    + getMedian()
+}
+
+@enduml
