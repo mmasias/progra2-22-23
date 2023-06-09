@@ -1,5 +1,19 @@
 public class Student {
 
+    private String name;
+    private String surname;
+    private String id;
+    private float grade;
+
+    /*
+     * Creates a new student with the given name, surname, id and grade.
+     * @param name The name of the student.
+     * @param surname The surname of the student.
+     * @param id The id of the student.
+     * @param grade The grade of the student.
+     */
+    public Student(String name, String surname, String id, float grade) {
+
     String name;
     String surname;
     String id;
@@ -12,6 +26,34 @@ public class Student {
         this.grade = grade;
     }
 
+    public Student(){
+
+
+    }
+
+    public void setGrade(float grade){
+
+
+        this.grade = grade;
+
+    }
+
+    public float getGrade() {
+
+
+        return grade;
+
+    }
+
+    public String getName() {
+
+
+        return name;
+
+    }
+
+    public void setName(String name) {
+
     public String getName() {
         return name;
     }
@@ -21,6 +63,13 @@ public class Student {
     }
 
     public String getSurname() {
+
+        return surname;
+
+    }
+
+    public void setSurname(String surname) {
+
         return surname;
     }
 
@@ -29,6 +78,17 @@ public class Student {
     }
 
     public String getId() {
+
+
+
+        return id;
+
+    }
+
+    public void setId(String id) {
+
+        this.id = id;
+    }
         return id;
     }
 

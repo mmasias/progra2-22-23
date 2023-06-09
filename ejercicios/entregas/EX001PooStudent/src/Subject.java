@@ -50,6 +50,24 @@ public class Subject {
      * Returns the median grade of all the students in the subject.
      */
     public float getMedian() {
+
+        orderStudents();
+        return students[Math.round(students.length/2)].getGrade();
+    }
+
+    public float getAverageGrade(){
+
+        float aux = 0;
+
+        for(int i=0;i<position;i++){
+
+            aux += (students[i].getGrade());
+
+        }
+
+        return aux / capacity;
+    }
+
         float median =0;
         int contador=0;
 
@@ -99,6 +117,16 @@ public class Subject {
         return position;
     }
     public Student getBestStudent() {
+        orderStudents();
+        return students[0];
+    }
+    public Student getWorstStudent() {
+
+        orderStudents();
+        return students[students.length-1];
+    }
+
+}
         if (!isOrdered){
             orderStudents();
         }

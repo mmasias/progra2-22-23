@@ -1,0 +1,13 @@
+@startuml
+class BankAccount {
+-String titular
+-double amount
++BankAccount(String titular,double amount)
++void deposit(double amount)
++void withdraw(double amount)
++String getTitular()
++void setTitular(String titular)
++double getAmount()
++void setAmount(double amount)
+}
+@enduml

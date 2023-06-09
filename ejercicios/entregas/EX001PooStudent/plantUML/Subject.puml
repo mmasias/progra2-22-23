@@ -1,0 +1,28 @@
+@startuml
+
+class Student {
+-private String name
+-private Student[] students
+-private boolean isOrdered
+-private int position
+-private int capacity
+
+     +public String getName()
+     +public void setName(String name)
+     +public Student[] getStudents()
+     +public void setStudents(Student[] students)
+     +public boolean isOrdered()
+     +public void setOrdered(boolean ordered)
+     +public int getPosition()
+     +public void setPosition(int position)
+     +public int getCapacity()
+     +public void setCapacity(int capacity)
+     +public Subject()
+     +public void addStudent(Student student)
+     +public void orderStudents()
+     +public float getMedian()
+     +public float getAverageGrade()
+     +public Student getBestStudent() {
+     +public Student getWorstStudent()
+     }
+@enduml
