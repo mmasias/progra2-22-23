@@ -1,4 +1,5 @@
 @startuml
+
 class main.User {
 - String name
 - String password
@@ -41,6 +42,21 @@ class main.Manager {
 + <<Create>> Manager(int)
 + void add(User)
 + User login(String,String)
+}
+
+
+class User {
+    -userName: String
+    -userPassword: String
+    +login: boolean
+    +User()
+    +User(String userName, String userPassword)
+    +setUserName(String)
+    +setUserPassword(String)
+    +getUserName(): String
+    +getUserPassword(): String
+    +setLogin(boolean)
+    +getLogin(): boolean
 }
 
 @enduml
