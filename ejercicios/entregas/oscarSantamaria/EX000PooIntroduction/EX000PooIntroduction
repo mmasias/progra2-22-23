@@ -1,0 +1,43 @@
+public class BankAccount {
+    public static void main(String[] args) {
+        Private String holder;
+        Private Doble moneyBank;
+        //dinero que tienes en el banco
+        Private Doble moneyRetry;
+        //dinero que retiras del banco
+
+        moneyBank=deposit(double moneyBank)-withdraw(double moneyRetry);
+
+        while(moneyBank>0){
+            System.out.println("You have" + moneyBank + "euros at the bank account ");
+        }else{
+            System.out.println("You have 0 euros at the bank account ")
+        }
+       
+    }
+    public void deposit(double moneyBank){
+        Scanner entryScanner= new Scanner (System.in);
+        moneyBank= entryScanner.nextLine(); 
+    }
+
+    public void withdraw(double moneyRetry){
+        Scanner entryScanner= new Scanner (System.in);
+        moneyRetry= entryScanner.nextLine();
+
+        if(moneyRetry>=moneyBank){
+            System.out.println("Has sacado" + moneyRetry + "euros y te queda" + moneyBank + "euros en la cuenta");
+        }else{
+            System.out.println("No tienes tanto saldo en la cuenta por tanto no lo puedes sacar");
+        }
+    }
+
+}
+
+public class BankAccountTest {
+    public static void main(String[] args) {
+      String newAcount;
+      String permanent;
+      Double startMoney;
+
+    }
+}
