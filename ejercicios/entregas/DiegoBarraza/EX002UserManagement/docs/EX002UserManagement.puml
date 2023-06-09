@@ -1,0 +1,48 @@
+@startuml
+class User{
+-username:String
+-usernamePassword:String
+-login:Boolean
++User()
++User(String userName, String usernamePassword
++setUserName(String)
++setUserPassword(String)
++getUserName():String
++getUserPassword():String
++setLogin(boolean)
++getLogin():boolean
+}
+
+Class Manager{
+-users-list:Int
+-verified-user:Boolean
+-max-users-capacity:Int
++User()
++User()users
++setUserName(String)
++setUserlist(String)
++setVerifiedUser(String)
++setNumberVerifiedUser(Int)
++setMaxUsersCapacity(Int)
++getUsername():String
++getUserlist():Int
++getVerifiedUser(Int)
++getNumberVerifiedUser(Int)
++getMaxUsersCapacity(Int)
++setlogin(boolean)
++getlogin():boolean
++setregister(string)
++getregister():string
++setaddusertouserverified(string)
++getaddusertouserverfied:(String)
+}
+
+Class Options{
+-options:String
+-selectoption:String
+-maxoptions:int
++setoptions(String)
++setselectoption(String)
++setmaxoptions(Int)
+}
+@enduml

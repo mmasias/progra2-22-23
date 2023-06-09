@@ -1,0 +1,51 @@
+package Main;
+import Main.Core.Airline;
+import Main.Utils.FileHandler1;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        List<Airline> airlines = new ArrayList<>();
+
+        FileHandler1 fileHandlerExample = new FileHandler1();
+
+        for (String airline: fileHandlerExample.loadFileContent("src/main/data/airlines.dat")) {
+            String[] rawData;
+            rawData = airline.split(",");
+
+            int id;
+            id = Integer.parseInt(rawData[0]);
+
+            String name;
+            name = rawData[1];
+
+            String country;
+            country = rawData[5];
+            boolean active;
+
+            if(rawData[6]=="Y") {
+                active = true;
+            }else{
+                active = false;
+            }
+
+            airlines.add(new Airline(id, name , country, active));
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        String desiredCountry = scanner.nextLine();
+        printAirlinesByCountry(desiredCountry, airlines);
+    }
+
+    public static void printAirlinesByCountry(String desiredCountry, List<Airline> airlines) {
+        for (Airline airline : airlines) {
+            if (airline.country().equals(desiredCountry)) {
+                System.out.println(airline);
+            }
+        }
+    }
+}
