@@ -8,7 +8,7 @@ class Poo.Attendance {
 class Poo.Student {
    ~ String name
    + void Student(name: String)
-   + String getName()
+   + Strinn getName()
    + void setName(String)
 }
 @enduml

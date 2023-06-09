@@ -1,5 +1,14 @@
 package Poo;
 
+<<<<<<< HEAD
+public class Attendance {
+import Poo.Student;
+    private String time;
+    Student
+
+}
+
+=======
 import java.util.Date;
 
 public class Attendance {
@@ -12,3 +21,4 @@ public class Attendance {
     }
 
 }
+>>>>>>> origin/main
