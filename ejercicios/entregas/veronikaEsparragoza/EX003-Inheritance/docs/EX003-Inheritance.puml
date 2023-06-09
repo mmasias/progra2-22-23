@@ -1,0 +1,64 @@
+@startuml
+class Manager
+{
+  - users : User[]
+  - selectedUser : int
+  - maxUsers : int
+  - authenticatedUser : User
+  + Manager()
+  + Manager(User[] users, User authenticatedUser, int selectedOption, int maxUsers)
+  + addUser(User user) : void
+  + authenticatedUser(String userName, String password) : User
+}
+
+class UserManager
+{
+  - description : String
+  + MenuOption(int maxOptions, String description)
+  + setDescriptions(String[] descriptions) : void
+}
+class User
+{
+  - userName : String
+  - password : String
+  - name : String
+  - options : Option[]
+  + User(String userName, String password, String name)
+  + User()
+  + getUserName() : String
+  + setUsername() : void
+  + getPassword() : String
+  + setPassword() : void
+  + getName() : String
+  + setName() : void
+  + setOptions() : void
+}
+class Admin
+{
+  - isAdmin : boolean
+  + Admin(String userName, String password, String name, boolean isAdmin)
+  + isAdmin() : boolean
+  + setAdmin() : void
+}
+class Option
+{
+  - options : String[]
+  - selectedOption : int
+  - maxOptions : int
+  - filledOptions : int
+  + Option(int maxOptions)
+  + Options(String[] options, int selectedOption, int maxOptions)
+  + addOption(String option) : void
+  + getOption() : String
+}
+class MenuOption
+{
+  - description : String
+  + MenuOption(int maxOptions, String description)
+  + setDescriptions(String[] descriptions) : void
+}
+
+Manager <|-- UserManager
+User <|-- Admin
+Option <|-- MenuOption
+@enduml
