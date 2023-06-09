@@ -1,0 +1,19 @@
+@startuml
+class Student {
+    -String name
+    -String surname
+    -String id
+    -float grade
+    +Student(String name, String surname, String id, float grade)
+    +setGrade(float grade)
+    +getGrade()
+    +getName()
+    +setName(String name)
+    +getSurname()
+    +setSurname(String surname)
+    +getId()
+    +setId(String id)
+}
+
+@enduml
+

@@ -1,0 +1,10 @@
+
+@startuml
+class BankAccount {
+-string Headline
+-double Amount 
++void deposit(int AmountIn)
++void withdraw(double AmountOut)
+}
+
+@enduml
