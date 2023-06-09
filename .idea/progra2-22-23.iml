@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/temario/EX001PooStudent/out" />
+      <excludeFolder url="file://$MODULE_DIR$/temario/EX001PooStudent/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/ejercicios/entregas/alvaroLostal/EX000PooIntroducion/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/ejercicios/entregas/alvaroLostal/EX000PooIntroducion/out" />
+      <excludeFolder url="file://$MODULE_DIR$/ejercicios/entregas/alvaroLostal/EX002UserManagement/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/ejercicios/entregas/alvaroLostal/EX002UserManagement/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

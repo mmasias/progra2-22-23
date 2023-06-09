@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a35dcec8-374f-4aef-918d-ac8821012191" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/progra/inventory/IInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/progra/inventory/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/progra/inventory/exceptions/FullStorageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/progra/inventory/pets.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/test/ex1/AppointmentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/test/ex1/ClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/test/ex1/CustomDateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/test/ex1/ManagementSystemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hangman/hangman.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hangman2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hangman2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hangman2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hangman2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hangman2/hangman2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/CustomDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/CustomDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/ManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/ManagementSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../examen-parcial-p2/src/main/ex1/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/test/AppointmentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examen-parcial-p2/src/test/CustomDateTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2PpoOBVriu8vEhfIzNYru1iFrqN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alvar\IdeaProjects\parcial-progra2-22-23\entregas\alvaroLostal\EX004Exceptions\.idea" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a35dcec8-374f-4aef-918d-ac8821012191" name="Changes" comment="" />
+      <created>1684163349878</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684163349878</updated>
+      <workItem from="1684163350909" duration="519000" />
+      <workItem from="1684163891767" duration="2446000" />
+      <workItem from="1684166376790" duration="261000" />
+      <workItem from="1684166656599" duration="1906000" />
+      <workItem from="1684216014923" duration="314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
