@@ -1,0 +1,53 @@
+@startuml
+Class User{
+-String name
+-String login
+-String password
+
++User(String login, String password, String name)
++getLogin()
++setLogin(String login)
++getPassword()
++setPassword(String password)
++getName()
++setName(String name)
+
+}
+
+Class Option{
+-List <String> options
+-int maxOptions
+-int selectedOption
+
++Option(int maxOptions)
++void addOption(String option)
++String getOption(int index)
++int getSelectedOption()
++void setSelectedOption(int selectedOption)
++int getMaxOptions()
++void setMaxOption(int maxOptions)
+}
+
+Class Manager{
+-List <User> users
+-User authenticatedUser
+-Option menu
++Manager(int maxUsers, int maxOptions)
++User getAuthenticatedUser()
++void addUser(User user)
++boolean authenticate(String login, String password)
++void addMenuOption(String option)
++void showMenu()
++static void main(String[] args)
+}
+
+Class ManagerTest{
+-Manager manager
++void setUp()
++void testAuthenticateSuccess()
++ void testAuthenticateFailure()
++ void testShowMenuSuccess()
++void testShowMenuFailure()
++void testAuthenticationFailed()
+}
+@enduml

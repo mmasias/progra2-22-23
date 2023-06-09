@@ -1,0 +1,18 @@
+@startuml
+ class Poo.Student{
+    ~ String name
+    ~ String surname
+    ~ String id
+    ~ Float grade
+ }
+
+  class Poo.Subject{
+    ~ String name
+    ~ Student[] student
+    ~ Boolean isOrdered
+    ~ Int position
+    ~ Int capacity
+  }
+@enduml
+
+
